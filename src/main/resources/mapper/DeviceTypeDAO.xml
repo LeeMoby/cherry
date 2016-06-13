@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moby.dao.DeviceTypeDAO">
+    <select id="getDeviceTypeByID" parameterType="long" resultType="DeviceType">
+    SELECT dtid, dtno, dtname, sortno
+    FROM tb_device_type
+    WHERE dtid = #{deviceTypeID};
+    </select>
+
+    <select id="findAllDeviceType" resultType="DeviceType">
+        SELECT dtid, dtno, dtname, sortno
+        FROM tb_device_type;
+    </select>
+
+</mapper>
