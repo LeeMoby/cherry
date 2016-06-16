@@ -8,13 +8,17 @@ com/moby/entiry/Room.class
 com/moby/entiry/Seckill.class
 com/moby/service/impl/SeckillServiceImpl.class
 com/moby/entiry/Device.class
+com/moby/service/impl/RoomServiceImpl.class
 com/moby/exception/SeckillCloseException.class
+com/moby/service/DeviceTypeService.class
+com/moby/service/RoomService.class
 com/moby/dao/RoomDAO.class
 com/moby/entiry/DeviceType.class
 com/moby/enums/SeckillStatEnum.class
 com/moby/web/DeviceController.class
 com/moby/service/impl/DeviceServiceImpl.class
 com/moby/exception/SeckillException.class
+com/moby/service/impl/DeviceTypeServiceImpl.class
 com/moby/dao/CabinetDAO.class
 com/moby/web/MainController.class
 com/moby/entiry/SuccessKilled.class
