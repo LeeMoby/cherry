@@ -188,7 +188,9 @@
                 <table class="table table-bordered table-striped table-hover" style="width: 1500px;">
                     <thead>
                     <tr class="info">
-                        <th>#</th>
+                        <th>
+                            <input type="checkbox" value="${device.did}">
+                        </th>
                         <th>编号</th>
                         <th>名称</th>
                         <th>位置</th>
@@ -204,23 +206,27 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="device" items="${list}">
-                        <tr>
-                            <td>${device.did}</td>
-                            <td><a href="/device/${device.did}/detail" target="_blank">${device.dno}</a></td>
-                            <td>${device.dname}</td>
-                            <td>${device.cabinet.cno} ${device.dplace}</td>
-                            <td>${device.person}</td>
-                            <td><fmt:formatDate value="${device.useDate}" pattern="yyyy-MM-dd"/></td>
-                            <td>${device.dmodel}</td>
-                            <td>${device.nettype}</td>
-                            <td>${device.dmodel}</td>
-                            <td>${device.dcode}</td>
-                            <td>${device.dip}</td>
-                            <td>${device.dstatus}</td>
-                            <td>${device.serialNumber}</td>
-                        </tr>
-                    </c:forEach>
+                    <form class="form-inline">
+                        <c:forEach var="device" items="${list}">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="checkDeviceID" value="${device.did}">
+                                </td>
+                                <td><a href="/device/${device.did}/detail" target="_blank">${device.dno}</a></td>
+                                <td>${device.dname}</td>
+                                <td>${device.cabinet.cno} ${device.dplace}</td>
+                                <td>${device.person}</td>
+                                <td><fmt:formatDate value="${device.useDate}" pattern="yyyy-MM-dd"/></td>
+                                <td>${device.dmodel}</td>
+                                <td>${device.nettype}</td>
+                                <td>${device.dmodel}</td>
+                                <td>${device.dcode}</td>
+                                <td>${device.dip}</td>
+                                <td>${device.dstatus}</td>
+                                <td>${device.serialNumber}</td>
+                            </tr>
+                        </c:forEach>
+                    </form>
                     </tbody>
                 </table>
 
