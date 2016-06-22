@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.moby.dao.DeviceDAOTest" time="0.067" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.moby.dao.DeviceDAOTest" time="0.139" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.1.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -13,7 +13,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7534"/>
+    <property name="idea.launcher.port" value="7533"/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -66,9 +66,9 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="com.moby.dao.DeviceDAOTest" name="updateDevice" time="0"/>
-  <testcase classname="com.moby.dao.DeviceDAOTest" name="delDevice" time="0.002"/>
-  <testcase classname="com.moby.dao.DeviceDAOTest" name="findAllDevice" time="0.017"/>
+  <testcase classname="com.moby.dao.DeviceDAOTest" name="delDevice" time="0.001"/>
+  <testcase classname="com.moby.dao.DeviceDAOTest" name="findAllDevice" time="0.04"/>
   <testcase classname="com.moby.dao.DeviceDAOTest" name="addDevice" time="0.001"/>
   <testcase classname="com.moby.dao.DeviceDAOTest" name="getDeviceByID" time="0.012"/>
-  <testcase classname="com.moby.dao.DeviceDAOTest" name="findDeviceByDevice" time="0.035"/>
+  <testcase classname="com.moby.dao.DeviceDAOTest" name="findDeviceByDevice" time="0.085"/>
 </testsuite>

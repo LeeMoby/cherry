@@ -62,7 +62,8 @@ public class DeviceController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addDevice(Model model) {
-
+        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+        model.addAttribute("deviceTypeList", deviceTypeList);
         return "device/device_add";
     }
 
