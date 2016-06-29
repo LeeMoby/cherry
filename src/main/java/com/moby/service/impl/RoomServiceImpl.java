@@ -15,6 +15,7 @@ import java.util.List;
 public class RoomServiceImpl implements RoomService {
     @Autowired
     private RoomDAO roomDAO;
+
     public Room getRoomByID(Long roomID) {
         return roomDAO.getRoomByID(roomID);
     }

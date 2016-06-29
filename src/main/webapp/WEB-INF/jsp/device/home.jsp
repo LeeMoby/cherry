@@ -182,7 +182,7 @@
                 <a class="btn btn-info" href="/device/add" target="_blank" role="button">新增</a>
                 <button class="btn btn-info" type="batchUpdate">修改</button>
                 <button class="btn btn-danger" type="batchDel">删除</button>
-                <button class="btn btn-info" type="printBtn">打印</button>
+                <button class="btn btn-info" type="printBtn" onclick="exportExcel()">导出</button>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover" style="width: 1500px;">
@@ -255,7 +255,11 @@
 </div>
 
 <%@include file="../common/footer.jsp" %>
-
+<script type="text/javascript">
+    function exportExcel(){
+        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+    }
+</script>
 
 </body>
 </html>

@@ -51,4 +51,10 @@ public interface DeviceService {
      */
     int delDevice(Long deviceID);
 
+    /**
+     * 导出全部设备,Excel格式
+     * @return
+     */
+    byte[] expExcel4All() throws Exception;
+
 }

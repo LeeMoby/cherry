@@ -3,11 +3,15 @@ package com.moby.service.impl;
 import com.moby.dao.DeviceDAO;
 import com.moby.entiry.Device;
 import com.moby.service.DeviceService;
+import org.apache.poi.hssf.usermodel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,6 +20,7 @@ import java.util.List;
 @Service
 public class DeviceServiceImpl implements DeviceService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-DD");
 
     @Autowired
     private DeviceDAO deviceDAO;
@@ -43,4 +48,66 @@ public class DeviceServiceImpl implements DeviceService {
     public int delDevice(Long deviceID) {
         return deviceDAO.delDevice(deviceID);
     }
+
+    public byte[] expExcel4All() throws Exception {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        HSSFWorkbook wb = new HSSFWorkbook();
+        HSSFSheet sheet = wb.createSheet("设备台账");
+        HSSFRow row = sheet.createRow(0);
+        HSSFCellStyle headStyle = wb.createCellStyle();
+        headStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+        headStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);
+
+        List<String> heads = new ArrayList<String>();
+        heads.add("编号");
+        heads.add("名称");
+        heads.add("位置");
+        heads.add("责任人");
+        heads.add("投运日期");
+        heads.add("所属网络");
+        heads.add("设备型号");
+        heads.add("资产编码");
+        heads.add("IP地址");
+        heads.add("设备状态");
+        heads.add("序列号");
+        HSSFCell cell = null;
+        for (int i = 0; i < heads.size(); i++){
+            cell = row.createCell(i);
+            cell.setCellValue(heads.get(i));
+            cell.setCellStyle(headStyle);
+        }
+
+        List<Device> devices = deviceDAO.findAllDevice();
+        Device device = null;
+        for (int i = 0; i < devices.size(); i++){
+            row = sheet.createRow(i + 1);
+            device = devices.get(i);
+            int j = 0;
+            insertCell(row, j++, device.getDno());
+            insertCell(row, j++, device.getDname());
+            insertCell(row, j++, device.getCabinet().getCno() + " " + device.getDplace());
+            insertCell(row, j++, device.getPerson());
+            insertCell(row, j++, sdf.format(device.getUseDate()));
+            insertCell(row, j++, device.getNettype());
+            insertCell(row, j++, device.getDmodel());
+            insertCell(row, j++, device.getDcode());
+            insertCell(row, j++, device.getDip());
+            insertCell(row, j++, device.getDstatus());
+            insertCell(row, j++, device.getSerialNumber());
+
+        }
+        wb.write(out);
+        return out.toByteArray();
+    }
+
+    private void insertCell(HSSFRow row, int i, Object object){
+        if(object == null){
+            row.createCell(i).setCellValue("");
+        }else{
+            row.createCell(i).setCellValue(object.toString());
+        }
+
+    }
+
 }
+

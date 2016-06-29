@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -65,6 +67,21 @@ public class DeviceController {
         List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
         model.addAttribute("deviceTypeList", deviceTypeList);
         return "device/device_add";
+    }
+
+    @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
+    public void expExcel4All(HttpServletRequest request,
+                             HttpServletResponse response) throws Exception{
+        try{
+            byte[] bytes = deviceService.expExcel4All();
+            response.setContentType("application/x-msdownload");
+            response.setContentLength(bytes.length);
+            response.setHeader("Content-Disposition", "attachment;filename="
+                    + java.net.URLEncoder.encode("档期列表.xls", "UTF-8") );
+            response.getOutputStream().write(bytes);
+        }catch (Exception ex){
+
+        }
     }
 
 
