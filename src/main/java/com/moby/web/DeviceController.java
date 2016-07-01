@@ -63,9 +63,18 @@ public class DeviceController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addDevice(Model model) {
-        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
-        model.addAttribute("deviceTypeList", deviceTypeList);
+    public String addDevice(Model model, Device device) {
+        if(device == null){
+            List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+            model.addAttribute("deviceTypeList", deviceTypeList);
+        }else{
+            logger.info("device = " + device); // TODO
+            int result = deviceService.addDevcie(device);
+            if (result == 1){
+                model.addAttribute("添加成功!");
+            }
+        }
+
         return "device/device_add";
     }
 
