@@ -63,32 +63,32 @@ public class DeviceController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addDevice(Model model, Device device) {
-        if(device == null){
-            List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
-            model.addAttribute("deviceTypeList", deviceTypeList);
-        }else{
-            logger.info("device = " + device); // TODO
-            int result = deviceService.addDevcie(device);
-            if (result == 1){
-                model.addAttribute("添加成功!");
-            }
-        }
-
+    public String addDevice(Model model) {
+        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+        model.addAttribute("deviceTypeList", deviceTypeList);
         return "device/device_add";
+    }
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String saveDevice(Model model, Device device) {
+        int result = deviceService.addDevcie(device);
+        if (result == 1) {
+            model.addAttribute("添加成功!");
+        }
+        return "redirect:/device/home";
     }
 
     @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
     public void expExcel4All(HttpServletRequest request,
-                             HttpServletResponse response) throws Exception{
-        try{
+                             HttpServletResponse response) throws Exception {
+        try {
             byte[] bytes = deviceService.expExcel4All();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + java.net.URLEncoder.encode("档期列表.xls", "UTF-8") );
+                    + java.net.URLEncoder.encode("设备台账.xls", "UTF-8"));
             response.getOutputStream().write(bytes);
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
     }

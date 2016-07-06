@@ -189,7 +189,7 @@
                     <thead>
                     <tr class="info">
                         <th>
-                            <input type="checkbox" value="${device.did}">
+                            <input type="checkbox" id="globalCheck" onclick="changeCheck()">
                         </th>
                         <th>编号</th>
                         <th>名称</th>
@@ -258,6 +258,11 @@
 <script type="text/javascript">
     function exportExcel(){
         window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+    }
+
+    function changeCheck(){
+        alert($("#globalCheck").attr("checked"));
+
     }
 </script>
 

@@ -35,5 +35,4 @@
     <mvs:resources mapping="/css/**" location="/WEB-INF/assets/css/"/>
     <mvs:resources mapping="/font/**" location="/WEB-INF/assets/fonts/"/>
     <mvs:resources mapping="/images/**" location="/WEB-INF/assets/images/"/>
-
 </beans>

@@ -21,7 +21,7 @@
 
 <body>
 
-<div class="container-fluid" style="width: 800px">
+<div class="container-fluid" style="width: 1000px">
     <div class="row">
         <div class="col-md-8">
             <h2>
@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <td class="active"><strong>设备位置</strong></td>
-                    <td>${device.cid} ${device.dplace}</td>
+                    <td>${device.cabinet.cno} ${device.dplace}</td>
                     <td class="active"><strong>运维单位</strong></td>
                     <td>${device.department}</td>
                     <td class="active"><strong>责任人</strong></td>
@@ -99,7 +99,7 @@
                 </tr>
                 <tr>
                     <td class="active"><strong>设备状态</strong></td>
-                    <td>${device.cid} ${device.dstatus}</td>
+                    <td>${device.dstatus}</td>
                     <td class="active"><strong>序列号</strong></td>
                     <td>${device.serialNumber}</td>
                     <td class="active"><strong>投运日期</strong></td>
