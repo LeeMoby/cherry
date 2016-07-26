@@ -141,8 +141,12 @@
         WHERE did = #{did};
     </update>
 
-    <delete id="delDevice">
-        DELETE FROM tb_device WHERE did = #{deviceID};
+    <delete id="delDevice" parameterType="java.util.List">
+        DELETE FROM tb_device WHERE did IN
+        <foreach collection="deviceIDs" item="deviceID" open="(" separator="," close=")">
+            #{deviceID}
+        </foreach>
+        ;
     </delete>
 
 </mapper>

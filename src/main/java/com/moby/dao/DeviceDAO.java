@@ -45,8 +45,8 @@ public interface DeviceDAO {
 
     /**
      * 删除device
-     * @param deviceID
+     * @param deviceIDs
      * @return
      */
-    int delDevice(@Param("deviceID") Long deviceID);
+    int delDevice(@Param("deviceIDs") List deviceIDs);
 }

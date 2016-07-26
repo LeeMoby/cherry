@@ -45,11 +45,11 @@ public interface DeviceService {
     int updateDevice(Device device);
 
     /**
-     * 根据ID删除Device
-     * @param deviceID
+     * 根据ID删除Device,多个用英文逗号分隔
+     * @param deviceIDs
      * @return
      */
-    int delDevice(Long deviceID);
+    int delDevice(List deviceIDs);
 
     /**
      * 导出全部设备,Excel格式

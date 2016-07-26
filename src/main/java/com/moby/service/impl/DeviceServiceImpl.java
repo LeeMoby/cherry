@@ -45,8 +45,8 @@ public class DeviceServiceImpl implements DeviceService {
         return deviceDAO.updateDevice(device);
     }
 
-    public int delDevice(Long deviceID) {
-        return deviceDAO.delDevice(deviceID);
+    public int delDevice(List deviceIDs) {
+        return deviceDAO.delDevice(deviceIDs);
     }
 
     public byte[] expExcel4All() throws Exception {

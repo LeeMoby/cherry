@@ -180,16 +180,16 @@
             <br><br>
             <div class="text-right" style="margin-bottom: 5px">
                 <a class="btn btn-info" href="/device/add" target="_blank" role="button">新增</a>
-                <button class="btn btn-info" type="batchUpdate">修改</button>
-                <button class="btn btn-danger" type="batchDel">删除</button>
-                <button class="btn btn-info" type="printBtn" onclick="exportExcel()">导出</button>
+                <button class="btn btn-info" type="button">修改</button>
+                <button class="btn btn-danger" type="button" onclick="batchDelete()">删除</button>
+                <button class="btn btn-info" type="button" onclick="exportExcel()">导出</button>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover" style="width: 1500px;">
                     <thead>
                     <tr class="info">
                         <th>
-                            <input type="checkbox" id="globalCheck" onclick="changeCheck()">
+                            <input type="checkbox" id="cbtn_all">
                         </th>
                         <th>编号</th>
                         <th>名称</th>
@@ -210,7 +210,7 @@
                         <c:forEach var="device" items="${list}">
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="checkDeviceID" value="${device.did}">
+                                    <input type="checkbox" name="cbtn_id" value="${device.did}">
                                 </td>
                                 <td><a href="/device/${device.did}/detail" target="_blank">${device.dno}</a></td>
                                 <td>${device.dname}</td>
@@ -256,12 +256,56 @@
 
 <%@include file="../common/footer.jsp" %>
 <script type="text/javascript">
+    //以Excel格式,导出全部数据
     function exportExcel(){
         window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
     }
+    // 全选复选框,控制ID复选框
+    $(function (){
+        $('#cbtn_all').click(function(){
+            if(this.checked){
+                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+            }else{
+                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+            }
+        });
 
-    function changeCheck(){
-        alert($("#globalCheck").attr("checked"));
+        $(':checkbox[name="cbtn_id"]').click(function () {
+            allchk();
+
+        })
+    });
+    //ID复选框,控制全选复选框
+    function allchk() {
+        var cb_total = $(':checkbox[name="cbtn_id"]').size();
+        var cb_num = 0;
+        $(':checkbox[name="cbtn_id"]').each(function () {
+            if($(this).prop("checked") == true){
+                cb_num ++;
+            }
+        });
+        if(cb_total == cb_num){
+            $('#cbtn_all').prop("checked", true);
+        }else{
+            $('#cbtn_all').prop("checked", false);
+        }
+    }
+    // 批量删除
+    function batchDelete(){
+        var IDs = new Array();
+        $(':checkbox[name="cbtn_id"]').each(function(){
+           if($(this).prop("checked") == true){
+               IDs.push($(this).val());
+           }
+        });
+        if(IDs.length > 0){
+            var indata = {deviceIDs:IDs};
+            $.post("/device/delete", indata, function(data){
+                alert("ok");
+            }, 'json');
+        }else{
+            alert("请选择要删除的记录。");
+        }
 
     }
 </script>

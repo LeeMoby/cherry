@@ -82,7 +82,8 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="department">运维单位: </label>
-                            <input type="text" class="form-control" id="department" name="department" placeholder="请输入运维单位">
+                            <input type="text" class="form-control" id="department" name="department"
+                                   placeholder="请输入运维单位">
                         </div>
                     </div>
                     <br>
@@ -130,11 +131,19 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="dplace">序&nbsp;&nbsp;列&nbsp;&nbsp;号: </label>
-                            <input type="text" class="form-control" id="serialNumber" name="serialNumber" placeholder="请输入序列号">
+                            <input type="text" class="form-control" id="serialNumber" name="serialNumber"
+                                   placeholder="请输入序列号">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="department">投运日期: </label>
-                            <input type="text" class="form-control" id="useDate" name="useDate" placeholder="请输入投运日期">
+                            <label for="dtp_input2" class="col-md-2 control-label">投运日期</label>
+                            <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy"
+                                 data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input2" value=""/><br/>
                         </div>
                     </div>
                 </form>
@@ -191,7 +200,7 @@
 </div>
 <%@include file="../common/footer.jsp" %>
 <script type="text/javascript">
-    function submitForm(){
+    function submitForm() {
         var theForm = document.forms[0];
         // 检查表单
 
@@ -200,11 +209,21 @@
         theForm.method = "post";
         theForm.submit();
     }
-    function closeWindow(){
-        if(confirm("关闭该页面,数据将不会保存,是否关闭?")){
+    function closeWindow() {
+        if (confirm("关闭该页面,数据将不会保存,是否关闭?")) {
             window.close();
         }
     }
+    $('.form_date').datetimepicker({
+        language:  'zh_CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
     //    var substringMatcher = function (strs) {
     //        return function findMatches(q, cb) {
     //            var matches, substringRegex;

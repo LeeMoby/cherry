@@ -4,8 +4,8 @@
     <data-source name="MySQL - cherrydb@localhost" uuid="2ff2f5d1-952a-4741-8f21-cac61309e269">
       <secret-storage>master_key</secret-storage>
       <user-name>cherrydb</user-name>
-      <schema-pattern>cherrydb.*</schema-pattern>
-      <default-schemas>cherrydb.*</default-schemas>
+      <introspection-scope>cherrydb:*</introspection-scope>
+      <resolve-scope>cherrydb:*</resolve-scope>
     </data-source>
   </component>
 </project>

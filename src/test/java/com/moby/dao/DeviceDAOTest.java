@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -106,7 +107,10 @@ public class DeviceDAOTest {
 
     @Test
     public void delDevice() throws Exception {
-//        int count = deviceDAO.delDevice(1005L);
+//        List deviceIDs = new ArrayList();
+//        deviceIDs.add("1006");
+//        deviceIDs.add("1007");
+//        int count = deviceDAO.delDevice(deviceIDs);
 //        System.out.println("删除" + count + "条记录");
 //        this.findAllDevice();
     }

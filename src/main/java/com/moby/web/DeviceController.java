@@ -6,6 +6,7 @@ import com.moby.entiry.Room;
 import com.moby.service.DeviceService;
 import com.moby.service.DeviceTypeService;
 import com.moby.service.RoomService;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -73,7 +76,20 @@ public class DeviceController {
     public String saveDevice(Model model, Device device) {
         int result = deviceService.addDevcie(device);
         if (result == 1) {
-            model.addAttribute("添加成功!");
+            model.addAttribute("已添加1条记录!");
+        }
+        return "redirect:/device/home";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs) {
+        List deviceIDList = new ArrayList();
+        for(Long deviceID : deviceIDs){
+            deviceIDList.add(deviceID);
+        }
+        int result = deviceService.delDevice(deviceIDList);
+        if (result >= 1) {
+            model.addAttribute("已删除" + result + "条记录!");
         }
         return "redirect:/device/home";
     }

@@ -14,3 +14,5 @@
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <link href="/css/typeaheadjs.css" rel="stylesheet">
+
+<link href="/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
