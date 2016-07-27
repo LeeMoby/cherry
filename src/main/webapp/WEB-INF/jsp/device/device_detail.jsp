@@ -26,6 +26,7 @@
         <div class="col-md-8">
             <h2>
                 ${device.dname}
+
                 <small>${device.deviceType.dtname}</small>
             </h2>
         </div>
