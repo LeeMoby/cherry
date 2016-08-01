@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moby.dao.DepartmentDAO">
+    <select id="getDepartmentById" parameterType="int" resultType="Department">
+        SELECT dept.id, dept.name, dept.name_abbr, dept.code, dept.parent_id
+        FROM basedata_department dept
+        WHERE dept.id = #{id};
+    </select>
+
+    <select id="findAllDepartment" resultType="Department">
+        SELECT dept.id, dept.name, dept.name_abbr, dept.code, dept.parent_id
+        FROM basedata_department dept
+    </select>
+    <select id="findDepartmentByParentId" parameterType="int" resultType="Department">
+        SELECT dept.id, dept.name, dept.name_abbr, dept.code, dept.parent_id
+        FROM basedata_department dept
+        WHERE dept.parent_id = #{id};
+    </select>
+    <select id="getParentDepartmentById" parameterType="int" resultType="Department">
+        SELECT pdept.id, pdept.name, pdept.name_abbr, pdept.code, pdept.parent_id
+        FROM basedata_department dept
+        LEFT OUTER JOIN basedata_department pdept ON dept.parent_id = pdept.id
+        WHERE dept.id = #{id};
+    </select>
+
+</mapper>

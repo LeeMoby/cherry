@@ -13,7 +13,7 @@ public interface RoomDAO {
      * 根据ID获取Room
      * @return
      */
-    Room getRoomByID(@Param("roomID") long roomID);
+    Room getRoomById(@Param("id") int roomID);
 
     /**
      * 获取所有Room

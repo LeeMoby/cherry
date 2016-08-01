@@ -15,7 +15,7 @@ public interface DeviceTypeService {
      * @param deviceTypeID
      * @return
      */
-    DeviceType getDeviceTypeByID(Long deviceTypeID);
+    DeviceType getDeviceTypeById(int deviceTypeID);
 
     /**
      * 获取所有DeviceType

@@ -4,51 +4,42 @@ package com.moby.entiry;
  * Created by Moby on 16/6/8.
  */
 public class Cabinet {
-    private long cid;
-    private String cno;
-    private String cname;
-    private String ctype;
-    private long rid;
+    private int id;
+    private String name;
+    private String type;
+    private int roomId;
     private Room room;
 
-    public long getCid() {
-        return cid;
+    public int getId() {
+        return id;
     }
 
-    public void setCid(long cid) {
-        this.cid = cid;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getCno() {
-        return cno;
+    public String getName() {
+        return name;
     }
 
-    public void setCno(String cno) {
-        this.cno = cno;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCname() {
-        return cname;
+    public String getType() {
+        return type;
     }
 
-    public void setCname(String cname) {
-        this.cname = cname;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getCtype() {
-        return ctype;
+    public int getRoomId() {
+        return roomId;
     }
 
-    public void setCtype(String ctype) {
-        this.ctype = ctype;
-    }
-
-    public long getRid() {
-        return rid;
-    }
-
-    public void setRid(long rid) {
-        this.rid = rid;
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 
     public Room getRoom() {
@@ -62,11 +53,10 @@ public class Cabinet {
     @Override
     public String toString() {
         return "Cabinet{" +
-                "cid=" + cid +
-                ", cno='" + cno + '\'' +
-                ", cname='" + cname + '\'' +
-                ", ctype='" + ctype + '\'' +
-                ", rid=" + rid +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", roomId=" + roomId +
                 ", room=" + room +
                 '}';
     }

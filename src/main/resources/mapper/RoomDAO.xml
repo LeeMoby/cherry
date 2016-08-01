@@ -3,15 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.moby.dao.RoomDAO">
-    <select id="getRoomByID" parameterType="long" resultType="Room">
-    SELECT rid, rno, rname
-    FROM tb_room
-    WHERE rid = #{roomID};
+    <select id="getRoomById" parameterType="int" resultType="Room">
+    SELECT r.id, r.name, r.number, r.place, r.type
+    FROM basedata_room r
+    WHERE r.id = #{id};
     </select>
 
     <select id="findAllRoom" resultType="Room">
-        SELECT rid, rno, rname
-        FROM tb_room;
+    SELECT r.id, r.name, r.number, r.place, r.type
+    FROM basedata_room r;
     </select>
 
 </mapper>

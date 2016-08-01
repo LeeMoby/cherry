@@ -22,9 +22,9 @@ public class RoomDAOTest {
     private RoomDAO roomDAO;
 
     @Test
-    public void getRoomByID() throws Exception {
-        long roomID = 1000L;
-        Room room = roomDAO.getRoomByID(roomID);
+    public void getRoomById() throws Exception {
+        int roomID = 1001;
+        Room room = roomDAO.getRoomById(roomID);
         System.out.println(room.toString());
     }
 

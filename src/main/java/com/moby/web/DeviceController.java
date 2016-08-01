@@ -1,6 +1,7 @@
 package com.moby.web;
 
 import com.moby.entiry.Device;
+import com.moby.entiry.DeviceMultimedia;
 import com.moby.entiry.DeviceType;
 import com.moby.entiry.Room;
 import com.moby.service.DeviceService;

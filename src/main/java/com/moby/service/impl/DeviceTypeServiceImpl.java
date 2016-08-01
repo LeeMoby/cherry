@@ -20,8 +20,8 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
     @Autowired
     private DeviceTypeDAO deviceTypeDAO;
 
-    public DeviceType getDeviceTypeByID(Long deviceTypeID) {
-        return deviceTypeDAO.getDeviceTypeByID(deviceTypeID);
+    public DeviceType getDeviceTypeById(int deviceTypeID) {
+        return deviceTypeDAO.getDeviceTypeById(deviceTypeID);
     }
 
     public List<DeviceType> findAllDeviceType() {

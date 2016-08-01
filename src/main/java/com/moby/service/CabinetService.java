@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Moby on 16/6/27.
  */
 public interface CabinetService {
-    Cabinet getCabinetByID(Long CabinetID);
+    Cabinet getCabinetById(int CabinetID);
 
     List<Cabinet> findAllCabinet();
 }

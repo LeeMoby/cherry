@@ -21,9 +21,9 @@ public class CabinetDAOTest {
     @Resource
     private CabinetDAO cabinetDAO;
     @Test
-    public void getCabinetByID() throws Exception {
-        long cabinetID = 1000L;
-        Cabinet cabinet = cabinetDAO.getCabinetByID(cabinetID);
+    public void getCabinetById() throws Exception {
+        int cabinetID = 1001;
+        Cabinet cabinet = cabinetDAO.getCabinetById(cabinetID);
         System.out.println(cabinet.toString());
     }
 
@@ -37,9 +37,9 @@ public class CabinetDAOTest {
     }
 
     @Test
-    public void findCabinetByRoomID() throws Exception {
-        long roomID = 1000L;
-        List<Cabinet> cabinets = cabinetDAO.findCabinetByRoomID(roomID);
+    public void findCabinetByRoomId() throws Exception {
+        int roomID = 1001;
+        List<Cabinet> cabinets = cabinetDAO.findCabinetByRoomId(roomID);
         for (Cabinet cabinet : cabinets){
             System.out.println(cabinet.toString());
         }

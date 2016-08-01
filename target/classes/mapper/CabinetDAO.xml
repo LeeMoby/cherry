@@ -3,32 +3,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.moby.dao.CabinetDAO">
-    <select id="getCabinetByID" parameterType="long" resultType="Cabinet">
-        SELECT c.cid, c.cno, c.cname, c.ctype, c.cid,
-        r.rid "room.rid",
-        r.rno "room.rno",
-        r.rname "room.rname"
-        FROM tb_cabinet c
-        INNER JOIN tb_room r ON r.rid = c.rid
-        WHERE c.cid = #{cabinetID};
+    <select id="getCabinetById" parameterType="int" resultType="Cabinet">
+        SELECT c.id, c.name, c.type, r.id "room.id",
+        r.name "room.name", r.number "room.number",
+        r.place "room.place", r.type "room.type"
+        FROM basedata_cabinet c
+        INNER JOIN basedata_room r ON c.room_id = r.id
+        WHERE c.id = #{id};
     </select>
 
     <select id="findAllCabinet" resultType="Cabinet">
-        SELECT c.cid, c.cno, c.cname, c.ctype, c.cid,
-        r.rid "room.rid",
-        r.rno "room.rno",
-        r.rname "room.rname"
-        FROM tb_cabinet c
-        INNER JOIN tb_room r ON r.rid = c.rid
+        SELECT c.id, c.name, c.type, r.id "room.id",
+        r.name "room.name", r.number "room.number",
+        r.place "room.place", r.type "room.type"
+        FROM basedata_cabinet c
+        INNER JOIN basedata_room r ON c.room_id = r.id
     </select>
-    <select id="findCabinetByRoomID" parameterType="long" resultType="Cabinet">
-        SELECT c.cid, c.cno, c.cname, c.ctype, c.cid,
-        r.rid "room.rid",
-        r.rno "room.rno",
-        r.rname "room.rname"
-        FROM tb_cabinet c
-        INNER JOIN tb_room r ON r.rid = c.rid
-        WHERE c.rid = #{roomID};
+    <select id="findCabinetByRoomId" parameterType="int" resultType="Cabinet">
+        SELECT c.id, c.name, c.type, r.id "room.id",
+        r.name "room.name", r.number "room.number",
+        r.place "room.place", r.type "room.type"
+        FROM basedata_cabinet c
+        INNER JOIN basedata_room r ON c.room_id = r.id
+        WHERE c.room_id = #{room_id};
     </select>
 
 </mapper>

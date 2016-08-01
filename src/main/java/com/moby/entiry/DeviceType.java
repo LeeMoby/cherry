@@ -4,50 +4,60 @@ package com.moby.entiry;
  * Created by Moby on 16/6/8.
  */
 public class DeviceType {
-    private long dtid;
-    private String dtno;
-    private String dtname;
-    private String sortno;
+    private int id;
+    private String name;
+    private String nameAbbr;
+    private String parentId;
+    private String orderNumber;
 
-    public long getDtid() {
-        return dtid;
+    public int getId() {
+        return id;
     }
 
-    public void setDtid(long dtid) {
-        this.dtid = dtid;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDtno() {
-        return dtno;
+    public String getName() {
+        return name;
     }
 
-    public void setDtno(String dtno) {
-        this.dtno = dtno;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDtname() {
-        return dtname;
+    public String getNameAbbr() {
+        return nameAbbr;
     }
 
-    public void setDtname(String dtname) {
-        this.dtname = dtname;
+    public void setNameAbbr(String nameAbbr) {
+        this.nameAbbr = nameAbbr;
     }
 
-    public String getSortno() {
-        return sortno;
+    public String getParentId() {
+        return parentId;
     }
 
-    public void setSortno(String sortno) {
-        this.sortno = sortno;
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     @Override
     public String toString() {
         return "DeviceType{" +
-                "dtid=" + dtid +
-                ", dtno='" + dtno + '\'' +
-                ", dtname='" + dtname + '\'' +
-                ", sortno='" + sortno + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nameAbbr='" + nameAbbr + '\'' +
+                ", parentId='" + parentId + '\'' +
+                ", orderNumber='" + orderNumber + '\'' +
                 '}';
     }
 }

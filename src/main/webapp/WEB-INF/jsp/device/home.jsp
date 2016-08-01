@@ -301,7 +301,8 @@
         if(IDs.length > 0){
             var indata = {deviceIDs:IDs};
             $.post("/device/delete", indata, function(data){
-                alert(data);
+                var msg = "删除" + (data > 0? "成功" : "失败") + "。已删除" + data + "条记录。";
+                alert(msg);
             }, 'json');
         }else{
             alert("请选择要删除的记录。");

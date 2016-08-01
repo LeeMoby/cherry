@@ -3,15 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.moby.dao.DeviceTypeDAO">
-    <select id="getDeviceTypeByID" parameterType="long" resultType="DeviceType">
-    SELECT dtid, dtno, dtname, sortno
-    FROM tb_device_type
-    WHERE dtid = #{deviceTypeID};
+    <select id="getDeviceTypeById" parameterType="int" resultType="DeviceType">
+    SELECT dt.id, dt.name, dt.name_abbr, dt.parent_id, dt.order_number
+    FROM basedata_device_type dt
+    WHERE dt.id = #{id};
     </select>
 
     <select id="findAllDeviceType" resultType="DeviceType">
-        SELECT dtid, dtno, dtname, sortno
-        FROM tb_device_type;
+    SELECT dt.id, dt.name, dt.name_abbr, dt.parent_id, dt.order_number
+    FROM basedata_device_type dt;
     </select>
 
 </mapper>

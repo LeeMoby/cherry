@@ -4,40 +4,60 @@ package com.moby.entiry;
  * Created by Moby on 16/6/8.
  */
 public class Room {
-    private long rid;
-    private String rno;
-    private String rname;
+    private int id;
+    private String name;
+    private String number;
+    private String place;
+    private String type;
 
-    public long getRid() {
-        return rid;
+    public int getId() {
+        return id;
     }
 
-    public void setRid(long rid) {
-        this.rid = rid;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getRno() {
-        return rno;
+    public String getName() {
+        return name;
     }
 
-    public void setRno(String rno) {
-        this.rno = rno;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getRname() {
-        return rname;
+    public String getNumber() {
+        return number;
     }
 
-    public void setRname(String rname) {
-        this.rname = rname;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "rid=" + rid +
-                ", rno='" + rno + '\'' +
-                ", rname='" + rname + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", number='" + number + '\'' +
+                ", place='" + place + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

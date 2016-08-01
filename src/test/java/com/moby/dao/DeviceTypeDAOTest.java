@@ -24,10 +24,9 @@ public class DeviceTypeDAOTest {
 
     @Test
     public void testGetDeviceTypeByID() throws Exception {
-        long deviceTypeID = 1000L;
-        DeviceType deviceType = deviceTypeDAO.getDeviceTypeByID(deviceTypeID);
+        int deviceTypeID = 1001;
+        DeviceType deviceType = deviceTypeDAO.getDeviceTypeById(deviceTypeID);
         System.out.println(deviceType.toString());
-
     }
 
     @Test

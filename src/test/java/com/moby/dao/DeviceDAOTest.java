@@ -41,7 +41,7 @@ public class DeviceDAOTest {
     public void findDeviceByDevice() throws Exception {
         //Device deviceParam = deviceDAO.getDeviceByID(1000L);
         Device deviceParam = new Device();
-        deviceParam.setCid(1014L);
+        deviceParam.setCabinetId(1014);
         List<Device>  list = deviceDAO.findDeviceByDevice(deviceParam);
         for (Device device : list){
             System.out.println(device.toString());

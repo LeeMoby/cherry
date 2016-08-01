@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface RoomService {
 
-    Room getRoomByID(Long roomID);
+    Room getRoomById(int roomID);
 
     List<Room> findAllRoom();
 }

@@ -14,7 +14,7 @@ public interface DeviceTypeDAO {
      * @param deviceTypeID
      * @return
      */
-    DeviceType getDeviceTypeByID(@Param("deviceTypeID") long deviceTypeID);
+    DeviceType getDeviceTypeById(@Param("id") int deviceTypeID);
 
     /**
      * 获取所有DeviceType

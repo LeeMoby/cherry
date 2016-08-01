@@ -83,16 +83,16 @@ public class DeviceServiceImpl implements DeviceService {
             row = sheet.createRow(i + 1);
             device = devices.get(i);
             int j = 0;
-            insertCell(row, j++, device.getDno());
-            insertCell(row, j++, device.getDname());
-            insertCell(row, j++, device.getCabinet().getCno() + " " + device.getDplace());
-            insertCell(row, j++, device.getPerson());
+            insertCell(row, j++, device.getCode());
+            insertCell(row, j++, device.getName());
+            insertCell(row, j++, device.getCabinet().getName() + " " + device.getCabinetPosition());
+            insertCell(row, j++, device.getEmployee().getName());
             insertCell(row, j++, sdf.format(device.getUseDate()));
-            insertCell(row, j++, device.getNettype());
-            insertCell(row, j++, device.getDmodel());
-            insertCell(row, j++, device.getDcode());
-            insertCell(row, j++, device.getDip());
-            insertCell(row, j++, device.getDstatus());
+            insertCell(row, j++, device.getNetwork());
+            insertCell(row, j++, device.getBrand() + " " + device.getSeries() + " " + device.getModel());
+            insertCell(row, j++, device.getCodeSgcc());
+            insertCell(row, j++, device.getIpAddress());
+            insertCell(row, j++, device.getStatus());
             insertCell(row, j++, device.getSerialNumber());
 
         }

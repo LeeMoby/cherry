@@ -6,109 +6,150 @@ import java.util.Date;
  * Created by Moby on 16/6/8.
  */
 public class Device {
-    private Long did;
-    private String dname;
-    private Long dtid;
-    private String dno;
-    private Long cid;
-    private String dplace;
-    private String dmodel;
-    private String dcode;
-    private String dip;
-    private String dstatus;
+    private int id;
+    private String name;
+    private int deviceTypeId;
+    private String code;
+    private String codeSgcc;
+    private int roomId;
+    private int cabinetId;
+    private String cabinetPosition;
+    private String manufacturer;
+    private String brand;
+    private String series;
+    private String model;
+    private String status;
+    private String use;
     private Date useDate;
-    private String psupplier;
-    private String department;
-    private String nettype;
-    private String person;
-    private String oid;
-    private String defid;
-    private String fid;
-    private String projectid;
-    private String originalValue;
+    private String purchaseMethod;
     private String serialNumber;
+    private Date manufactureDate;
+    private Date serviceExpiryDate;
+    private String network;
+    private String ipAddress;
+    private int mgtDeptId;
+    private int mgtEmployeeId;
+    private String mgtPhone;
+    private String maintenanceSupplier;
+    private Date maintenanceDateStart;
+    private Date maintenanceDateEnd;
 
     private DeviceType deviceType;
     private Cabinet cabinet;
+    private Room room;
+    private Department department;
+    private Employee employee;
 
-    public String getDstatus() {
-        return dstatus;
+    public int getId() {
+        return id;
     }
 
-    public void setDstatus(String dstatus) {
-        this.dstatus = dstatus;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Long getDid() {
-        return did;
+    public String getName() {
+        return name;
     }
 
-    public void setDid(Long did) {
-        this.did = did;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDname() {
-        return dname;
+    public int getDeviceTypeId() {
+        return deviceTypeId;
     }
 
-    public void setDname(String dname) {
-        this.dname = dname;
+    public void setDeviceTypeId(int deviceTypeId) {
+        this.deviceTypeId = deviceTypeId;
     }
 
-    public Long getDtid() {
-        return dtid;
+    public String getCode() {
+        return code;
     }
 
-    public void setDtid(Long dtid) {
-        this.dtid = dtid;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getDno() {
-        return dno;
+    public String getCodeSgcc() {
+        return codeSgcc;
     }
 
-    public void setDno(String dno) {
-        this.dno = dno;
+    public void setCodeSgcc(String codeSgcc) {
+        this.codeSgcc = codeSgcc;
     }
 
-    public Long getCid() {
-        return cid;
+    public int getRoomId() {
+        return roomId;
     }
 
-    public void setCid(Long cid) {
-        this.cid = cid;
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 
-    public String getDplace() {
-        return dplace;
+    public int getCabinetId() {
+        return cabinetId;
     }
 
-    public void setDplace(String dplace) {
-        this.dplace = dplace;
+    public void setCabinetId(int cabinetId) {
+        this.cabinetId = cabinetId;
     }
 
-    public String getDmodel() {
-        return dmodel;
+    public String getCabinetPosition() {
+        return cabinetPosition;
     }
 
-    public void setDmodel(String dmodel) {
-        this.dmodel = dmodel;
+    public void setCabinetPosition(String cabinetPosition) {
+        this.cabinetPosition = cabinetPosition;
     }
 
-    public String getDcode() {
-        return dcode;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setDcode(String dcode) {
-        this.dcode = dcode;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
-    public String getDip() {
-        return dip;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setDip(String dip) {
-        this.dip = dip;
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getUse() {
+        return use;
+    }
+
+    public void setUse(String use) {
+        this.use = use;
     }
 
     public Date getUseDate() {
@@ -119,76 +160,12 @@ public class Device {
         this.useDate = useDate;
     }
 
-    public String getPsupplier() {
-        return psupplier;
+    public String getPurchaseMethod() {
+        return purchaseMethod;
     }
 
-    public void setPsupplier(String psupplier) {
-        this.psupplier = psupplier;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getNettype() {
-        return nettype;
-    }
-
-    public void setNettype(String nettype) {
-        this.nettype = nettype;
-    }
-
-    public String getPerson() {
-        return person;
-    }
-
-    public void setPerson(String person) {
-        this.person = person;
-    }
-
-    public String getOid() {
-        return oid;
-    }
-
-    public void setOid(String oid) {
-        this.oid = oid;
-    }
-
-    public String getDefid() {
-        return defid;
-    }
-
-    public void setDefid(String defid) {
-        this.defid = defid;
-    }
-
-    public String getFid() {
-        return fid;
-    }
-
-    public void setFid(String fid) {
-        this.fid = fid;
-    }
-
-    public String getProjectid() {
-        return projectid;
-    }
-
-    public void setProjectid(String projectid) {
-        this.projectid = projectid;
-    }
-
-    public String getOriginalValue() {
-        return originalValue;
-    }
-
-    public void setOriginalValue(String originalValue) {
-        this.originalValue = originalValue;
+    public void setPurchaseMethod(String purchaseMethod) {
+        this.purchaseMethod = purchaseMethod;
     }
 
     public String getSerialNumber() {
@@ -197,6 +174,86 @@ public class Device {
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
+    }
+
+    public Date getManufactureDate() {
+        return manufactureDate;
+    }
+
+    public void setManufactureDate(Date manufactureDate) {
+        this.manufactureDate = manufactureDate;
+    }
+
+    public Date getServiceExpiryDate() {
+        return serviceExpiryDate;
+    }
+
+    public void setServiceExpiryDate(Date serviceExpiryDate) {
+        this.serviceExpiryDate = serviceExpiryDate;
+    }
+
+    public String getNetwork() {
+        return network;
+    }
+
+    public void setNetwork(String network) {
+        this.network = network;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    public int getMgtDeptId() {
+        return mgtDeptId;
+    }
+
+    public void setMgtDeptId(int mgtDeptId) {
+        this.mgtDeptId = mgtDeptId;
+    }
+
+    public int getMgtEmployeeId() {
+        return mgtEmployeeId;
+    }
+
+    public void setMgtEmployeeId(int mgtEmployeeId) {
+        this.mgtEmployeeId = mgtEmployeeId;
+    }
+
+    public String getMgtPhone() {
+        return mgtPhone;
+    }
+
+    public void setMgtPhone(String mgtPhone) {
+        this.mgtPhone = mgtPhone;
+    }
+
+    public String getMaintenanceSupplier() {
+        return maintenanceSupplier;
+    }
+
+    public void setMaintenanceSupplier(String maintenanceSupplier) {
+        this.maintenanceSupplier = maintenanceSupplier;
+    }
+
+    public Date getMaintenanceDateStart() {
+        return maintenanceDateStart;
+    }
+
+    public void setMaintenanceDateStart(Date maintenanceDateStart) {
+        this.maintenanceDateStart = maintenanceDateStart;
+    }
+
+    public Date getMaintenanceDateEnd() {
+        return maintenanceDateEnd;
+    }
+
+    public void setMaintenanceDateEnd(Date maintenanceDateEnd) {
+        this.maintenanceDateEnd = maintenanceDateEnd;
     }
 
     public DeviceType getDeviceType() {
@@ -215,32 +272,65 @@ public class Device {
         this.cabinet = cabinet;
     }
 
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
     @Override
     public String toString() {
         return "Device{" +
-                "did=" + did +
-                ", dname='" + dname + '\'' +
-                ", dtid=" + dtid +
-                ", dno='" + dno + '\'' +
-                ", cid=" + cid +
-                ", dplace='" + dplace + '\'' +
-                ", dmodel='" + dmodel + '\'' +
-                ", dcode='" + dcode + '\'' +
-                ", dip='" + dip + '\'' +
-                ", dstatus='" + dstatus + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", deviceTypeId=" + deviceTypeId +
+                ", code='" + code + '\'' +
+                ", codeSgcc='" + codeSgcc + '\'' +
+                ", roomId=" + roomId +
+                ", cabinetId=" + cabinetId +
+                ", cabinetPosition='" + cabinetPosition + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", brand='" + brand + '\'' +
+                ", series='" + series + '\'' +
+                ", model='" + model + '\'' +
+                ", status='" + status + '\'' +
+                ", use='" + use + '\'' +
                 ", useDate=" + useDate +
-                ", psupplier='" + psupplier + '\'' +
-                ", department='" + department + '\'' +
-                ", nettype='" + nettype + '\'' +
-                ", person='" + person + '\'' +
-                ", oid='" + oid + '\'' +
-                ", defid='" + defid + '\'' +
-                ", fid='" + fid + '\'' +
-                ", projectid='" + projectid + '\'' +
-                ", originalValue='" + originalValue + '\'' +
+                ", purchaseMethod='" + purchaseMethod + '\'' +
                 ", serialNumber='" + serialNumber + '\'' +
+                ", manufactureDate=" + manufactureDate +
+                ", serviceExpiryDate=" + serviceExpiryDate +
+                ", network='" + network + '\'' +
+                ", ipAddress='" + ipAddress + '\'' +
+                ", mgtDeptId=" + mgtDeptId +
+                ", mgtEmployeeId=" + mgtEmployeeId +
+                ", mgtPhone='" + mgtPhone + '\'' +
+                ", maintenanceSupplier='" + maintenanceSupplier + '\'' +
+                ", maintenanceDateStart=" + maintenanceDateStart +
+                ", maintenanceDateEnd=" + maintenanceDateEnd +
                 ", deviceType=" + deviceType +
                 ", cabinet=" + cabinet +
+                ", room=" + room +
+                ", department=" + department +
+                ", employee=" + employee +
                 '}';
     }
 }

@@ -14,7 +14,7 @@ public interface CabinetDAO {
      * @param cabinetID
      * @return
      */
-    Cabinet getCabinetByID(@Param("cabinetID") long cabinetID);
+    Cabinet getCabinetById(@Param("id") int cabinetID);
 
     /**
      * 获取所有Cabinet
@@ -27,5 +27,5 @@ public interface CabinetDAO {
      * @param roomID
      * @return
      */
-    List<Cabinet> findCabinetByRoomID(@Param("roomID") long roomID);
+    List<Cabinet> findCabinetByRoomId(@Param("room_id") int roomID);
 }

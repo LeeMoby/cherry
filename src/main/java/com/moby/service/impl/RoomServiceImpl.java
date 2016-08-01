@@ -16,8 +16,8 @@ public class RoomServiceImpl implements RoomService {
     @Autowired
     private RoomDAO roomDAO;
 
-    public Room getRoomByID(Long roomID) {
-        return roomDAO.getRoomByID(roomID);
+    public Room getRoomById(int roomID) {
+        return roomDAO.getRoomById(roomID);
     }
 
     public List<Room> findAllRoom() {
