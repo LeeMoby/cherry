@@ -298,10 +298,15 @@
                IDs.push($(this).val());
            }
         });
-        var indata = {deviceIDs:IDs};
-        $.post("/device/delete", indata, function(data){
-            alert("ok");
-        }, 'json');
+        if(IDs.length > 0){
+            var indata = {deviceIDs:IDs};
+            $.post("/device/delete", indata, function(data){
+                alert(data);
+            }, 'json');
+        }else{
+            alert("请选择要删除的记录。");
+        }
+
     }
 </script>
 
