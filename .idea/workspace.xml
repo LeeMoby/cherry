@@ -2,277 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3691ec79-742f-4ef9-9eff-d6f91df21681" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DepartmentDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/EmployeeDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Department.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DevcieSafety.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceMultimedia.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceNetwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceOther.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Employee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/DepartmentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/EmployeeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DepartmentServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/EmployeeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DepartmentDAO.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDAO.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DepartmentDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/EmployeeDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/moby/service/DepartmentServiceTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/SeckillDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/SuccessKilledDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dto/Exposer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dto/SeckillExecution.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dto/SeckillResult.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Seckill.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/SuccessKilled.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/enums/SeckillStatEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/exception/RepeatKillException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/exception/SeckillCloseException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/exception/SeckillException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/SeckillService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/SeckillServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/moby/web/SeckillController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/SeckillDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/SeckillDAOTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/SuccessKilledDAOTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/moby/service/SeckillServiceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/css/bootstrap-datetimepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/css/bootstrap-datetimepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/css/dashboard.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/css/typeaheadjs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/chart1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/chart2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/chart3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/chart4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/cherry-256x256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/cherry-32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/images/family.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/bloodhound.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/bloodhound.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/bootstrap-datetimepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/holder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/ie-emulation-modes-warning.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/ie10-viewport-bug-workaround.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.bn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ee.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.rs-latin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.rs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sw.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ua.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/locales/bootstrap-datetimepicker.zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/seckill.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/typeahead.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/typeahead.bundle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/typeahead.jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/assets/js/typeahead.jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/CabinetDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/DeviceDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/DeviceTypeDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/RoomDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/SeckillDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dao/SuccessKilledDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dto/Exposer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dto/SeckillExecution.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/dto/SeckillResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/Cabinet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/Device.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/DeviceType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/Room.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/Seckill.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/entiry/SuccessKilled.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/enums/SeckillStatEnum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/exception/RepeatKillException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/exception/SeckillCloseException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/exception/SeckillException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/CabinetService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/DeviceService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/DeviceTypeService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/RoomService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/SeckillService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/impl/CabinetServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/impl/DeviceServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/impl/DeviceTypeServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/impl/RoomServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/service/impl/SeckillServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/web/CabinetController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/web/DeviceController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/web/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/com/moby/web/SeckillController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/CabinetDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/DeviceDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/DeviceTypeDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/RoomDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/SeckillDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mapper/SuccessKilledDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/mybatis-config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/spring/spring-dao.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/spring/spring-service.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/classes/spring/spring-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/common/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/common/head.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/common/tag.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/detail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/device/device_add.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/device/device_detail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/device/home.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/home.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/jsp/list.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/commons-codec-1.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/commons-fileupload-1.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/commons-io-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/druid-1.0.20.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/jackson-annotations-2.7.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/jackson-core-2.7.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/jackson-databind-2.7.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/logback-classic-1.1.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/logback-core-1.1.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/mariadb-java-client-1.4.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/mybatis-3.4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/mybatis-spring-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/poi-3.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/slf4j-api-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-aop-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-beans-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-context-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-core-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-expression-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-jdbc-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-test-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-tx-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-web-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/spring-webmvc-4.2.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/lib/standard-1.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/cherry/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/dao/SeckillDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/dao/SuccessKilledDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/dto/Exposer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/dto/SeckillExecution.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/dto/SeckillResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/Seckill.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/SuccessKilled.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/enums/SeckillStatEnum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/exception/RepeatKillException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/exception/SeckillCloseException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/exception/SeckillException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/SeckillService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/impl/SeckillServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/moby/web/SeckillController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapper/SeckillDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDAO.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/SeckillDAOTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/SuccessKilledDAOTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/service/SeckillServiceTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/dao/CabinetDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/dao/CabinetDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/dao/DeviceTypeDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/dao/DeviceTypeDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/dao/RoomDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/dao/RoomDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/Cabinet.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/entiry/Cabinet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/Device.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/entiry/Device.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/DeviceType.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/entiry/DeviceType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/entiry/Room.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/entiry/Room.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/CabinetService.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/CabinetService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/DeviceTypeService.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/DeviceTypeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/RoomService.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/RoomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/impl/CabinetServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/impl/CabinetServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/impl/DeviceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/impl/DeviceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/impl/DeviceTypeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/impl/DeviceTypeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/service/impl/RoomServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/service/impl/RoomServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/web/DeviceController.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/web/DeviceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/CabinetDAOTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/moby/dao/CabinetDAOTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/DeviceDAOTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/moby/dao/DeviceDAOTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/DeviceTypeDAOTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/moby/dao/DeviceTypeDAOTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/moby/dao/RoomDAOTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/moby/dao/RoomDAOTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceMultimediaDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceNetworkDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceOtherDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceSafetyDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceServerDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceStorageDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/CabinetDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/CabinetDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceTypeDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceTypeDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/RoomDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/RoomDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Cabinet.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Cabinet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceType.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Room.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/entiry/Room.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/CabinetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/CabinetService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceTypeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceTypeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/RoomService.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/RoomService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/CabinetServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/CabinetServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceTypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceTypeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/RoomServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/RoomServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/CabinetDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CabinetDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceTypeDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceTypeDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoomDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoomDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/CabinetDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/CabinetDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceTypeDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceTypeDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/RoomDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/RoomDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/CabinetDAO.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/CabinetDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/DeviceTypeDAO.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/DeviceTypeDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/RoomDAO.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/RoomDAO.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java" />
     </list>
     <ignored path="cherry.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -307,45 +45,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeviceTypeDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceTypeDAOTest.java">
+      <file leaf-file-name="DeviceSafetyDAO.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DepartmentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/service/DepartmentServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeDAO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/EmployeeDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1470039976000" expanded="true" signature="300:1135" ph="SELECT d.did... tb_device" />
+                <marker date="1470039976000" expanded="true" signature="1218:2051" ph="SELECT d.did... tb_device" />
+                <marker date="1470039976000" expanded="true" signature="5158:5684" ph="INSERT INTO tb_device... " />
+                <marker date="1470039976000" expanded="true" signature="5740:6254" ph="UPDATE tb_de... " />
               </folding>
             </state>
           </provider>
@@ -358,9 +67,9 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -375,13 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/holder.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp" />
-        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.6.RELEASE/spring-web-4.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_detail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceMultimedia.java" />
@@ -398,7 +100,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CabinetDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/Cabinet.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/moby/dao/CabinetDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/RoomDAO.java" />
@@ -426,6 +127,14 @@
         <option value="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceTypeDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DepartmentService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/moby/service/DepartmentServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceMultimedia.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceNetworkDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceOtherDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceServerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceStorageDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceSafetyDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
       </list>
     </option>
   </component>
@@ -975,6 +684,7 @@
       <recent name="com.moby.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.moby.dao" />
       <recent name="com.moby.service.impl" />
       <recent name="com.moby.service" />
     </key>
@@ -1730,7 +1440,7 @@
       <workItem from="1469495948427" duration="8396000" />
       <workItem from="1469671546631" duration="4875000" />
       <workItem from="1469760912351" duration="4253000" />
-      <workItem from="1470011949658" duration="10704000" />
+      <workItem from="1470011949658" duration="12231000" />
     </task>
     <servers />
   </component>
@@ -1767,7 +1477,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275588000" />
+    <option name="totallyTimeSpent" value="277115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1835,84 +1545,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/DeviceServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Cabinet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/SeckillDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/RoomDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/RoomService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1951,14 +1583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceTypeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceTypeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1976,14 +1600,6 @@
             <marker date="1470021219000" expanded="true" signature="629:861" ph="SELECT c.id,... basedata_cabinet" />
             <marker date="1470021219000" expanded="true" signature="963:1232" ph="SELECT c.id,... basedata_cabinet" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2066,12 +1682,12 @@
         <state relative-caret-position="105">
           <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
           <folding>
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="false" />
+            <element signature="e#692#693#0" expanded="false" />
+            <element signature="e#743#744#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1069#1070#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2121,7 +1737,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2159,14 +1775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -2235,19 +1843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1469415616000" expanded="true" signature="289:1124" ph="SELECT d.did... tb_device" />
-            <marker date="1469415616000" expanded="true" signature="1201:2034" ph="SELECT d.did... tb_device" />
-            <marker date="1469415616000" expanded="true" signature="5129:5655" ph="INSERT INTO tb_device... " />
-            <marker date="1469415616000" expanded="true" signature="5711:6225" ph="UPDATE tb_de... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/RoomDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -2269,7 +1864,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2301,13 +1896,13 @@
         <state relative-caret-position="209">
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#678#679#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#777#778#0" expanded="false" />
+            <element signature="e#839#840#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2325,7 +1920,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2348,10 +1943,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/EmployeeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="224">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceTypeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceMultimediaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceNetworkDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceOtherDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceServerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceStorageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceSafetyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <marker date="1470039976000" expanded="true" signature="300:1135" ph="SELECT d.did... tb_device" />
+            <marker date="1470039976000" expanded="true" signature="1218:2051" ph="SELECT d.did... tb_device" />
+            <marker date="1470039976000" expanded="true" signature="5158:5684" ph="INSERT INTO tb_device... " />
+            <marker date="1470039976000" expanded="true" signature="5740:6254" ph="UPDATE tb_de... " />
           </folding>
         </state>
       </provider>

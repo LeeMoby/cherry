@@ -14,7 +14,7 @@ public interface DeviceDAO {
      * @param deviceID
      * @return
      */
-    Device getDeviceByID(@Param("deviceID") Long deviceID);
+    Device getDeviceByID(@Param("id") int deviceID);
 
     /**
      * 获取所有Device
@@ -48,5 +48,5 @@ public interface DeviceDAO {
      * @param deviceIDs
      * @return
      */
-    int delDevice(@Param("deviceIDs") List deviceIDs);
+    int delDevice(@Param("ids") List deviceIDs);
 }

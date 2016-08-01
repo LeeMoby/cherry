@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.moby.dao.DeviceDAO">
-    <select id="getDeviceByID" parameterType="Long" resultType="Device">
+<mapper namespace="com.moby.dao.DeviceSafetyDAO">
+    <select id="getDeviceByID" parameterType="int" resultType="DeviceSafety">
         SELECT d.did, d.dname, d.dtid, d.dno, d.cid, d.dplace,
           d.dmodel, d.dcode, d.dip, d.dstatus, d.usedate, d.psupplier,
           d.department, d.nettype, d.person, d.oid, d.defid, d.fid,
@@ -20,7 +20,7 @@
         WHERE d.did = #{deviceID};
     </select>
 
-    <select id="findAllDevice" resultType="Device">
+    <select id="findAllDevice" resultType="DeviceSafety">
         SELECT d.did, d.dname, d.dtid, d.dno, d.cid, d.dplace,
           d.dmodel, d.dcode, d.dip, d.dstatus, d.usedate, d.psupplier,
           d.department, d.nettype, d.person, d.oid, d.defid, d.fid,
@@ -37,7 +37,7 @@
         ORDER BY dt.dtno, d.dno;
     </select>
 
-    <select id="findDeviceByDevice" parameterType="Device" resultType="Device">
+    <select id="findDeviceByDevice" parameterType="DeviceSafety" resultType="DeviceSafety">
         SELECT d.did, d.dname, d.dtid, d.dno, d.cid, d.dplace,
           d.dmodel, d.dcode, d.dip, d.dstatus, d.usedate, d.psupplier,
           d.department, d.nettype, d.person, d.oid, d.defid, d.fid,
@@ -143,8 +143,8 @@
 
     <delete id="delDevice" parameterType="java.util.List">
         DELETE FROM tb_device WHERE did IN
-        <foreach collection="deviceIDs" item="deviceID" open="(" separator="," close=")">
-            #{deviceID}
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
         </foreach>
         ;
     </delete>
