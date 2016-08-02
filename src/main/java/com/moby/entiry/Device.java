@@ -6,13 +6,13 @@ import java.util.Date;
  * Created by Moby on 16/6/8.
  */
 public class Device {
-    private int id;
+    private Integer id;
     private String name;
-    private int deviceTypeId;
+    private Integer deviceTypeId;
     private String code;
     private String codeSgcc;
-    private int roomId;
-    private int cabinetId;
+    private Integer roomId;
+    private Integer cabinetId;
     private String cabinetPosition;
     private String manufacturer;
     private String brand;
@@ -27,8 +27,8 @@ public class Device {
     private Date serviceExpiryDate;
     private String network;
     private String ipAddress;
-    private int mgtDeptId;
-    private int mgtEmployeeId;
+    private Integer mgtDeptId;
+    private Integer mgtEmployeeId;
     private String mgtPhone;
     private String maintenanceSupplier;
     private Date maintenanceDateStart;
@@ -40,11 +40,11 @@ public class Device {
     private Department department;
     private Employee employee;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -56,11 +56,11 @@ public class Device {
         this.name = name;
     }
 
-    public int getDeviceTypeId() {
+    public Integer getDeviceTypeId() {
         return deviceTypeId;
     }
 
-    public void setDeviceTypeId(int deviceTypeId) {
+    public void setDeviceTypeId(Integer deviceTypeId) {
         this.deviceTypeId = deviceTypeId;
     }
 
@@ -80,19 +80,19 @@ public class Device {
         this.codeSgcc = codeSgcc;
     }
 
-    public int getRoomId() {
+    public Integer getRoomId() {
         return roomId;
     }
 
-    public void setRoomId(int roomId) {
+    public void setRoomId(Integer roomId) {
         this.roomId = roomId;
     }
 
-    public int getCabinetId() {
+    public Integer getCabinetId() {
         return cabinetId;
     }
 
-    public void setCabinetId(int cabinetId) {
+    public void setCabinetId(Integer cabinetId) {
         this.cabinetId = cabinetId;
     }
 
@@ -208,19 +208,19 @@ public class Device {
         this.ipAddress = ipAddress;
     }
 
-    public int getMgtDeptId() {
+    public Integer getMgtDeptId() {
         return mgtDeptId;
     }
 
-    public void setMgtDeptId(int mgtDeptId) {
+    public void setMgtDeptId(Integer mgtDeptId) {
         this.mgtDeptId = mgtDeptId;
     }
 
-    public int getMgtEmployeeId() {
+    public Integer getMgtEmployeeId() {
         return mgtEmployeeId;
     }
 
-    public void setMgtEmployeeId(int mgtEmployeeId) {
+    public void setMgtEmployeeId(Integer mgtEmployeeId) {
         this.mgtEmployeeId = mgtEmployeeId;
     }
 

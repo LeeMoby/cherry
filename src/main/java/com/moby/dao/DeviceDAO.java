@@ -20,7 +20,7 @@ public interface DeviceDAO {
      * 获取所有Device
      * @return
      */
-    List<Device> findAllDevice();
+    List findAllDevice();
 
     /**
      * 根据device多条件获取device

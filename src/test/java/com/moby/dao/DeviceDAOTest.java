@@ -23,9 +23,9 @@ public class DeviceDAOTest {
     @Resource
     private DeviceDAO deviceDAO;
     @Test
-    public void getDeviceByID() throws Exception {
-        long deviceId = 1000L;
-        Device device = deviceDAO.getDeviceByID(deviceId);
+    public void getDeviceById() throws Exception {
+        int deviceId = 1000;
+        Device device = deviceDAO.getDeviceById(deviceId);
         System.out.println(device.toString());
     }
 

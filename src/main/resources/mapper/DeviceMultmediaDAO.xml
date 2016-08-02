@@ -28,7 +28,7 @@
         LEFT OUTER JOIN basedata_cabinet c ON d.cabinet_id = c.id
         LEFT OUTER JOIN basedata_department dept ON d.mgt_dept_id = dept.id
         LEFT OUTER JOIN basedata_employee emp ON d.mgt_employee_id = emp.id
-        WHERE d.id = #{deviceID};
+        WHERE d.id = #{id};
     </select>
 
     <select id="findAllDevice" resultType="DeviceMultimedia">
@@ -56,7 +56,7 @@
         LEFT OUTER JOIN basedata_cabinet c ON d.cabinet_id = c.id
         LEFT OUTER JOIN basedata_department dept ON d.mgt_dept_id = dept.id
         LEFT OUTER JOIN basedata_employee emp ON d.mgt_employee_id = emp.id
-        ORDER BY d.dno;
+        ORDER BY d.code;
     </select>
 
     <select id="findDeviceByDevice" parameterType="DeviceMultimedia" resultType="DeviceMultimedia">
@@ -89,16 +89,16 @@
                 d.id = #{id}
             </if>
             <if test="name != null">
-                AND d.name LIKE #{name}
+                AND d.name LIKE "%"#{name}"%"
             </if>
             <if test="deviceTypeId != null">
                 AND d.device_type_id = #{deviceTypeId}
             </if>
             <if test="code != null">
-                AND d.code LIKE #{code}
+                AND d.code LIKE "%"#{code}"%"
             </if>
             <if test="codeSgcc != null">
-                AND d.code_sgcc LIKE #{codeSgcc}
+                AND d.code_sgcc LIKE "%"#{codeSgcc}"%"
             </if>
             <if test="roomId != null">
                 AND d.room_id = #{roomId}
@@ -107,34 +107,34 @@
                 AND d.cabinet_id = #{cabinetId}
             </if>
             <if test="cabinetPosition != null">
-                AND d.cabinet_position LIKE #{cabinetPosition}
+                AND d.cabinet_position LIKE "%"#{cabinetPosition}"%"
             </if>
             <if test="manufacturer != null">
-                AND d.manufacturer LIKE #{manufacturer}
+                AND d.manufacturer LIKE "%"#{manufacturer}"%"
             </if>
             <if test="brand != null">
-                AND d.brand LIKE #{brand}
+                AND d.brand LIKE "%"#{brand}"%"
             </if>
             <if test="series != null">
-                AND d.series LIKE #{series}
+                AND d.series LIKE "%"#{series}"%"
             </if>
             <if test="model != null">
-                AND d.model LIKE #{model}
+                AND d.model LIKE "%"#{model}"%"
             </if>
             <if test="status != null">
                 AND d.status = #{status}
             </if>
             <if test="use != null">
-                AND d.use LIKE #{use}
+                AND d.use LIKE "%"#{use}"%"
             </if>
-            <if test="use_date != null">
-                AND d.use_date = #{use_date}
+            <if test="useDate != null">
+                AND d.use_date = #{useDate}
             </if>
             <if test="purchaseMethod != null">
-                AND d.purchase_method LIKE #{purchaseMethod}
+                AND d.purchase_method LIKE "%"#{purchaseMethod}"%"
             </if>
             <if test="serialNumber != null">
-                AND d.serial_number LIKE #{serialNumber}
+                AND d.serial_number LIKE "%"#{serialNumber}"%"
             </if>
             <if test="manufactureDate != null">
                 AND d.manufacture_date = #{manufactureDate}
@@ -143,10 +143,10 @@
                 AND d.service_expiry_date = #{serviceExpiryDate}
             </if>
             <if test="network != null">
-                AND d.network LIKE #{network}
+                AND d.network LIKE "%"#{network}"%"
             </if>
             <if test="ipAddress != null">
-                AND d.ip_address LIKE #{ipAddress}
+                AND d.ip_address LIKE "%"#{ipAddress}"%"
             </if>
             <if test="mgtDeptId != null">
                 AND d.mgt_dept_id = #{mgtDeptId}
@@ -155,10 +155,10 @@
                 AND d.mgt_employee_id = #{mgtEmployeeId}
             </if>
             <if test="mgtPhone != null">
-                AND d.mgt_phone LIKE #{mgtPhone}
+                AND d.mgt_phone LIKE "%"#{mgtPhone}"%"
             </if>
             <if test="maintenanceSupplier != null">
-                AND d.maintenance_supplier LIKE #{maintenanceSupplier}
+                AND d.maintenance_supplier LIKE "%"#{maintenanceSupplier}"%"
             </if>
             <if test="maintenanceDateStart != null">
                 AND d.maintenance_date_start = #{maintenanceDateStart}
@@ -171,14 +171,14 @@
     </select>
 
     <insert id="addDevice">
-        INSERT INTO device_multimedia d (d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
-            d.room_id, d.cabinet_id, d.cabinet_position, d.manufacturer,
-            d.brand, d.series, d.model, d.status, d.use, d.use_date,
-            d.purchase_method, d.serial_number, d.manufacture_date,
-            d.service_expiry_date, d.network, d.ip_address, d.mgt_dept_id,
-            d.mgt_employee_id, d.mgt_phone, d.maintenance_supplier,
-            d.maintenance_date_start, d.maintenance_date_end)
-        VALUES (#{id}, #{name}, #{deviceTypeId}, #{code}, #{codeSgcc},
+        INSERT INTO device_multimedia (`name`, `device_type_id`, `code`, `code_sgcc`,
+			`room_id`, `cabinet_id`, `cabinet_position`, `manufacturer`,
+            `brand`, `series`, `model`, `status`, `use`, `use_date`,
+            `purchase_method`, `serial_number`, `manufacture_date`,
+            `service_expiry_date`, `network`, `ip_address`, `mgt_dept_id`,
+            `mgt_employee_id`, `mgt_phone`, `maintenance_supplier`,
+            `maintenance_date_start`, `maintenance_date_end`)
+        VALUES (#{name}, #{deviceTypeId}, #{code}, #{codeSgcc},
             #{roomId}, #{cabinetId}, #{cabinetPosition}, #{manufacturer},
             #{brand}, #{series}, #{model}, #{status}, #{use}, #{useDate},
             #{purchaseMethod}, #{serialNumber}, #{manufactureDate},
@@ -189,8 +189,8 @@
 
     <update id="updateDevice">
         UPDATE device_multimedia d
-        SET d.name = #{name}, d.device_type_id = #{deviceTypeId}, d.code = #{code}, d.code_sgcc = #{code_sgcc},
-            d.room_id = #{roomId}, d.cabinet_id = #{cabinetId}, d.manufacturer = #{manufacturer},
+        SET d.name = #{name}, d.device_type_id = #{deviceTypeId}, d.code = #{code}, d.code_sgcc = #{codeSgcc},
+            d.room_id = #{roomId}, d.cabinet_id = #{cabinetId}, d.cabinet_position = #{cabinetPosition}, d.manufacturer = #{manufacturer},
             d.brand = #{brand}, d.series = #{series}, d.model = #{model}, d.status = #{status}, d.use = #{use}, d.use_date = #{useDate},
             d.purchase_method = #{purchaseMethod}, d.serial_number = #{serialNumber}, d.manufacture_date = #{manufactureDate},
             d.service_expiry_date = #{serviceExpiryDate}, d.network = #{network}, d.ip_address = #{ipAddress}, d.mgt_dept_id = #{mgtDeptId},

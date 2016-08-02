@@ -25,8 +25,8 @@ public class DeviceServiceImpl implements DeviceService {
     @Autowired
     private DeviceDAO deviceDAO;
 
-    public Device getDeviceById(Long deviceID) {
-        return deviceDAO.getDeviceByID(deviceID);
+    public Device getDeviceById(int deviceID) {
+        return deviceDAO.getDeviceById(deviceID);
     }
 
     public List<Device> findAllDevice() {

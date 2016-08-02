@@ -51,7 +51,7 @@ public class DeviceController {
     }
 
     @RequestMapping(value = "/{deviceID}/detail", method = RequestMethod.GET)
-    public String deviceDetail(@PathVariable("deviceID") Long deviceID, Model model) {
+    public String deviceDetail(@PathVariable("deviceID") Integer deviceID, Model model) {
         if (deviceID == null) {
             return "redirect:/device/home";
         }
