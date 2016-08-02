@@ -1,6 +1,9 @@
 package com.moby.dao;
 
 import com.moby.entiry.Device;
+import com.moby.entiry.DeviceMultimedia;
+import com.moby.entiry.DeviceOther;
+import com.moby.entiry.DeviceSafety;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,10 +25,34 @@ import static org.junit.Assert.*;
 public class DeviceDAOTest {
     @Resource
     private DeviceDAO deviceDAO;
+
+    @Resource
+    private DeviceMultimediaDAO deviceMultimediaDAO;
+
+    @Resource
+    private DeviceNetworkDAO deviceNetworkDAO;
+
+    @Resource
+    private DeviceSafetyDAO deviceSafetyDAO;
+
+    @Resource
+    private DeviceOtherDAO deviceOtherDAO;
+
+    @Resource
+    private DeviceServerDAO deviceServerDAO;
+
+    @Resource
+    private DeviceStorageDAO deviceStorageDAO;
+
     @Test
     public void getDeviceById() throws Exception {
-        int deviceId = 1000;
-        Device device = deviceDAO.getDeviceById(deviceId);
+        int deviceId = 1001;
+//        Device device = deviceMultimediaDAO.getDeviceById(deviceId);
+//        Device device = deviceNetworkDAO.getDeviceById(deviceId);
+//        Device device = deviceSafetyDAO.getDeviceById(deviceId);
+//        Device device = deviceOtherDAO.getDeviceById(deviceId);
+//        Device device = deviceServerDAO.getDeviceById(deviceId);
+        Device device = deviceStorageDAO.getDeviceById(deviceId);
         System.out.println(device.toString());
     }
 

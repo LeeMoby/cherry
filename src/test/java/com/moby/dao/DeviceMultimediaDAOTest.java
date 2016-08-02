@@ -158,8 +158,10 @@ public class DeviceMultimediaDAOTest {
         for (DeviceMultimedia deviceMultimedia : deviceMultimediaList){
             ids.add(deviceMultimedia.getId());
         }
-        int result = deviceMultimediaDAO.delDevice(ids);
-        logger.info("已删除" + result + "条记录");
+        if (ids.size() > 0) {
+            int result = deviceMultimediaDAO.delDevice(ids);
+            logger.info("已删除" + result + "条记录");
+        }
     }
 
 
