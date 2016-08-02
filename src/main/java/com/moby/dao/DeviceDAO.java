@@ -14,7 +14,7 @@ public interface DeviceDAO {
      * @param deviceID
      * @return
      */
-    Device getDeviceByID(@Param("id") int deviceID);
+    Device getDeviceById(@Param("id") int deviceID);
 
     /**
      * 获取所有Device

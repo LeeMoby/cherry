@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.moby.dao.DeviceSafetyDAO">
-    <select id="getDeviceById" parameterType="int" resultType="DeviceSafety">
+<mapper namespace="com.moby.dao.DeviceServerDAO">
+    <select id="getDeviceById" parameterType="int" resultType="DeviceServer">
         SELECT d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
             d.room_id, d.cabinet_id, d.cabinet_position, d.manufacturer,
             d.brand, d.series, d.model, d.status, d.use, d.use_date,
@@ -22,7 +22,7 @@
             emp.id "employee.id", emp.name "employee.name", emp.code "employee.code",
             emp.department_id "employee.departmentId", emp.phone "employee.phone",
             emp.cellphone "employee.cellphone"
-        FROM device_safety d
+        FROM device_server d
         LEFT OUTER JOIN basedata_device_type dt ON d.device_type_id = dt.id
         LEFT OUTER JOIN basedata_room r ON d.room_id = r.id
         LEFT OUTER JOIN basedata_cabinet c ON d.cabinet_id = c.id
@@ -31,7 +31,7 @@
         WHERE d.id = #{deviceID};
     </select>
 
-    <select id="findAllDevice" resultType="DeviceSafety">
+    <select id="findAllDevice" resultType="DeviceServer">
         SELECT d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
             d.room_id, d.cabinet_id, d.cabinet_position, d.manufacturer,
             d.brand, d.series, d.model, d.status, d.use, d.use_date,
@@ -50,7 +50,7 @@
             emp.id "employee.id", emp.name "employee.name", emp.code "employee.code",
             emp.department_id "employee.departmentId", emp.phone "employee.phone",
             emp.cellphone "employee.cellphone"
-        FROM device_safety d
+        FROM device_server d
         LEFT OUTER JOIN basedata_device_type dt ON d.device_type_id = dt.id
         LEFT OUTER JOIN basedata_room r ON d.room_id = r.id
         LEFT OUTER JOIN basedata_cabinet c ON d.cabinet_id = c.id
@@ -59,7 +59,7 @@
         ORDER BY d.dno;
     </select>
 
-    <select id="findDeviceByDevice" parameterType="DeviceSafety" resultType="DeviceSafety">
+    <select id="findDeviceByDevice" parameterType="DeviceServer" resultType="DeviceServer">
         SELECT d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
         d.room_id, d.cabinet_id, d.cabinet_position, d.manufacturer,
         d.brand, d.series, d.model, d.status, d.use, d.use_date,
@@ -78,7 +78,7 @@
         emp.id "employee.id", emp.name "employee.name", emp.code "employee.code",
         emp.department_id "employee.departmentId", emp.phone "employee.phone",
         emp.cellphone "employee.cellphone"
-        FROM device_safety d
+        FROM device_server d
         LEFT OUTER JOIN basedata_device_type dt ON d.device_type_id = dt.id
         LEFT OUTER JOIN basedata_room r ON d.room_id = r.id
         LEFT OUTER JOIN basedata_cabinet c ON d.cabinet_id = c.id
@@ -171,7 +171,7 @@
     </select>
 
     <insert id="addDevice">
-        INSERT INTO device_safety d (d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
+        INSERT INTO device_server d (d.id, d.name, d.device_type_id, d.code, d.code_sgcc,
             d.room_id, d.cabinet_id, d.cabinet_position, d.manufacturer,
             d.brand, d.series, d.model, d.status, d.use, d.use_date,
             d.purchase_method, d.serial_number, d.manufacture_date,
@@ -188,7 +188,7 @@
     </insert>
 
     <update id="updateDevice">
-        UPDATE device_safety d
+        UPDATE device_server d
         SET d.name = #{name}, d.device_type_id = #{deviceTypeId}, d.code = #{code}, d.code_sgcc = #{code_sgcc},
             d.room_id = #{roomId}, d.cabinet_id = #{cabinetId}, d.manufacturer = #{manufacturer},
             d.brand = #{brand}, d.series = #{series}, d.model = #{model}, d.status = #{status}, d.use = #{use}, d.use_date = #{useDate},
@@ -200,7 +200,7 @@
     </update>
 
     <delete id="delDevice" parameterType="java.util.List">
-        DELETE FROM device_safety WHERE id IN
+        DELETE FROM device_server WHERE id IN
         <foreach collection="ids" item="id" open="(" separator="," close=")">
             #{id}
         </foreach>
