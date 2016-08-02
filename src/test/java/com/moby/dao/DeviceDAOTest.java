@@ -1,11 +1,10 @@
 package com.moby.dao;
 
-import com.moby.entiry.Device;
-import com.moby.entiry.DeviceMultimedia;
-import com.moby.entiry.DeviceOther;
-import com.moby.entiry.DeviceSafety;
+import com.moby.entiry.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -23,6 +22,8 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/spring-dao.xml")
 public class DeviceDAOTest {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Resource
     private DeviceDAO deviceDAO;
 
@@ -53,93 +54,185 @@ public class DeviceDAOTest {
 //        Device device = deviceOtherDAO.getDeviceById(deviceId);
 //        Device device = deviceServerDAO.getDeviceById(deviceId);
         Device device = deviceStorageDAO.getDeviceById(deviceId);
-        System.out.println(device.toString());
+        logger.info("device: " + device);
     }
 
     @Test
     public void findAllDevice() throws Exception {
-        List<Device> list = deviceDAO.findAllDevice();
-        for (Device device : list){
-            System.out.println(device.toString());
+//        List list = deviceMultimediaDAO.findAllDevice();
+//        List list = deviceNetworkDAO.findAllDevice();
+//        List list = deviceSafetyDAO.findAllDevice();
+//        List list = deviceOtherDAO.findAllDevice();
+//        List list = deviceServerDAO.findAllDevice();
+        List list = deviceStorageDAO.findAllDevice();
+        for (int i = 0; i < list.size(); i++) {
+            Device device = (Device) list.get(i);
+            logger.info("device: " + device);
         }
     }
 
     @Test
     public void findDeviceByDevice() throws Exception {
-        //Device deviceParam = deviceDAO.getDeviceByID(1000L);
-        Device deviceParam = new Device();
-        deviceParam.setCabinetId(1014);
-        List<Device>  list = deviceDAO.findDeviceByDevice(deviceParam);
-        for (Device device : list){
-            System.out.println(device.toString());
+        Device aDevice = new Device();
+        aDevice.setName("test");
+//        List list = deviceMultimediaDAO.findAllDevice();
+//        List list = deviceNetworkDAO.findAllDevice();
+//        List list = deviceSafetyDAO.findAllDevice();
+//        List list = deviceOtherDAO.findAllDevice();
+//        List list = deviceServerDAO.findAllDevice();
+        List list = deviceStorageDAO.findAllDevice();
+        for (int i = 0; i < list.size(); i++) {
+            Device device = (Device)list.get(i);
+            logger.info("device: " + device);
         }
     }
 
     @Test
     public void addDevice() throws Exception {
-//        Device deviceParam = new Device();
-//        deviceParam.setDname("设备名称");
-//        deviceParam.setDtid(1002L);
-//        deviceParam.setDno("设备编号");
-//        deviceParam.setCid(1012L);
-//        deviceParam.setDplace("机柜内位置(U数)");
-//        deviceParam.setDmodel("设备型号");
-//        deviceParam.setDcode("资产编码");
-//        deviceParam.setDip("设备IP地址");
-//        deviceParam.setDstatus("设备状态");
-//        deviceParam.setUseDate(new Date());
-//        deviceParam.setPsupplier("供应商名称");
-//        deviceParam.setDepartment("运维单位");
-//        deviceParam.setNettype("网络类型");
-//        deviceParam.setPerson("责任人");
-//        deviceParam.setOid("OID");
-//        deviceParam.setDefid("DEFID");
-//        deviceParam.setFid("FID");
-//        deviceParam.setProjectid("项目ID");
-//        deviceParam.setOriginalValue("资产原值");
-//        deviceParam.setSerialNumber("序列号");
-//        int count = deviceDAO.addDevice(deviceParam);
-//        System.out.println("新增" + count + "条记录");
-//        this.findAllDevice();
+        Device newDevice = new Device();
+        newDevice.setName("设备名称-test");
+        int deviceTypeId = 1003; // 网络设备
+        newDevice.setDeviceTypeId(deviceTypeId);
+        newDevice.setCode("设备编号-test");
+        newDevice.setCodeSgcc("国网编号-test");
+        int roomId = 1001; // 12机房
+        newDevice.setRoomId(roomId);
+        int cabinetId = 1001; // 12AA机房
+        newDevice.setCabinetId(cabinetId);
+        newDevice.setCabinetPosition("机柜位置1-40U-test");
+        newDevice.setManufacturer("供应商-test");
+        newDevice.setBrand("品牌-test");
+        newDevice.setSeries("系列-test");
+        newDevice.setModel("型号-test");
+        newDevice.setStatus("设备状态-test");
+        newDevice.setUse("用途-test");
+        newDevice.setUseDate(new Date());
+        newDevice.setPurchaseMethod("采购方式-test");
+        newDevice.setSerialNumber("序列号-test");
+        newDevice.setManufactureDate(new Date());
+        newDevice.setServiceExpiryDate(new Date());
+        newDevice.setNetwork("所属网络-test");
+        newDevice.setIpAddress("IP地址-test");
+        int deptId = 1002; // 运检一室
+        newDevice.setMgtDeptId(deptId);
+        int empId = 1002; // 王磊
+        newDevice.setMgtEmployeeId(empId);
+        newDevice.setMgtPhone("联系电话-test");
+        newDevice.setMaintenanceSupplier("维保单位-test");
+        newDevice.setMaintenanceDateStart(new Date());
+        newDevice.setMaintenanceDateEnd(new Date());
+
+//        int result = deviceMultimediaDAO.addDevice(newDevice);
+//        int result = deviceNetworkDAO.addDevice(newDevice);
+//        int result = deviceSafetyDAO.addDevice(newDevice);
+//        int result = deviceOtherDAO.addDevice(newDevice);
+//        int result = deviceServerDAO.addDevice(newDevice);
+        int result = deviceStorageDAO.addDevice(newDevice);
+
+
+        if (result > 0) {
+            Device aDevice = new Device();
+            aDevice.setName("test");
+//            List list = deviceMultimediaDAO.findDeviceByDevice(aDevice);
+//            List list = deviceNetworkDAO.findDeviceByDevice(aDevice);
+//            List list = deviceSafetyDAO.findDeviceByDevice(aDevice);
+//            List list = deviceOtherDAO.findDeviceByDevice(aDevice);
+//            List list = deviceServerDAO.findDeviceByDevice(aDevice);
+            List list = deviceStorageDAO.findDeviceByDevice(aDevice);
+
+            for (int i = 0; i < list.size(); i++){
+                Device device = (Device) list.get(i);
+                logger.info("device: " + device);
+            }
+        }
 
     }
 
     @Test
     public void updateDevice() throws Exception {
-//        Device device = deviceDAO.getDeviceByID(1005L);
-//        device.setDname("设备名称" + "111");
-//        device.setDtid(1003L);
-//        device.setDno("设备编号" + "111");
-//        device.setCid(1013L);
-//        device.setDplace("机柜内位置(U数)" + "111");
-//        device.setDmodel("设备型号" + "111");
-//        device.setDcode("资产编码" + "111");
-//        device.setDip("设备IP地址" + "111");
-//        device.setDstatus("设备状态" + "111");
-//        device.setUseDate(new Date());
-//        device.setPsupplier("供应商名称" + "111");
-//        device.setDepartment("运维单位" + "111");
-//        device.setNettype("网络类型" + "111");
-//        device.setPerson("责任人" + "111");
-//        device.setOid("OID" + "111");
-//        device.setDefid("DEFID" + "111");
-//        device.setFid("FID" + "111");
-//        device.setProjectid("项目ID" + "111");
-//        device.setOriginalValue("资产原值" + "111");
-//        device.setSerialNumber("序列号" + "111");
-//        int count = deviceDAO.updateDevice(device);
-//        System.out.println("更新" + count + "条记录");
-//        this.findAllDevice();
+        Device aDevice = new Device();
+        aDevice.setName("test");
+//            List list = deviceMultimediaDAO.findDeviceByDevice(aDevice);
+//            List list = deviceNetworkDAO.findDeviceByDevice(aDevice);
+//            List list = deviceSafetyDAO.findDeviceByDevice(aDevice);
+//            List list = deviceOtherDAO.findDeviceByDevice(aDevice);
+//            List list = deviceServerDAO.findDeviceByDevice(aDevice);
+        List list = deviceStorageDAO.findDeviceByDevice(aDevice);
+        if (list.size() > 0){
+            aDevice = (Device) list.get(0);
+            aDevice.setName(aDevice.getName() + "-update");
+            int deviceTypeId = 1003; // 网络设备
+            aDevice.setDeviceTypeId(deviceTypeId);
+            aDevice.setCode(aDevice.getCode() + "-update");
+            aDevice.setCodeSgcc(aDevice.getCodeSgcc() + "-update");
+            int roomId = 1001; // 12机房
+            aDevice.setRoomId(roomId);
+            int cabinetId = 1001; // 12AA机房
+            aDevice.setCabinetId(cabinetId);
+            aDevice.setCabinetPosition(aDevice.getCabinetPosition() + "-update");
+            aDevice.setManufacturer(aDevice.getManufacturer() + "-update");
+            aDevice.setBrand(aDevice.getBrand() + "-update");
+            aDevice.setSeries(aDevice.getSeries() + "-update");
+            aDevice.setModel(aDevice.getModel() + "-update");
+            aDevice.setStatus(aDevice.getStatus() + "-update");
+            aDevice.setUse(aDevice.getUse() + "-update");
+            aDevice.setUseDate(new Date());
+            aDevice.setPurchaseMethod(aDevice.getPurchaseMethod() + "-update");
+            aDevice.setSerialNumber(aDevice.getSerialNumber() + "-update");
+            aDevice.setManufactureDate(new Date());
+            aDevice.setServiceExpiryDate(new Date());
+            aDevice.setNetwork(aDevice.getNetwork() + "-update");
+            aDevice.setIpAddress(aDevice.getIpAddress() + "-update");
+            int deptId = 1002; // 运检一室
+            aDevice.setMgtDeptId(deptId);
+            int empId = 1002; // 王磊
+            aDevice.setMgtEmployeeId(empId);
+            aDevice.setMgtPhone(aDevice.getMgtPhone() + "-update");
+            aDevice.setMaintenanceSupplier(aDevice.getMaintenanceSupplier() + "-update");
+            aDevice.setMaintenanceDateStart(new Date());
+            aDevice.setMaintenanceDateEnd(new Date());
+
+//            int result = deviceMultimediaDAO.updateDevice(aDevice);
+//            int result = deviceNetworkDAO.updateDevice(aDevice);
+//            int result = deviceSafetyDAO.updateDevice(aDevice);
+//            int result = deviceOtherDAO.updateDevice(aDevice);
+//            int result = deviceServerDAO.updateDevice(aDevice);
+            int result = deviceStorageDAO.updateDevice(aDevice);
+
+            if (result > 0) {
+//                logger.info("deviceNetwork: " + deviceMultimediaDAO.getDeviceById(aDevice.getId()));
+//                logger.info("deviceNetwork: " + deviceNetworkDAO.getDeviceById(aDevice.getId()));
+//                logger.info("deviceNetwork: " + deviceSafetyDAO.getDeviceById(aDevice.getId()));
+//                logger.info("deviceNetwork: " + deviceOtherDAO.getDeviceById(aDevice.getId()));
+//                logger.info("deviceNetwork: " + deviceServerDAO.getDeviceById(aDevice.getId()));
+                logger.info("deviceNetwork: " + deviceStorageDAO.getDeviceById(aDevice.getId()));
+            }
+        }
     }
 
     @Test
     public void delDevice() throws Exception {
-//        List deviceIDs = new ArrayList();
-//        deviceIDs.add("1006");
-//        deviceIDs.add("1007");
-//        int count = deviceDAO.delDevice(deviceIDs);
-//        System.out.println("删除" + count + "条记录");
-//        this.findAllDevice();
+        List ids = new ArrayList();
+        Device aDevice = new Device();
+        aDevice.setName("test");
+//            List list = deviceMultimediaDAO.findDeviceByDevice(aDevice);
+//            List list = deviceNetworkDAO.findDeviceByDevice(aDevice);
+//            List list = deviceSafetyDAO.findDeviceByDevice(aDevice);
+//            List list = deviceOtherDAO.findDeviceByDevice(aDevice);
+//            List list = deviceServerDAO.findDeviceByDevice(aDevice);
+        List list = deviceStorageDAO.findDeviceByDevice(aDevice);
+        for (int i = 0; i < list.size(); i++) {
+            ids.add(((Device)list.get(i)).getId());
+        }
+        if (ids.size() > 0){
+//            int result = deviceMultimediaDAO.delDevice(ids);
+//            int result = deviceNetworkDAO.delDevice(ids);
+//            int result = deviceSafetyDAO.delDevice(ids);
+//            int result = deviceOtherDAO.delDevice(ids);
+//            int result = deviceServerDAO.delDevice(ids);
+            int result = deviceStorageDAO.delDevice(ids);
+            logger.info("已删除" + result + "条记录");
+        }
     }
 
 }

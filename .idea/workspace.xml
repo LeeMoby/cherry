@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3691ec79-742f-4ef9-9eff-d6f91df21681" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceNetworkDAOTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceMultimediaDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceMultimediaDAOTest.java" />
     </list>
     <ignored path="cherry.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +41,8 @@
       <file leaf-file-name="DeviceDAOTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="63" selection-end-column="9" />
+            <state relative-caret-position="299">
+              <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,36 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceService.java">
+      <file leaf-file-name="Device.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="0">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepartmentServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DepartmentServiceImpl.java">
+      <file leaf-file-name="DeviceNetworkDAOTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceNetworkDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="179">
+              <caret line="155" column="39" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -735,8 +715,8 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeviceDAOTest.getDeviceById">
-    <configuration default="false" name="DeviceNetworkDAOTest.addDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeviceDAOTest.delDevice">
+    <configuration default="false" name="DeviceDAOTest.getDeviceById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.moby.dao.*" />
@@ -747,7 +727,59 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.moby.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceNetworkDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceDAOTest" />
+      <option name="METHOD_NAME" value="getDeviceById" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceDAOTest.findAllDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.moby.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cherry" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.moby.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceDAOTest" />
+      <option name="METHOD_NAME" value="findAllDevice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceDAOTest.addDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.moby.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cherry" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.moby.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceDAOTest" />
       <option name="METHOD_NAME" value="addDevice" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -762,7 +794,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DeviceNetworkDAOTest.updateDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DeviceDAOTest.updateDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.moby.dao.*" />
@@ -773,7 +805,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.moby.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceNetworkDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceDAOTest" />
       <option name="METHOD_NAME" value="updateDevice" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -788,59 +820,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DeviceNetworkDAOTest.delDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.moby.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cherry" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.moby.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceNetworkDAOTest" />
-      <option name="METHOD_NAME" value="delDevice" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DeviceMultimediaDAOTest.delDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.moby.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cherry" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.moby.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceMultimediaDAOTest" />
-      <option name="METHOD_NAME" value="delDevice" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DeviceDAOTest.getDeviceById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DeviceDAOTest.delDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.moby.dao.*" />
@@ -852,7 +832,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.moby.dao" />
       <option name="MAIN_CLASS_NAME" value="com.moby.dao.DeviceDAOTest" />
-      <option name="METHOD_NAME" value="getDeviceById" />
+      <option name="METHOD_NAME" value="delDevice" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1394,19 +1374,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.addDevice" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.updateDevice" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.delDevice" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceMultimediaDAOTest.delDevice" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.getDeviceById" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.getDeviceById" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.findAllDevice" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.addDevice" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.updateDevice" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.delDevice" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.getDeviceById" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.delDevice" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceMultimediaDAOTest.delDevice" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.updateDevice" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceNetworkDAOTest.addDevice" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.delDevice" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.updateDevice" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.addDevice" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.findAllDevice" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceDAOTest.getDeviceById" />
       </list>
     </recent_temporary>
   </component>
@@ -1473,19 +1453,25 @@
       <workItem from="1469671546631" duration="4875000" />
       <workItem from="1469760912351" duration="4253000" />
       <workItem from="1470011949658" duration="12976000" />
-      <workItem from="1470098057773" duration="14670000" />
+      <workItem from="1470098057773" duration="16551000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeviceDAOTest_getDeviceById - 2016.08.02 at 16h 47m 10s.xml">
-      <configuration name="DeviceDAOTest.getDeviceById" configurationId="JUnit" />
+    <history-entry file="DeviceDAOTest_addDevice - 2016.08.02 at 17h 20m 32s.xml">
+      <configuration name="DeviceDAOTest.addDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DeviceDAOTest_getDeviceById - 2016.08.02 at 16h 47m 40s.xml">
-      <configuration name="DeviceDAOTest.getDeviceById" configurationId="JUnit" />
+    <history-entry file="DeviceDAOTest_delDevice - 2016.08.02 at 17h 26m 51s.xml">
+      <configuration name="DeviceDAOTest.delDevice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DeviceDAOTest_getDeviceById - 2016.08.02 at 16h 50m 12s.xml">
-      <configuration name="DeviceDAOTest.getDeviceById" configurationId="JUnit" />
+    <history-entry file="DeviceDAOTest_delDevice - 2016.08.02 at 17h 29m 31s.xml">
+      <configuration name="DeviceDAOTest.delDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceDAOTest_findAllDevice - 2016.08.02 at 17h 09m 45s.xml">
+      <configuration name="DeviceDAOTest.findAllDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceDAOTest_findAllDevice - 2016.08.02 at 17h 10m 06s.xml">
+      <configuration name="DeviceDAOTest.findAllDevice" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DeviceDAOTest_getDeviceById - 2016.08.02 at 16h 50m 32s.xml">
       <configuration name="DeviceDAOTest.getDeviceById" configurationId="JUnit" />
@@ -1499,18 +1485,12 @@
     <history-entry file="DeviceDAOTest_getDeviceById - 2016.08.02 at 16h 51m 24s.xml">
       <configuration name="DeviceDAOTest.getDeviceById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DeviceMultimediaDAOTest_delDevice - 2016.08.02 at 16h 43m 24s.xml">
-      <configuration name="DeviceMultimediaDAOTest.delDevice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceNetworkDAOTest_delDevice - 2016.08.02 at 16h 42m 18s.xml">
-      <configuration name="DeviceNetworkDAOTest.delDevice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceNetworkDAOTest_delDevice - 2016.08.02 at 16h 44m 12s.xml">
-      <configuration name="DeviceNetworkDAOTest.delDevice" configurationId="JUnit" />
+    <history-entry file="DeviceDAOTest_updateDevice - 2016.08.02 at 17h 26m 23s.xml">
+      <configuration name="DeviceDAOTest.updateDevice" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292530000" />
+    <option name="totallyTimeSpent" value="294411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1534,7 +1514,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33722627" sideWeight="0.5113452" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1871961" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33430657" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33430657" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.493517" order="5" side_tool="false" content_ui="tabs" />
@@ -1569,7 +1549,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1822,14 +1802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceOtherDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1854,16 +1826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceStorageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1958,16 +1920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceMultimediaDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="160" column="29" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1978,16 +1930,6 @@
             <marker date="1470126445000" expanded="true" signature="2093:3803" ph="SELECT d.id,... device_other" />
             <marker date="1470126445000" expanded="true" signature="8740:9699" ph="INSERT INTO device_other... " />
             <marker date="1470126445000" expanded="true" signature="9755:10695" ph="UPDATE devic... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceNetworkDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2029,10 +1971,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceStorageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceMultimediaDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="160" column="29" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceNetworkDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="155" column="39" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/dao/DeviceDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="63" selection-end-column="9" />
+        <state relative-caret-position="299">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
