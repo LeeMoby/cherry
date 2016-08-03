@@ -39,13 +39,13 @@ public class DeviceController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String deviceHome(Model model) {
-        List<Device> list = deviceService.findAllDevice();
-        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
-        List<Room> roomList = roomService.findAllRoom();
+//        List<Device> list = deviceService.findAllDevice();
+//        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+//        List<Room> roomList = roomService.findAllRoom();
 
-        model.addAttribute("list", list);
-        model.addAttribute("deviceTypeList", deviceTypeList);
-        model.addAttribute("roomList", roomList);
+//        model.addAttribute("list", list);
+//        model.addAttribute("deviceTypeList", deviceTypeList);
+//        model.addAttribute("roomList", roomList);
 
         return "device/home";
     }
@@ -92,10 +92,10 @@ public class DeviceController {
     }
 
     @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
-    public void expExcel4All(HttpServletRequest request,
+    public void expAllDevice2Excel(HttpServletRequest request,
                              HttpServletResponse response) throws Exception {
         try {
-            byte[] bytes = deviceService.expExcel4All();
+            byte[] bytes = deviceService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="

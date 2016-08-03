@@ -49,7 +49,7 @@ public class DeviceServiceImpl implements DeviceService {
         return deviceDAO.delDevice(deviceIDs);
     }
 
-    public byte[] expExcel4All() throws Exception {
+    public byte[] expAllDevice2Excel() throws Exception {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         HSSFWorkbook wb = new HSSFWorkbook();
         HSSFSheet sheet = wb.createSheet("设备台账");

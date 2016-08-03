@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moby.dao.AuditDeviceDAO">
+    <select id="getAuditDevice" parameterType="int" resultType="AuditDevice">
+        SELECT a.id, a.type, a.datetime, a.user_id, a.ip_address,
+            a.browser, a.os, a.content
+        FROM audit_device a
+        WHERE a.id = #{id};
+    </select>
+
+    <select id="findAuditDeviceByDatetime" resultType="AuditDevice">
+        SELECT a.id, a.type, a.datetime, a.user_id, a.ip_address,
+            a.browser, a.os, a.content
+        FROM audit_device a
+        WHERE a.datetime BETWEEN #{start} AND #{end}
+        ORDER BY datetime DESC;
+    </select>
+
+    <insert id="addAuditDevice">
+        INSERT INTO audit_device (`type`, `datetime`, `user_id`,
+            `ip_address`, `browser`, `os`, `content`)
+        VALUES (#{type}, #{datetime}, #{userId},
+            #{ipAddress}, #{browser}, #{os}, #{content});
+    </insert>
+
+    <delete id="delAuditDevice" parameterType="java.util.List">
+        DELETE FROM audit_device WHERE id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        ;
+    </delete>
+
+    <delete id="delAuditDeviceByDatetime">
+        DELETE FROM audit_device
+        WHERE datetime BETWEEN #{start} AND #{end};
+    </delete>
+
+</mapper>

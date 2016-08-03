@@ -1,48 +1,48 @@
 package com.moby.service;
 
-import com.moby.entiry.Device;
-import com.moby.entiry.DeviceType;
+
+import com.moby.entiry.DeviceMultimedia;
 
 import java.util.List;
 
 /**
  * Created by Moby on 16/6/13.
  */
-public interface DeviceService {
+public interface DeviceMultimediaService {
 
     /**
      * 根据ID获取Device
      * @param deviceID
      * @return
      */
-    Device getDeviceById(int deviceID);
+    DeviceMultimedia getDeviceById(int deviceID);
 
     /**
      * 获取全部Device
      * @return
      */
-    List<Device> findAllDevice();
+    List<DeviceMultimedia> findAllDevice();
 
     /**
      * 根据多条件获取Device
      * @param device
      * @return
      */
-    List<Device> findDeviceByDevice(Device device);
+    List<DeviceMultimedia> findDeviceByDevice(DeviceMultimedia device);
 
     /**
      * 新增Device
      * @param device
      * @return
      */
-    int addDevcie(Device device);
+    int addDevcie(DeviceMultimedia device);
 
     /**
      * 更新Device
      * @param device
      * @return
      */
-    int updateDevice(Device device);
+    int updateDevice(DeviceMultimedia device);
 
     /**
      * 根据ID删除Device,多个用英文逗号分隔

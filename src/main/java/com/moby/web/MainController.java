@@ -25,8 +25,8 @@ public class MainController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(Model model) {
-        List<Device> list = deviceService.findAllDevice();
-        model.addAttribute("list", list);
+//        List<Device> list = deviceService.findAllDevice();
+//        model.addAttribute("list", list);
         return "home";
     }
 }
