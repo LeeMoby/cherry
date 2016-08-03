@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moby.dao.AuthUserDAO">
+    <select id="getAuthUserById" parameterType="int" resultType="AuthUser">
+        SELECT  u.id, u.name, u.login_name, u.password,
+            u.last_login_datetime, u.last_ip_address,
+            u.last_browser, u.last_os, u.employee_id,
+            emp.id "employee.id", emp.name "employee.name",
+            emp.code "employee.code", emp.department_id "employee.department",
+            emp.phone "employee.phone", emp.cellphone "employee.cellphone"
+        FROM auth_user u
+        LEFT OUTER JOIN basedata_employee emp ON u.employee_id = emp.id
+        WHERE u.id = #{id};
+    </select>
+
+    <update id="saveAuthUserLoginRecord">
+        UPDATE auth_user
+        SET last_login_datetime = #{lastLoginDatetime},
+            last_ip_address = #{lastIpAddress},
+            last_browser = #{lastBrowser},
+            last_os = #{lastOs}
+        WHERE id = #{id};
+    </update>
+
+</mapper>

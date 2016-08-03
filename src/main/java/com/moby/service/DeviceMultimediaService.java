@@ -1,6 +1,7 @@
 package com.moby.service;
 
 
+import com.moby.entiry.AuthUser;
 import com.moby.entiry.DeviceMultimedia;
 
 import java.util.List;
@@ -35,21 +36,21 @@ public interface DeviceMultimediaService {
      * @param device
      * @return
      */
-    int addDevcie(DeviceMultimedia device);
+    int addDevcie(DeviceMultimedia device, AuthUser authUser);
 
     /**
      * 更新Device
      * @param device
      * @return
      */
-    int updateDevice(DeviceMultimedia device);
+    int updateDevice(DeviceMultimedia device, AuthUser authUser);
 
     /**
      * 根据ID删除Device,多个用英文逗号分隔
      * @param deviceIDs
      * @return
      */
-    int delDevice(List deviceIDs);
+    int delDevice(List deviceIDs, AuthUser authUser);
 
     /**
      * 导出全部设备,Excel格式
