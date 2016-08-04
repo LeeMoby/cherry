@@ -71,7 +71,8 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">资产设备</h1>
+            <!-- <h1 class="page-header">资产设备</h1> -->
+
             <!-- 选项卡组件（菜单项nav-tabs）-->
             <ul id="myTab" class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#index" role="tab" data-toggle="tab">首页</a></li>
@@ -85,6 +86,11 @@
             <!-- 选项卡面板 -->
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="index">
+                    <h3 >概要</h3>
+                    <p>
+                        截止目前6类硬件设备共257台, 其中服务器104台, 存储设备18台, 网络设备54台, 安全设备21台, 音视频设备19台, 其他设备74台。 正常运行215台。 内网设备192台, 外网设备36台。
+                    </p>
+                    <h3>统计</h3>
                     <!-- 统计图表 2 X 2 -->
                     <div class="row">
                         <div class="col-md-6">
@@ -111,7 +117,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="server">服务器设备</div>
+                <div class="tab-pane fade" id="server">
+                    <%@include file="../device/deviceMultimedia.jsp" %>
+                </div>
                 <div class="tab-pane fade" id="storage">存储设备</div>
                 <div class="tab-pane fade" id="network">网络设备</div>
                 <div class="tab-pane fade" id="safety">安全设备</div>
@@ -124,7 +132,7 @@
 
 <%@include file="../common/footer.jsp" %>
 <!-- chart.js -->
-<script src="/js/Chart.min.js"></script>
+<script src="/resources/chartjs/Chart.min.js"></script>
 <script type="text/javascript">
     // 绘制图表
     // chart1

@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<div class="container-fluid" style="margin-top: 30px">
     <form class="form-inline">
         <div class="row">
             <div class="col-md-4">
@@ -7,7 +8,7 @@
                         <label for="deviceType">设备类型: </label>
                         <select id="deviceType" class="form-control">
                             <c:forEach var="deviceType" items="${deviceTypeList}">
-                                <option value="${deviceType.dtid}">${deviceType.dtname}</option>
+                                <option value="${deviceType.id}">${deviceType.name}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -34,7 +35,7 @@
                         <label for="roomid">所在机房: </label>
                         <select id="roomid" class="form-control">
                             <c:forEach var="room" items="${roomList}">
-                                <option value="${room.rid}">${room.rname}</option>
+                                <option value="${room.id}">${room.name}</option>
                             </c:forEach>
                         </select>
                     </div>

@@ -40,12 +40,12 @@ public class DeviceController {
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String deviceHome(Model model) {
 //        List<Device> list = deviceService.findAllDevice();
-//        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
-//        List<Room> roomList = roomService.findAllRoom();
+        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+        List<Room> roomList = roomService.findAllRoom();
 
 //        model.addAttribute("list", list);
-//        model.addAttribute("deviceTypeList", deviceTypeList);
-//        model.addAttribute("roomList", roomList);
+        model.addAttribute("deviceTypeList", deviceTypeList);
+        model.addAttribute("roomList", roomList);
 
         return "device/home";
     }
