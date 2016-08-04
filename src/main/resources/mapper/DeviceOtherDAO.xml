@@ -167,6 +167,7 @@
                 AND d.maintenance_date_end = #{maintenanceDateEnd}
             </if>
         </where>
+        ORDER BY d.code
         ;
     </select>
 
