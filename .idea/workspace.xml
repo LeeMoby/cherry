@@ -2,37 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3691ec79-742f-4ef9-9eff-d6f91df21681" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/ui-bootstrap-tpls-2.0.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/ui-bootstrap-tpls-2.0.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/chartjs/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/dashboard/js/holder.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/jquery.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/holder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/jquery.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/dashboard.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/dashboard/css/dashboard.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/chartjs/Chart.bundle.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/Chart.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/chartjs/Chart.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/bootstrap.min.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/css/bootstrap-datetimepicker.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/typeaheadjs.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/css/typeaheadjs.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/bloodhound.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/bloodhound.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/bloodhound.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/bloodhound.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/js/bootstrap-datetimepicker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/js/bootstrap-datetimepicker.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ar.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.az.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.az.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.bg.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.bg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.bn.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.bn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ca.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.cs.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.cs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.da.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.da.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.de.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.de.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ee.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ee.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.el.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.es.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.es.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.fi.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.fi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.fr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.fr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.he.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.he.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.hr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.hu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.hy.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.hy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.id.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.id.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.is.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.is.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.it.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.it.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ja.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ja.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ka.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ka.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ko.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ko.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.lt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.lt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.lv.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.lv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ms.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ms.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.nb.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.nb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.nl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.nl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.no.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.no.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.pl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pt-BR.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.pt-BR.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.pt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.pt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ro.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ro.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.rs-latin.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.rs-latin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.rs.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.rs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ru.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sk.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.sk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sl.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.sl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sv.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.sv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.sw.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.sw.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.th.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.th.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.tr.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.tr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.ua.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.ua.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.uk.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.uk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.zh-CN.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/locales/bootstrap-datetimepicker.zh-TW.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/locales/bootstrap-datetimepicker.zh-TW.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/typeahead.bundle.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/typeahead.bundle.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/typeahead.bundle.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/typeahead.bundle.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/typeahead.jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/typeahead.jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/typeahead.jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js/typeahead.jquery.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/moby/web/DeviceController.class" afterPath="$PROJECT_DIR$/target/classes/com/moby/web/DeviceController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" />
@@ -40,6 +67,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" />
     </list>
@@ -76,21 +104,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="192">
+              <caret line="343" column="18" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -99,28 +117,30 @@
       <file leaf-file-name="DeviceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            <state relative-caret-position="105">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp">
+      <file leaf-file-name="deviceMultimedia.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+              <folding>
+                <marker date="1470384124000" expanded="false" signature="4663:4670" ph="«" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <file leaf-file-name="device_add.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="33" column="65" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="65" />
+            <state relative-caret-position="2520">
+              <caret line="218" column="21" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -150,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/moby/dao/DepartmentDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/dao/EmployeeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDAO.xml" />
@@ -195,12 +214,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
       </list>
     </option>
   </component>
@@ -265,32 +285,7 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="cherry Maven Webapp" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="cherry Maven Webapp" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -356,7 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -464,40 +458,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cherry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cherry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="device" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -813,8 +773,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -834,6 +795,16 @@
       <recent name="com.moby.service" />
       <recent name="com.moby.dao" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/typeahead/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/typeahead/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/datetimepicker" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.moby.service" />
       <recent name="com.moby.dao" />
@@ -845,15 +816,6 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/jquery" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/bootstrap" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/dashboard/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8">
@@ -1598,7 +1560,8 @@
       <workItem from="1470186607515" duration="157000" />
       <workItem from="1470186809543" duration="6753000" />
       <workItem from="1470194963968" duration="14120000" />
-      <workItem from="1470271741768" duration="10324000" />
+      <workItem from="1470271741768" duration="11439000" />
+      <workItem from="1470358946293" duration="9043000" />
     </task>
     <servers />
   </component>
@@ -1635,7 +1598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328262000" />
+    <option name="totallyTimeSpent" value="338420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1647,7 +1610,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1276" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1276" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1660,7 +1623,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1871961" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33430657" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33868614" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.493517" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1671,8 +1634,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1703,13 +1666,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/DeviceNetworkDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1944,14 +1900,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/Chart.bundle.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/Chart.bundle.min.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -2092,38 +2041,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2162,33 +2080,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="218" column="21" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
+        <state relative-caret-position="192">
+          <caret line="343" column="18" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+          <folding>
+            <marker date="1470384124000" expanded="false" signature="4663:4670" ph="«" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,6 +4,7 @@ import com.moby.entiry.Device;
 import com.moby.entiry.DeviceMultimedia;
 import com.moby.entiry.DeviceType;
 import com.moby.entiry.Room;
+import com.moby.service.DeviceMultimediaService;
 import com.moby.service.DeviceService;
 import com.moby.service.DeviceTypeService;
 import com.moby.service.RoomService;
@@ -32,6 +33,9 @@ public class DeviceController {
     private DeviceService deviceService;
 
     @Autowired
+    private DeviceMultimediaService deviceMultimediaService;
+
+    @Autowired
     private DeviceTypeService deviceTypeService;
 
     @Autowired
@@ -39,11 +43,11 @@ public class DeviceController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String deviceHome(Model model) {
-//        List<Device> list = deviceService.findAllDevice();
+        List<DeviceMultimedia> deviceMultimediaList = deviceMultimediaService.findAllDevice();
         List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
         List<Room> roomList = roomService.findAllRoom();
 
-//        model.addAttribute("list", list);
+        model.addAttribute("deviceMultimediaList", deviceMultimediaList);
         model.addAttribute("deviceTypeList", deviceTypeList);
         model.addAttribute("roomList", roomList);
 

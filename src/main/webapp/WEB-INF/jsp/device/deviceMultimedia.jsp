@@ -74,7 +74,7 @@
             <th>位置</th>
             <th>责任人</th>
             <th>投运日期</th>
-            <th>型号</th>
+            <th>品牌</th>
             <th>所属网络</th>
             <th>设备型号</th>
             <th>资产编码</th>
@@ -85,22 +85,22 @@
         </thead>
         <tbody>
         <form class="form-inline">
-            <c:forEach var="device" items="${list}">
+            <c:forEach var="device" items="${deviceMultimediaList}">
                 <tr>
                     <td>
-                        <input type="checkbox" name="cbtn_id" value="${device.did}">
+                        <input type="checkbox" name="cbtn_id" value="${device.id}">
                     </td>
-                    <td><a href="/device/${device.did}/detail" target="_blank">${device.dno}</a></td>
-                    <td>${device.dname}</td>
-                    <td>${device.cabinet.cno} ${device.dplace}</td>
-                    <td>${device.person}</td>
+                    <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
+                    <td>${device.name}</td>
+                    <td>${device.cabinet.name} ${device.cabinetPosition}</td>
+                    <td>${device.employee.name}</td>
                     <td><fmt:formatDate value="${device.useDate}" pattern="yyyy-MM-dd"/></td>
-                    <td>${device.dmodel}</td>
-                    <td>${device.nettype}</td>
-                    <td>${device.dmodel}</td>
-                    <td>${device.dcode}</td>
-                    <td>${device.dip}</td>
-                    <td>${device.dstatus}</td>
+                    <td>${device.brand}</td>
+                    <td>${device.network}</td>
+                    <td>${device.model}</td>
+                    <td>${device.codeSgcc}</td>
+                    <td>${device.ipAddress}</td>
+                    <td>${device.status}</td>
                     <td>${device.serialNumber}</td>
                 </tr>
             </c:forEach>
@@ -109,22 +109,78 @@
     </table>
 
 </div>
-<nav>
-    <ul class="pagination">
-        <li class="disabled">
-            <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        </li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li>
-            <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+<%--<nav>--%>
+    <%--<ul class="pagination">--%>
+        <%--<li class="disabled">--%>
+            <%--<a href="#" aria-label="Previous">--%>
+                <%--<span aria-hidden="true">&laquo;</span>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
+        <%--<li><a href="#">2</a></li>--%>
+        <%--<li><a href="#">3</a></li>--%>
+        <%--<li><a href="#">4</a></li>--%>
+        <%--<li><a href="#">5</a></li>--%>
+        <%--<li>--%>
+            <%--<a href="#" aria-label="Next">--%>
+                <%--<span aria-hidden="true">&raquo;</span>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+    <%--</ul>--%>
+<%--</nav>--%>
+
+<script type="text/javascript">
+    //以Excel格式,导出全部数据
+    function exportExcel() {
+        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+    }
+    // 全选复选框,控制ID复选框
+    $(function () {
+        $('#cbtn_all').click(function () {
+            if (this.checked) {
+                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+            } else {
+                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+            }
+        });
+
+        $(':checkbox[name="cbtn_id"]').click(function () {
+            allchk();
+
+        })
+    });
+    //ID复选框,控制全选复选框
+    function allchk() {
+        var cb_total = $(':checkbox[name="cbtn_id"]').size();
+        var cb_num = 0;
+        $(':checkbox[name="cbtn_id"]').each(function () {
+            if ($(this).prop("checked") == true) {
+                cb_num++;
+            }
+        });
+        if (cb_total == cb_num) {
+            $('#cbtn_all').prop("checked", true);
+        } else {
+            $('#cbtn_all').prop("checked", false);
+        }
+    }
+    // 批量删除
+    function batchDelete() {
+        var IDs = new Array();
+        $(':checkbox[name="cbtn_id"]').each(function () {
+            if ($(this).prop("checked") == true) {
+                IDs.push($(this).val());
+            }
+        });
+        if (IDs.length > 0) {
+            var indata = {deviceIDs: IDs};
+            $.post("/device/delete", indata, function (data) {
+                var msg = "删除" + (data > 0 ? "成功" : "失败") + "。已删除" + data + "条记录。";
+                alert(msg);
+            }, 'json');
+        } else {
+            alert("请选择要删除的记录。");
+        }
+
+    }
+</script>

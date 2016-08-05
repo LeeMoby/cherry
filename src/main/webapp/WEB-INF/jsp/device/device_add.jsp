@@ -215,7 +215,7 @@
         }
     }
     $('.form_date').datetimepicker({
-        language:  'zh_CN',
+        language:  'zh-CN',
         weekStart: 1,
         todayBtn:  1,
         autoclose: 1,

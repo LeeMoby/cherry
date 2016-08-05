@@ -32,7 +32,6 @@
     <context:component-scan base-package="com.moby.web"/>
     <!-- 映射静态资源 -->
     <mvs:resources mapping="/js/**" location="/WEB-INF/assets/js/"/>
-    <mvs:resources mapping="/js/**" location="/WEB-INF/assets/js/"/>
     <mvs:resources mapping="/css/**" location="/WEB-INF/assets/css/"/>
     <mvs:resources mapping="/images/**" location="/WEB-INF/assets/images/"/>
 </beans>

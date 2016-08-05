@@ -15,7 +15,7 @@
     <link rel="icon" href="/images/cherry-32x32.png">
 
     <title>Cherry</title>
-    <%@include file="../common/head.jsp" %>
+    <%@include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                 <li class="active"><a href="http://localhost:8080/device/home/">资产设备 <span
                         class="sr-only">(current)</span></a></li>
             </ul>
-            <ul class="nav nav-sidebar">
+            <ul class="nav nav-sidebar"> 
                 <li><a href="http://localhost:8080/cherry/home/">系统配置</a></li>
                 <li><a href="http://localhost:8080/cherry/home/">偏好设置</a></li>
                 <li><a href="http://localhost:8080/cherry/home/">关于</a></li>
@@ -118,19 +118,21 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="server">
-                    <%@include file="../device/deviceMultimedia.jsp" %>
+                    <%@include file="deviceMultimedia.jsp" %>
                 </div>
                 <div class="tab-pane fade" id="storage">存储设备</div>
                 <div class="tab-pane fade" id="network">网络设备</div>
                 <div class="tab-pane fade" id="safety">安全设备</div>
-                <div class="tab-pane fade" id="multimedia">音视频设备</div>
+                <div class="tab-pane fade" id="multimedia">
+
+                </div>
                 <div class="tab-pane fade" id="other">其他设备</div>
             </div>
         </div>
     </div>
 </div>
 
-<%@include file="../common/footer.jsp" %>
+<%@include file="/WEB-INF/jsp/common/footer.jsp" %>
 <!-- chart.js -->
 <script src="/resources/chartjs/Chart.min.js"></script>
 <script type="text/javascript">
@@ -342,61 +344,9 @@
     var myCtx6 = myCanvas6.getContext("2d");
     new Chart(myCtx6, {type: "bubble", data: myData6});
 
-/*
-    //以Excel格式,导出全部数据
-    function exportExcel() {
-        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
-    }
-    // 全选复选框,控制ID复选框
-    $(function () {
-        $('#cbtn_all').click(function () {
-            if (this.checked) {
-                $(':checkbox[name="cbtn_id"]').prop("checked", true);
-            } else {
-                $(':checkbox[name="cbtn_id"]').prop("checked", false);
-            }
-        });
 
-        $(':checkbox[name="cbtn_id"]').click(function () {
-            allchk();
 
-        })
-    });
-    //ID复选框,控制全选复选框
-    function allchk() {
-        var cb_total = $(':checkbox[name="cbtn_id"]').size();
-        var cb_num = 0;
-        $(':checkbox[name="cbtn_id"]').each(function () {
-            if ($(this).prop("checked") == true) {
-                cb_num++;
-            }
-        });
-        if (cb_total == cb_num) {
-            $('#cbtn_all').prop("checked", true);
-        } else {
-            $('#cbtn_all').prop("checked", false);
-        }
-    }
-    // 批量删除
-    function batchDelete() {
-        var IDs = new Array();
-        $(':checkbox[name="cbtn_id"]').each(function () {
-            if ($(this).prop("checked") == true) {
-                IDs.push($(this).val());
-            }
-        });
-        if (IDs.length > 0) {
-            var indata = {deviceIDs: IDs};
-            $.post("/device/delete", indata, function (data) {
-                var msg = "删除" + (data > 0 ? "成功" : "失败") + "。已删除" + data + "条记录。";
-                alert(msg);
-            }, 'json');
-        } else {
-            alert("请选择要删除的记录。");
-        }
 
-    }
-    */
 </script>
 
 </body>

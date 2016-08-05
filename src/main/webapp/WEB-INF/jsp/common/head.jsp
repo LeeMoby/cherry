@@ -9,6 +9,6 @@
 <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<link href="/css/typeaheadjs.css" rel="stylesheet">
+<link href="/resources/typeahead/css/typeaheadjs.css" rel="stylesheet">
 
-<link href="/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="/resources/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">

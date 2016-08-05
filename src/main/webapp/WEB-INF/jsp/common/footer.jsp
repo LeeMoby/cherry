@@ -9,12 +9,12 @@
 <script src="/js/ie10-viewport-bug-workaround.js"></script>
 
 <!-- typeahead -->
-<script src="/js/bloodhound.min.js"></script>
-<script src="/js/typeahead.bundle.min.js"></script>
-<script src="/js/typeahead.jquery.min.js"></script>
+<script src="/resources/typeahead/js/bloodhound.min.js"></script>
+<script src="/resources/typeahead/js/typeahead.bundle.min.js"></script>
+<script src="/resources/typeahead/js/typeahead.jquery.min.js"></script>
 
 <!-- datetimepicker -->
-<script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/resources/datetimepicker/css/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/resources/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 
 
