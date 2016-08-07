@@ -67,7 +67,7 @@
         <thead>
         <tr class="info">
             <th>
-                <input type="checkbox" id="cbtn_all">
+                <input type="checkbox" id="cbtn_all" onclick="allchkbtn()">
             </th>
             <th>编号</th>
             <th>名称</th>
@@ -88,7 +88,7 @@
             <c:forEach var="device" items="${deviceMultimediaList}">
                 <tr>
                     <td>
-                        <input type="checkbox" name="cbtn_id" value="${device.id}">
+                        <input type="checkbox" name="cbtn_id" value="${device.id}" onclick="allchk()">
                     </td>
                     <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
@@ -135,20 +135,28 @@
         window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
     }
     // 全选复选框,控制ID复选框
-    $(function () {
-        $('#cbtn_all').click(function () {
-            if (this.checked) {
-                $(':checkbox[name="cbtn_id"]').prop("checked", true);
-            } else {
-                $(':checkbox[name="cbtn_id"]').prop("checked", false);
-            }
-        });
+//    $(function () {
+//        $('#cbtn_all').click(function () {
+//            if (this..prop("checked") == true) {
+//                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+//            } else {
+//                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+//            }
+//        });
+//
+//        $(':checkbox[name="cbtn_id"]').click(function () {
+//            allchk();
+//
+//        })
+//    });
+    function allchkbtn(){
+        if ($('#cbtn_all').prop("checked") == true) {
+            $(':checkbox[name="cbtn_id"]').prop("checked", true);
+        } else {
+            $(':checkbox[name="cbtn_id"]').prop("checked", false);
+        }
 
-        $(':checkbox[name="cbtn_id"]').click(function () {
-            allchk();
-
-        })
-    });
+    }
     //ID复选框,控制全选复选框
     function allchk() {
         var cb_total = $(':checkbox[name="cbtn_id"]').size();
