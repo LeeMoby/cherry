@@ -118,15 +118,23 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="server">
+                    <%@include file="deviceServer.jsp" %>
+                </div>
+                <div class="tab-pane fade" id="storage">
+                    <%@include file="deviceStorage.jsp" %>
+                </div>
+                <div class="tab-pane fade" id="network">
+                    <%@include file="deviceNetwork.jsp" %>
+                </div>
+                <div class="tab-pane fade" id="safety">
+                    <%@include file="deviceSafety.jsp" %>
+                </div>
+                <div class="tab-pane fade" id="multimedia">
                     <%@include file="deviceMultimedia.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="storage">存储设备</div>
-                <div class="tab-pane fade" id="network">网络设备</div>
-                <div class="tab-pane fade" id="safety">安全设备</div>
-                <div class="tab-pane fade" id="multimedia">
-
+                <div class="tab-pane fade" id="other">
+                    <%@include file="deviceOther.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="other">其他设备</div>
             </div>
         </div>
     </div>

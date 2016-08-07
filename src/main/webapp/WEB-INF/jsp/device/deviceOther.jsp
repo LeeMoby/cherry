@@ -5,21 +5,21 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="dm_name">名称: </label>
-                        <input type="text" class="form-control" id="dm_name" placeholder="请输入设备名称">
+                        <label for="do_name">设备名称: </label>
+                        <input type="text" class="form-control" id="do_name" placeholder="请输入设备名称">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dm_code">编号: </label>
-                    <input type="text" class="form-control" id="dm_code" placeholder="请输入设备编号">
+                    <label for="do_code">设备编号: </label>
+                    <input type="text" class="form-control" id="do_code" placeholder="请输入设备编号">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dm_ipAddress"> IP: </label>
-                    <input type="text" class="form-control" id="dm_ipAddress" placeholder="请输入部门">
+                    <label for="do_emp">责任人: </label>
+                    <input type="text" class="form-control" id="do_emp" placeholder="请输入责任人">
                 </div>
             </div>
         </div>
@@ -28,19 +28,19 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="dm_brand">型号: </label>
-                        <input type="text" class="form-control" id="dm_brand" placeholder="请输入责任人">
+                        <label for="do_roomid">所在机房: </label>
+                        <select id="do_roomid" class="form-control">
+                            <c:forEach var="room" items="${roomList}">
+                                <option value="${room.id}">${room.name}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dm_roomid">机房: </label>
-                    <select id="dm_roomid" class="form-control">
-                        <c:forEach var="room" items="${roomList}">
-                            <option value="${room.id}">${room.name}</option>
-                        </c:forEach>
-                    </select>
+                    <label for="do_dept">运维部门: </label>
+                    <input type="text" class="form-control" id="do_dept" placeholder="请输入部门">
                 </div>
             </div>
             <div class="col-md-4">
@@ -55,15 +55,15 @@
 <div class="text-right" style="margin-bottom: 5px">
     <a class="btn btn-info" href="/device/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
-    <button class="btn btn-danger" type="button" onclick="dm_batchDelete()">删除</button>
-    <button class="btn btn-info" type="button" onclick="dm_exportExcel()">导出</button>
+    <button class="btn btn-danger" type="button" onclick="do_batchDelete()">删除</button>
+    <button class="btn btn-info" type="button" onclick="do_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover" style="width: 1500px;">
         <thead>
         <tr class="info">
             <th>
-                <input type="checkbox" id="cbtn_dm_all" onclick="dm_allchkbtn()">
+                <input type="checkbox" id="cbtn_do_all" onclick="do_allchkbtn()">
             </th>
             <th>编号</th>
             <th>名称</th>
@@ -81,10 +81,10 @@
         </thead>
         <tbody>
         <form class="form-inline">
-            <c:forEach var="device" items="${deviceMultimediaList}">
+            <c:forEach var="device" items="${deviceOtherList}">
                 <tr>
                     <td>
-                        <input type="checkbox" name="cbtn_dm_id" value="${device.id}" onclick="dm_allchk()">
+                        <input type="checkbox" name="cbtn_do_id" value="${device.id}" onclick="do_allchk()">
                     </td>
                     <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
@@ -106,72 +106,72 @@
 
 </div>
 <%--<nav>--%>
-<%--<ul class="pagination">--%>
-<%--<li class="disabled">--%>
-<%--<a href="#" aria-label="Previous">--%>
-<%--<span aria-hidden="true">&laquo;</span>--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
-<%--<li><a href="#">2</a></li>--%>
-<%--<li><a href="#">3</a></li>--%>
-<%--<li><a href="#">4</a></li>--%>
-<%--<li><a href="#">5</a></li>--%>
-<%--<li>--%>
-<%--<a href="#" aria-label="Next">--%>
-<%--<span aria-hidden="true">&raquo;</span>--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--</ul>--%>
+    <%--<ul class="pagination">--%>
+        <%--<li class="disabled">--%>
+            <%--<a href="#" aria-label="Previous">--%>
+                <%--<span aria-hidden="true">&laquo;</span>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+        <%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
+        <%--<li><a href="#">2</a></li>--%>
+        <%--<li><a href="#">3</a></li>--%>
+        <%--<li><a href="#">4</a></li>--%>
+        <%--<li><a href="#">5</a></li>--%>
+        <%--<li>--%>
+            <%--<a href="#" aria-label="Next">--%>
+                <%--<span aria-hidden="true">&raquo;</span>--%>
+            <%--</a>--%>
+        <%--</li>--%>
+    <%--</ul>--%>
 <%--</nav>--%>
 
 <script type="text/javascript">
     //以Excel格式,导出全部数据
-    function dm_exportExcel() {
+    function do_exportExcel() {
         window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
     }
     // 全选复选框,控制ID复选框
-    //    $(function () {
-    //        $('#cbtn_all').click(function () {
-    //            if (this..prop("checked") == true) {
-    //                $(':checkbox[name="cbtn_id"]').prop("checked", true);
-    //            } else {
-    //                $(':checkbox[name="cbtn_id"]').prop("checked", false);
-    //            }
-    //        });
-    //
-    //        $(':checkbox[name="cbtn_id"]').click(function () {
-    //            allchk();
-    //
-    //        })
-    //    });
-    function dm_allchkbtn() {
-        if ($('#cbtn_dm_all').prop("checked") == true) {
-            $(':checkbox[name="cbtn_dm_id"]').prop("checked", true);
+//    $(function () {
+//        $('#cbtn_all').click(function () {
+//            if (this..prop("checked") == true) {
+//                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+//            } else {
+//                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+//            }
+//        });
+//
+//        $(':checkbox[name="cbtn_id"]').click(function () {
+//            allchk();
+//
+//        })
+//    });
+    function do_allchkbtn(){
+        if ($('#cbtn_do_all').prop("checked") == true) {
+            $(':checkbox[name="cbtn_do_id"]').prop("checked", true);
         } else {
-            $(':checkbox[name="cbtn_dm_id"]').prop("checked", false);
+            $(':checkbox[name="cbtn_do_id"]').prop("checked", false);
         }
 
     }
     //ID复选框,控制全选复选框
-    function dm_allchk() {
-        var cb_total = $(':checkbox[name="cbtn_dm_id"]').size();
+    function do_allchk() {
+        var cb_total = $(':checkbox[name="cbtn_do_id"]').size();
         var cb_num = 0;
-        $(':checkbox[name="cbtn_dm_id"]').each(function () {
+        $(':checkbox[name="cbtn_do_id"]').each(function () {
             if ($(this).prop("checked") == true) {
                 cb_num++;
             }
         });
         if (cb_total == cb_num) {
-            $('#cbtn_dm_all').prop("checked", true);
+            $('#cbtn_do_all').prop("checked", true);
         } else {
-            $('#cbtn_dm_all').prop("checked", false);
+            $('#cbtn_do_all').prop("checked", false);
         }
     }
     // 批量删除
-    function dm_batchDelete() {
+    function do_batchDelete() {
         var IDs = new Array();
-        $(':checkbox[name="cbtn_dm_id"]').each(function () {
+        $(':checkbox[name="cbtn_do_id"]').each(function () {
             if ($(this).prop("checked") == true) {
                 IDs.push($(this).val());
             }

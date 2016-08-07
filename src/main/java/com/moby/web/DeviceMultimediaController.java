@@ -2,7 +2,6 @@ package com.moby.web;
 
 import com.moby.entiry.*;
 import com.moby.service.*;
-import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,18 +12,16 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Created by Moby on 16/6/12.
  */
 @Controller
-@RequestMapping("/device")
-public class DeviceController {
+@RequestMapping("/device/multimedia")
+public class DeviceMultimediaController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    @Autowired
-    private DeviceService deviceService;
 
     @Autowired
     private DeviceMultimediaService deviceMultimediaService;
@@ -45,7 +42,7 @@ public class DeviceController {
     @Autowired
     private RoomService roomService;
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String deviceHome(Model model) {
         List<DeviceMultimedia> deviceMultimediaList = deviceMultimediaService.findAllDevice();
         List<DeviceNetwork> deviceNetworkList = deviceNetworkService.findAllDevice();
@@ -53,7 +50,6 @@ public class DeviceController {
         List<DeviceSafety> deviceSafetyList = deviceSafetyService.findAllDevice();
         List<DeviceServer> deviceServerList = deviceServerService.findAllDevice();
         List<DeviceStorage> deviceStorageList = deviceStorageService.findAllDevice();
-        List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
         List<Room> roomList = roomService.findAllRoom();
 
         model.addAttribute("deviceMultimediaList", deviceMultimediaList);
@@ -62,9 +58,8 @@ public class DeviceController {
         model.addAttribute("deviceSafetyList", deviceSafetyList);
         model.addAttribute("deviceServerList", deviceServerList);
         model.addAttribute("deviceStorageList", deviceStorageList);
-        model.addAttribute("deviceTypeList", deviceTypeList);
         model.addAttribute("roomList", roomList);
-        model.addAttribute("activeTab", "index");
+        model.addAttribute("activeTab", "multimedia");
 
         return "device/home";
     }
@@ -74,7 +69,7 @@ public class DeviceController {
         if (deviceID == null) {
             return "redirect:/device/home";
         }
-        Device device = deviceService.getDeviceById(deviceID);
+        Device device = deviceMultimediaService.getDeviceById(deviceID);
         if (device == null) {
             return "redirect:/device/home";
         }
@@ -91,7 +86,9 @@ public class DeviceController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveDevice(Model model, Device device) {
-        int result = deviceService.addDevcie(device);
+        DeviceMultimedia deviceMultimedia = (DeviceMultimedia) device;
+
+        int result = deviceMultimediaService.addDevcie(deviceMultimedia, this.getLoginUser());
         if (result == 1) {
             model.addAttribute("result", "已添加1条记录!");
         }
@@ -105,7 +102,7 @@ public class DeviceController {
         for(Long deviceID : deviceIDs){
             deviceIDList.add(deviceID);
         }
-        int result = deviceService.delDevice(deviceIDList);
+        int result = deviceMultimediaService.delDevice(deviceIDList, this.getLoginUser());
 
         return "" + result;
     }
@@ -114,7 +111,7 @@ public class DeviceController {
     public void expAllDevice2Excel(HttpServletRequest request,
                              HttpServletResponse response) throws Exception {
         try {
-            byte[] bytes = deviceService.expAllDevice2Excel();
+            byte[] bytes = deviceMultimediaService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
@@ -123,6 +120,16 @@ public class DeviceController {
         } catch (Exception ex) {
 
         }
+    }
+
+    private AuthUser getLoginUser(){
+        AuthUser authUser = new AuthUser();
+        authUser.setId(1001);
+        authUser.setLastLoginDatetime(new Date());
+        authUser.setLastIpAddress("10.200.230.1");
+        authUser.setLastBrowser("Chrome");
+        authUser.setLastOs("Windows 7");
+        return authUser;
     }
 
 
