@@ -11,10 +11,9 @@
 <!-- typeahead -->
 <script src="/resources/typeahead/js/bloodhound.min.js"></script>
 <script src="/resources/typeahead/js/typeahead.bundle.min.js"></script>
-<%--<script src="/resources/typeahead/js/typeahead.jquery.min.js"></script>--%>
+<script src="/resources/typeahead/js/typeahead.jquery.min.js"></script>
 
 <!-- datetimepicker -->
-<script type="text/javascript" src="/resources/datetimepicker/css/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/resources/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
-
+<script src="/resources/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/resources/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 

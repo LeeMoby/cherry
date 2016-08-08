@@ -3,7 +3,7 @@
 <%@include file="../common/tag.jsp" %>
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://localhost:8080/cherry/home/ -->
-<html lang="zh-CN">
+<html lang="UTF-8">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -75,17 +75,17 @@
 
             <!-- 选项卡组件（菜单项nav-tabs）-->
             <ul id="myTab" class="nav nav-tabs" role="tablist">
-                <li class="active"><a href="#index" role="tab" data-toggle="tab">首页</a></li>
-                <li><a href="#server" role="tab" data-toggle="tab">服务器</a></li>
-                <li><a href="#storage" role="tab" data-toggle="tab">存储</a></li>
-                <li><a href="#network" role="tab" data-toggle="tab">网络</a></li>
-                <li><a href="#safety" role="tab" data-toggle="tab">安全</a></li>
-                <li><a href="#multimedia" role="tab" data-toggle="tab">音视频</a></li>
-                <li><a href="#other" role="tab" data-toggle="tab">其他</a></li>
+                <li <c:if test="${activeTab == 'index'}">class="active"</c:if>><a href="#index" role="tab" data-toggle="tab">首页</a></li>
+                <li <c:if test="${activeTab == '服务器'}">class="active"</c:if>><a href="#server" role="tab" data-toggle="tab">服务器</a></li>
+                <li <c:if test="${activeTab == '存储'}">class="active"</c:if>><a href="#storage" role="tab" data-toggle="tab">存储</a></li>
+                <li <c:if test="${activeTab == '网络'}">class="active"</c:if>><a href="#network" role="tab" data-toggle="tab">网络</a></li>
+                <li <c:if test="${activeTab == '安全'}">class="active"</c:if>><a href="#safety" role="tab" data-toggle="tab">安全</a></li>
+                <li <c:if test="${activeTab == '音视频'}">class="active"</c:if>><a href="#multimedia" role="tab" data-toggle="tab">音视频</a></li>
+                <li <c:if test="${activeTab == '其他'}">class="active"</c:if>><a href="#other" role="tab" data-toggle="tab">其他</a></li>
             </ul>
             <!-- 选项卡面板 -->
             <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in active" id="index">
+                <div class="tab-pane fade <c:if test="${activeTab == 'index'}">in active</c:if>" id="index">
                     <h3 >概要</h3>
                     <p>
                         截止目前6类硬件设备共257台, 其中服务器104台, 存储设备18台, 网络设备54台, 安全设备21台, 音视频设备19台, 其他设备74台。 正常运行215台。 内网设备192台, 外网设备36台。
@@ -117,22 +117,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="server">
+                <div class="tab-pane fade <c:if test="${activeTab == '服务器'}">in active</c:if>" id="server">
                     <%@include file="deviceServer.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="storage">
+                <div class="tab-pane fade <c:if test="${activeTab == '存储'}">in active</c:if>" id="storage">
                     <%@include file="deviceStorage.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="network">
+                <div class="tab-pane fade <c:if test="${activeTab == '网络'}">in active</c:if>" id="network">
                     <%@include file="deviceNetwork.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="safety">
+                <div class="tab-pane fade <c:if test="${activeTab == '安全'}">in active</c:if>" id="safety">
                     <%@include file="deviceSafety.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="multimedia">
+                <div class="tab-pane fade <c:if test="${activeTab == '音视频'}">in active</c:if>" id="multimedia">
                     <%@include file="deviceMultimedia.jsp" %>
                 </div>
-                <div class="tab-pane fade" id="other">
+                <div class="tab-pane fade <c:if test="${activeTab == '其他'}">in active</c:if>" id="other">
                     <%@include file="deviceOther.jsp" %>
                 </div>
             </div>

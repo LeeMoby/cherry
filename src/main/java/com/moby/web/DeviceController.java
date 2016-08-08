@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,6 +45,10 @@ public class DeviceController {
 
     @Autowired
     private RoomService roomService;
+    @Autowired
+    private DepartmentService departmentService;
+    @Autowired
+    private EmployeeService employeeService;
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String deviceHome(Model model) {
@@ -85,13 +90,41 @@ public class DeviceController {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addDevice(Model model) {
         List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+        List<Room> roomList = roomService.findAllRoom();
+        List<Department> departmentList = departmentService.findAllDepartment();
+        List<Employee> employeeList = employeeService.findAllEmployee();
         model.addAttribute("deviceTypeList", deviceTypeList);
+        model.addAttribute("roomList", roomList);
+        model.addAttribute("departmentList", departmentList);
+        model.addAttribute("employeeList", employeeList);
         return "device/device_add";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveDevice(Model model, Device device) {
-        int result = deviceService.addDevcie(device);
+        int deviceTypeId = device.getDeviceTypeId();
+        int result = 0;
+        switch (deviceTypeId) {
+            case 1001:
+                result = deviceServerService.addDevcie((DeviceServer) device, this.getLoginUser());
+                break;
+            case 1002:
+                result = deviceStorageService.addDevcie((DeviceStorage) device, this.getLoginUser());
+                break;
+            case 1003:
+                result = deviceNetworkService.addDevcie((DeviceNetwork) device, this.getLoginUser());
+                break;
+            case 1004:
+                result = deviceSafetyService.addDevcie((DeviceSafety) device, this.getLoginUser());
+                break;
+            case 1005:
+                result = deviceMultimediaService.addDevcie((DeviceMultimedia) device, this.getLoginUser());
+                break;
+            case 1006:
+                result = deviceOtherService.addDevcie((DeviceOther) device, this.getLoginUser());
+                break;
+        }
+
         if (result == 1) {
             model.addAttribute("result", "已添加1条记录!");
         }
@@ -102,7 +135,7 @@ public class DeviceController {
     @ResponseBody
     public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs) {
         List deviceIDList = new ArrayList();
-        for(Long deviceID : deviceIDs){
+        for (Long deviceID : deviceIDs) {
             deviceIDList.add(deviceID);
         }
         int result = deviceService.delDevice(deviceIDList);
@@ -112,7 +145,7 @@ public class DeviceController {
 
     @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
     public void expAllDevice2Excel(HttpServletRequest request,
-                             HttpServletResponse response) throws Exception {
+                                   HttpServletResponse response) throws Exception {
         try {
             byte[] bytes = deviceService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
@@ -125,5 +158,13 @@ public class DeviceController {
         }
     }
 
-
+    private AuthUser getLoginUser(){
+        AuthUser authUser = new AuthUser();
+        authUser.setId(1001);
+        authUser.setLastLoginDatetime(new Date());
+        authUser.setLastIpAddress("10.200.230.1");
+        authUser.setLastBrowser("Chrome");
+        authUser.setLastOs("Windows 7");
+        return authUser;
+    }
 }

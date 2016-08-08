@@ -3,7 +3,7 @@
 <%@include file="../common/tag.jsp" %>
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://localhost:8080/cherry/home/ -->
-<html lang="zh-CN">
+<html lang="UTF-8">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 

@@ -28,4 +28,11 @@ public interface CabinetDAO {
      * @return
      */
     List<Cabinet> findCabinetByRoomId(@Param("room_id") int roomID);
+
+    /**
+     * 根据名称获取Cabinet
+     * @param name
+     * @return
+     */
+    List<Cabinet> findCabinetByName(@Param("name")String name);
 }

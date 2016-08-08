@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.List;
  * Created by Moby on 16/7/3.
  */
 @Controller
-@RequestMapping("/cabinet")
+@RequestMapping("/basedata/cabinet")
 public class CabinetController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -27,6 +28,13 @@ public class CabinetController {
     @ResponseBody
     public List<Cabinet> findAllCabinet(){
         List<Cabinet> cabinets = cabinetService.findAllCabinet();
+        return cabinets;
+    }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    @ResponseBody
+    public List<Cabinet> findCabinetByName(@RequestParam(value = "cabinetName")String name){
+        List<Cabinet> cabinets = cabinetService.findCabinetByName(name);
         return cabinets;
     }
 }

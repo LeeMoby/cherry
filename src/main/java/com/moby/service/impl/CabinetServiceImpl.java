@@ -27,4 +27,8 @@ public class CabinetServiceImpl implements CabinetService {
     public List<Cabinet> findAllCabinet() {
         return cabinetDAO.findAllCabinet();
     }
+
+    public List<Cabinet> findCabinetByName(String name) {
+        return cabinetDAO.findCabinetByName(name);
+    }
 }

@@ -1,5 +1,7 @@
 package com.moby.entiry;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -20,10 +22,13 @@ public class Device {
     private String model;
     private String status;
     private String use;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date useDate;
     private String purchaseMethod;
     private String serialNumber;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date manufactureDate;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date serviceExpiryDate;
     private String network;
     private String ipAddress;
@@ -31,7 +36,9 @@ public class Device {
     private Integer mgtEmployeeId;
     private String mgtPhone;
     private String maintenanceSupplier;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date maintenanceDateStart;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date maintenanceDateEnd;
 
     private DeviceType deviceType;

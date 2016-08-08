@@ -1,5 +1,7 @@
 package com.moby.entiry;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -8,6 +10,7 @@ import java.util.Date;
 public class AuditDevice {
     private Integer id;
     private String type;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date datetime;
     private Integer userId;
     private String ipAddress;

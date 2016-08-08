@@ -1,5 +1,7 @@
 package com.moby.entiry;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -10,6 +12,7 @@ public class AuthUser {
     private String name;
     private String loginName;
     private String password;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date lastLoginDatetime;
     private String lastIpAddress;
     private String lastBrowser;

@@ -11,4 +11,4 @@
 <![endif]-->
 <link href="/resources/typeahead/css/typeaheadjs.css" rel="stylesheet">
 
-<link href="/resources/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="/resources/datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">

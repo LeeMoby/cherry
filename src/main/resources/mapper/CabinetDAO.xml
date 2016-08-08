@@ -27,5 +27,13 @@
         INNER JOIN basedata_room r ON c.room_id = r.id
         WHERE c.room_id = #{room_id};
     </select>
+    <select id="findCabinetByName" parameterType="String" resultType="Cabinet">
+        SELECT c.id, c.name, c.type, r.id "room.id",
+        r.name "room.name", r.number "room.number",
+        r.place "room.place", r.type "room.type"
+        FROM basedata_cabinet c
+        INNER JOIN basedata_room r ON c.room_id = r.id
+        WHERE c.name LIKE "%"#{name}"%";
+    </select>
 
 </mapper>

@@ -41,6 +41,12 @@ public class DeviceMultimediaController {
 
     @Autowired
     private RoomService roomService;
+    @Autowired
+    private DepartmentService departmentService;
+    @Autowired
+    private EmployeeService employeeService;
+    @Autowired
+    private CabinetService cabinetService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String deviceHome(Model model) {
@@ -59,7 +65,7 @@ public class DeviceMultimediaController {
         model.addAttribute("deviceServerList", deviceServerList);
         model.addAttribute("deviceStorageList", deviceStorageList);
         model.addAttribute("roomList", roomList);
-        model.addAttribute("activeTab", "multimedia");
+        model.addAttribute("activeTab", "音视频");
 
         return "device/home";
     }
@@ -80,26 +86,35 @@ public class DeviceMultimediaController {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addDevice(Model model) {
         List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+        List<Room> roomList = roomService.findAllRoom();
+        List<Department> departmentList = departmentService.findAllDepartment();
+        List<Employee> employeeList = employeeService.findAllEmployee();
         model.addAttribute("deviceTypeList", deviceTypeList);
+        model.addAttribute("roomList", roomList);
+        model.addAttribute("departmentList", departmentList);
+        model.addAttribute("employeeList", employeeList);
+        model.addAttribute("activeTab", "音视频");
         return "device/device_add";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveDevice(Model model, Device device) {
-        DeviceMultimedia deviceMultimedia = (DeviceMultimedia) device;
-
+    public String saveDevice(Model model, DeviceMultimedia deviceMultimedia) {
+        List<Cabinet> cabinetList = cabinetService.findCabinetByName(deviceMultimedia.getCabinet().getName());
+        if (cabinetList != null && cabinetList.size() > 0) {
+            deviceMultimedia.setCabinetId(cabinetList.get(0).getId());
+        }
         int result = deviceMultimediaService.addDevcie(deviceMultimedia, this.getLoginUser());
         if (result == 1) {
             model.addAttribute("result", "已添加1条记录!");
         }
-        return "redirect:/device/home";
+        return "redirect:/device/multimedia/list";
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
     public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs) {
         List deviceIDList = new ArrayList();
-        for(Long deviceID : deviceIDs){
+        for (Long deviceID : deviceIDs) {
             deviceIDList.add(deviceID);
         }
         int result = deviceMultimediaService.delDevice(deviceIDList, this.getLoginUser());
@@ -109,20 +124,43 @@ public class DeviceMultimediaController {
 
     @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
     public void expAllDevice2Excel(HttpServletRequest request,
-                             HttpServletResponse response) throws Exception {
+                                   HttpServletResponse response) throws Exception {
         try {
             byte[] bytes = deviceMultimediaService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + java.net.URLEncoder.encode("设备台账.xls", "UTF-8"));
+                    + java.net.URLEncoder.encode("音视频设备台账.xls", "UTF-8"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
 
         }
     }
 
-    private AuthUser getLoginUser(){
+    @RequestMapping(value = "/query", method = RequestMethod.POST)
+    public String findDeviceByDevice(Model model, DeviceMultimedia deviceMultimedia) {
+        List<DeviceMultimedia> deviceMultimediaList = deviceMultimediaService.findDeviceByDevice(deviceMultimedia);
+        List<DeviceNetwork> deviceNetworkList = deviceNetworkService.findAllDevice();
+        List<DeviceOther> deviceOtherList = deviceOtherService.findAllDevice();
+        List<DeviceSafety> deviceSafetyList = deviceSafetyService.findAllDevice();
+        List<DeviceServer> deviceServerList = deviceServerService.findAllDevice();
+        List<DeviceStorage> deviceStorageList = deviceStorageService.findAllDevice();
+        List<Room> roomList = roomService.findAllRoom();
+
+        model.addAttribute("deviceMultimediaList", deviceMultimediaList);
+        model.addAttribute("deviceNetworkList", deviceNetworkList);
+        model.addAttribute("deviceOtherList", deviceOtherList);
+        model.addAttribute("deviceSafetyList", deviceSafetyList);
+        model.addAttribute("deviceServerList", deviceServerList);
+        model.addAttribute("deviceStorageList", deviceStorageList);
+        model.addAttribute("deviceMultimedia", deviceMultimedia);
+        model.addAttribute("roomList", roomList);
+        model.addAttribute("activeTab", "音视频");
+
+        return "device/home";
+    }
+
+    private AuthUser getLoginUser() {
         AuthUser authUser = new AuthUser();
         authUser.setId(1001);
         authUser.setLastLoginDatetime(new Date());

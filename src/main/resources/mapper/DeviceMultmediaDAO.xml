@@ -88,16 +88,16 @@
             <if test="id != null">
                 d.id = #{id}
             </if>
-            <if test="name != null">
+            <if test="name != null and name != ''">
                 AND d.name LIKE "%"#{name}"%"
             </if>
             <if test="deviceTypeId != null">
                 AND d.device_type_id = #{deviceTypeId}
             </if>
-            <if test="code != null">
+            <if test="code != null and code != ''">
                 AND d.code LIKE "%"#{code}"%"
             </if>
-            <if test="codeSgcc != null">
+            <if test="codeSgcc != null and codeSgcc != ''">
                 AND d.code_sgcc LIKE "%"#{codeSgcc}"%"
             </if>
             <if test="roomId != null">
@@ -106,34 +106,34 @@
             <if test="cabinetId != null">
                 AND d.cabinet_id = #{cabinetId}
             </if>
-            <if test="cabinetPosition != null">
+            <if test="cabinetPosition != null and cabinetPosition != ''">
                 AND d.cabinet_position LIKE "%"#{cabinetPosition}"%"
             </if>
-            <if test="manufacturer != null">
+            <if test="manufacturer != null and manufacturer != ''">
                 AND d.manufacturer LIKE "%"#{manufacturer}"%"
             </if>
-            <if test="brand != null">
+            <if test="brand != null and brand != ''">
                 AND d.brand LIKE "%"#{brand}"%"
             </if>
-            <if test="series != null">
+            <if test="series != null and series != ''">
                 AND d.series LIKE "%"#{series}"%"
             </if>
-            <if test="model != null">
+            <if test="model != null and model != ''">
                 AND d.model LIKE "%"#{model}"%"
             </if>
             <if test="status != null">
                 AND d.status = #{status}
             </if>
-            <if test="use != null">
+            <if test="use != null and use != ''">
                 AND d.use LIKE "%"#{use}"%"
             </if>
             <if test="useDate != null">
                 AND d.use_date = #{useDate}
             </if>
-            <if test="purchaseMethod != null">
+            <if test="purchaseMethod != null and purchaseMethod != ''">
                 AND d.purchase_method LIKE "%"#{purchaseMethod}"%"
             </if>
-            <if test="serialNumber != null">
+            <if test="serialNumber != null and serialNumber != ''">
                 AND d.serial_number LIKE "%"#{serialNumber}"%"
             </if>
             <if test="manufactureDate != null">
@@ -142,10 +142,10 @@
             <if test="serviceExpiryDate != null">
                 AND d.service_expiry_date = #{serviceExpiryDate}
             </if>
-            <if test="network != null">
+            <if test="network != null and network != ''">
                 AND d.network LIKE "%"#{network}"%"
             </if>
-            <if test="ipAddress != null">
+            <if test="ipAddress != null and ipAddress != ''">
                 AND d.ip_address LIKE "%"#{ipAddress}"%"
             </if>
             <if test="mgtDeptId != null">
@@ -154,10 +154,10 @@
             <if test="mgtEmployeeId != null">
                 AND d.mgt_employee_id = #{mgtEmployeeId}
             </if>
-            <if test="mgtPhone != null">
+            <if test="mgtPhone != null and mgtPhone != ''">
                 AND d.mgt_phone LIKE "%"#{mgtPhone}"%"
             </if>
-            <if test="maintenanceSupplier != null">
+            <if test="maintenanceSupplier != null and maintenanceSupplier != ''">
                 AND d.maintenance_supplier LIKE "%"#{maintenanceSupplier}"%"
             </if>
             <if test="maintenanceDateStart != null">
