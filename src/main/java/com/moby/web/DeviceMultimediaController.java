@@ -170,5 +170,32 @@ public class DeviceMultimediaController {
         return authUser;
     }
 
+    @RequestMapping(value = "/import", method = RequestMethod.GET)
+    public String importDevice(Model model, String uploadSign){
+        if (uploadSign != null && uploadSign.equals("save")){
+
+
+            List<DeviceMultimedia> deviceMultimediaList = deviceMultimediaService.findAllDevice();
+            List<DeviceNetwork> deviceNetworkList = deviceNetworkService.findAllDevice();
+            List<DeviceOther> deviceOtherList = deviceOtherService.findAllDevice();
+            List<DeviceSafety> deviceSafetyList = deviceSafetyService.findAllDevice();
+            List<DeviceServer> deviceServerList = deviceServerService.findAllDevice();
+            List<DeviceStorage> deviceStorageList = deviceStorageService.findAllDevice();
+            List<Room> roomList = roomService.findAllRoom();
+
+            model.addAttribute("deviceMultimediaList", deviceMultimediaList);
+            model.addAttribute("deviceNetworkList", deviceNetworkList);
+            model.addAttribute("deviceOtherList", deviceOtherList);
+            model.addAttribute("deviceSafetyList", deviceSafetyList);
+            model.addAttribute("deviceServerList", deviceServerList);
+            model.addAttribute("deviceStorageList", deviceStorageList);
+            model.addAttribute("roomList", roomList);
+            model.addAttribute("activeTab", "音视频");
+
+            return "device/home";
+        }else{
+            return "device/device_import";
+        }
+    }
 
 }

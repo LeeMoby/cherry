@@ -6,20 +6,23 @@
                 <div class="form-group">
                     <div class="dropdown">
                         <label for="dm_name">名称: </label>
-                        <input type="text" class="form-control" id="dm_name" name="name" value="<c:out value="${deviceMultimedia.name}"/>" placeholder="请输入设备名称">
+                        <input type="text" class="form-control" id="dm_name" name="name"
+                               value="<c:out value="${deviceMultimedia.name}"/>" placeholder="请输入设备名称">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="dm_code">编号: </label>
-                    <input type="text" class="form-control" id="dm_code" name="code" value="<c:out value="${deviceMultimedia.code}"/>" placeholder="请输入设备编号">
+                    <input type="text" class="form-control" id="dm_code" name="code"
+                           value="<c:out value="${deviceMultimedia.code}"/>" placeholder="请输入设备编号">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="dm_ipAddress"> IP: </label>
-                    <input type="text" class="form-control" id="dm_ipAddress" name="ipAddress" value="<c:out value="${deviceMultimedia.ipAddress}"/>" placeholder="请输入IP地址">
+                    <input type="text" class="form-control" id="dm_ipAddress" name="ipAddress"
+                           value="<c:out value="${deviceMultimedia.ipAddress}"/>" placeholder="请输入IP地址">
                 </div>
             </div>
         </div>
@@ -29,7 +32,8 @@
                 <div class="form-group">
                     <div class="dropdown">
                         <label for="dm_brand">品牌: </label>
-                        <input type="text" class="form-control" id="dm_brand" name="brand" value="<c:out value="${deviceMultimedia.brand}"/>" placeholder="请输入设备品牌">
+                        <input type="text" class="form-control" id="dm_brand" name="brand"
+                               value="<c:out value="${deviceMultimedia.brand}"/>" placeholder="请输入设备品牌">
                     </div>
                 </div>
             </div>
@@ -39,7 +43,8 @@
                     <select id="dm_roomid" name="roomId" class="form-control">
                         <option value="">全部</option>
                         <c:forEach var="room" items="${roomList}">
-                            <option value="${room.id}" <c:if test="${deviceMultimedia.roomId == room.id}">selected</c:if>>${room.name}</option>
+                            <option value="${room.id}"
+                                    <c:if test="${deviceMultimedia.roomId == room.id}">selected</c:if>>${room.name}</option>
                         </c:forEach>
                     </select>
                 </div>
@@ -57,6 +62,7 @@
     <a class="btn btn-info" href="/device/multimedia/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dm_batchDelete()">删除</button>
+    <a class="btn btn-info" href="/device/multimedia/import" target="_blank" role="button">导入</a>
     <button class="btn btn-info" type="button" onclick="dm_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">
@@ -132,7 +138,7 @@
         window.location.href = "/device/multimedia/export";
     }
 
-    function dm_query(){
+    function dm_query() {
         var theForm = document.getElementById("dm_form_query");
         theForm.action = "/device/multimedia/query";
         theForm.method = "post";
