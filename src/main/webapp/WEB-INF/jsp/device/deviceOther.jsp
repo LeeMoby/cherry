@@ -1,25 +1,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid" style="margin-top: 30px">
-    <form class="form-inline">
+    <form id="do_form_query" class="form-inline">
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="do_name">设备名称: </label>
-                        <input type="text" class="form-control" id="do_name" placeholder="请输入设备名称">
+                        <label for="do_name">名称: </label>
+                        <input type="text" class="form-control" id="do_name" name="name" value="<c:out value="${deviceOther.name}"/>" placeholder="请输入设备名称">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="do_code">设备编号: </label>
-                    <input type="text" class="form-control" id="do_code" placeholder="请输入设备编号">
+                    <label for="do_code">编号: </label>
+                    <input type="text" class="form-control" id="do_code" name="code" value="<c:out value="${deviceOther.code}"/>" placeholder="请输入设备编号">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="do_emp">责任人: </label>
-                    <input type="text" class="form-control" id="do_emp" placeholder="请输入责任人">
+                    <label for="do_ipAddress"> IP: </label>
+                    <input type="text" class="form-control" id="do_ipAddress" name="ipAddress" value="<c:out value="${deviceOther.ipAddress}"/>" placeholder="请输入IP地址">
                 </div>
             </div>
         </div>
@@ -28,24 +28,25 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="do_roomid">所在机房: </label>
-                        <select id="do_roomid" class="form-control">
-                            <c:forEach var="room" items="${roomList}">
-                                <option value="${room.id}">${room.name}</option>
-                            </c:forEach>
-                        </select>
+                        <label for="do_brand">品牌: </label>
+                        <input type="text" class="form-control" id="do_brand" name="brand" value="<c:out value="${deviceOther.brand}"/>" placeholder="请输入设备品牌">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="do_dept">运维部门: </label>
-                    <input type="text" class="form-control" id="do_dept" placeholder="请输入部门">
+                    <label for="do_roomid">机房: </label>
+                    <select id="do_roomid" name="roomId" class="form-control">
+                        <option value="">全部</option>
+                        <c:forEach var="room" items="${roomList}">
+                            <option value="${room.id}" <c:if test="${deviceOther.roomId == room.id}">selected</c:if>>${room.name}</option>
+                        </c:forEach>
+                    </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <button type="button" class="btn btn-primary"> &nbsp;&nbsp;&nbsp;查&nbsp;&nbsp;&nbsp;询&nbsp;&nbsp;&nbsp;</button>
+                    <button type="button" class="btn btn-primary" onclick="do_query()"> &nbsp;&nbsp;&nbsp;查&nbsp;&nbsp;&nbsp;询&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
         </div>
@@ -53,7 +54,7 @@
 </div>
 <br><br>
 <div class="text-right" style="margin-bottom: 5px">
-    <a class="btn btn-info" href="/device/add" target="_blank" role="button">新增</a>
+    <a class="btn btn-info" href="/device/other/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="do_batchDelete()">删除</button>
     <button class="btn btn-info" type="button" onclick="do_exportExcel()">导出</button>
@@ -106,46 +107,53 @@
 
 </div>
 <%--<nav>--%>
-    <%--<ul class="pagination">--%>
-        <%--<li class="disabled">--%>
-            <%--<a href="#" aria-label="Previous">--%>
-                <%--<span aria-hidden="true">&laquo;</span>--%>
-            <%--</a>--%>
-        <%--</li>--%>
-        <%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
-        <%--<li><a href="#">2</a></li>--%>
-        <%--<li><a href="#">3</a></li>--%>
-        <%--<li><a href="#">4</a></li>--%>
-        <%--<li><a href="#">5</a></li>--%>
-        <%--<li>--%>
-            <%--<a href="#" aria-label="Next">--%>
-                <%--<span aria-hidden="true">&raquo;</span>--%>
-            <%--</a>--%>
-        <%--</li>--%>
-    <%--</ul>--%>
+<%--<ul class="pagination">--%>
+<%--<li class="disabled">--%>
+<%--<a href="#" aria-label="Previous">--%>
+<%--<span aria-hidden="true">&laquo;</span>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
+<%--<li><a href="#">2</a></li>--%>
+<%--<li><a href="#">3</a></li>--%>
+<%--<li><a href="#">4</a></li>--%>
+<%--<li><a href="#">5</a></li>--%>
+<%--<li>--%>
+<%--<a href="#" aria-label="Next">--%>
+<%--<span aria-hidden="true">&raquo;</span>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--</ul>--%>
 <%--</nav>--%>
 
 <script type="text/javascript">
     //以Excel格式,导出全部数据
     function do_exportExcel() {
-        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+        window.location.href = "/device/other/export";
+    }
+
+    function do_query(){
+        var theForm = document.getElementById("do_form_query");
+        theForm.action = "/device/other/query";
+        theForm.method = "post";
+        theForm.submit();
     }
     // 全选复选框,控制ID复选框
-//    $(function () {
-//        $('#cbtn_all').click(function () {
-//            if (this..prop("checked") == true) {
-//                $(':checkbox[name="cbtn_id"]').prop("checked", true);
-//            } else {
-//                $(':checkbox[name="cbtn_id"]').prop("checked", false);
-//            }
-//        });
-//
-//        $(':checkbox[name="cbtn_id"]').click(function () {
-//            allchk();
-//
-//        })
-//    });
-    function do_allchkbtn(){
+    //    $(function () {
+    //        $('#cbtn_all').click(function () {
+    //            if (this..prop("checked") == true) {
+    //                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+    //            } else {
+    //                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+    //            }
+    //        });
+    //
+    //        $(':checkbox[name="cbtn_id"]').click(function () {
+    //            allchk();
+    //
+    //        })
+    //    });
+    function do_allchkbtn() {
         if ($('#cbtn_do_all').prop("checked") == true) {
             $(':checkbox[name="cbtn_do_id"]').prop("checked", true);
         } else {
@@ -178,10 +186,12 @@
         });
         if (IDs.length > 0) {
             var indata = {deviceIDs: IDs};
-            $.post("/device/delete", indata, function (data) {
+            $.post("/device/other/delete", indata, function (data) {
                 var msg = "删除" + (data > 0 ? "成功" : "失败") + "。已删除" + data + "条记录。";
                 alert(msg);
+
             }, 'json');
+            window.location.reload();
         } else {
             alert("请选择要删除的记录。");
         }

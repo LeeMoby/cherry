@@ -129,7 +129,7 @@ public class DeviceMultimediaServiceImpl implements DeviceMultimediaService {
         }
 
         List<DeviceMultimedia> devices = deviceMultimediaDAO.findAllDevice();
-        Device device = null;
+        Device device;
         for (int i = 0; i < devices.size(); i++) {
             row = sheet.createRow(i + 1);
             device = devices.get(i);
@@ -161,6 +161,9 @@ public class DeviceMultimediaServiceImpl implements DeviceMultimediaService {
             insertCell(wb, row, j++, device.getMaintenanceDateStart() != null ? sdf.format(device.getMaintenanceDateStart()) : "");
             insertCell(wb, row, j++, device.getMaintenanceDateEnd() != null ? sdf.format(device.getMaintenanceDateEnd()) : "");
 
+        }
+        for (int i = 0; i < heads.size(); i++) {
+            sheet.autoSizeColumn((short) i);
         }
         wb.write(out);
         return out.toByteArray();

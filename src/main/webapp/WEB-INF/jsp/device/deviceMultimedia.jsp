@@ -129,7 +129,6 @@
 <script type="text/javascript">
     //以Excel格式,导出全部数据
     function dm_exportExcel() {
-//        window.open("/device/multimedia/export", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
         window.location.href = "/device/multimedia/export";
     }
 

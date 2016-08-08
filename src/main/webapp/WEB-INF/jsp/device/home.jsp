@@ -64,7 +64,7 @@
                 <li class="active"><a href="http://localhost:8080/device/home/">资产设备 <span
                         class="sr-only">(current)</span></a></li>
             </ul>
-            <ul class="nav nav-sidebar"> 
+            <ul class="nav nav-sidebar">
                 <li><a href="http://localhost:8080/cherry/home/">系统配置</a></li>
                 <li><a href="http://localhost:8080/cherry/home/">偏好设置</a></li>
                 <li><a href="http://localhost:8080/cherry/home/">关于</a></li>
@@ -75,20 +75,28 @@
 
             <!-- 选项卡组件（菜单项nav-tabs）-->
             <ul id="myTab" class="nav nav-tabs" role="tablist">
-                <li <c:if test="${activeTab == 'index'}">class="active"</c:if>><a href="#index" role="tab" data-toggle="tab">首页</a></li>
-                <li <c:if test="${activeTab == '服务器'}">class="active"</c:if>><a href="#server" role="tab" data-toggle="tab">服务器</a></li>
-                <li <c:if test="${activeTab == '存储'}">class="active"</c:if>><a href="#storage" role="tab" data-toggle="tab">存储</a></li>
-                <li <c:if test="${activeTab == '网络'}">class="active"</c:if>><a href="#network" role="tab" data-toggle="tab">网络</a></li>
-                <li <c:if test="${activeTab == '安全'}">class="active"</c:if>><a href="#safety" role="tab" data-toggle="tab">安全</a></li>
-                <li <c:if test="${activeTab == '音视频'}">class="active"</c:if>><a href="#multimedia" role="tab" data-toggle="tab">音视频</a></li>
-                <li <c:if test="${activeTab == '其他'}">class="active"</c:if>><a href="#other" role="tab" data-toggle="tab">其他</a></li>
+                <li <c:if test="${activeTab == 'index'}">class="active"</c:if>><a href="#index" role="tab"
+                                                                                  data-toggle="tab">首页</a></li>
+                <li <c:if test="${activeTab == '服务器'}">class="active"</c:if>><a href="#server" role="tab"
+                                                                                data-toggle="tab">服务器</a></li>
+                <li <c:if test="${activeTab == '存储'}">class="active"</c:if>><a href="#storage" role="tab"
+                                                                               data-toggle="tab">存储</a></li>
+                <li <c:if test="${activeTab == '网络'}">class="active"</c:if>><a href="#network" role="tab"
+                                                                               data-toggle="tab">网络</a></li>
+                <li <c:if test="${activeTab == '安全'}">class="active"</c:if>><a href="#safety" role="tab"
+                                                                               data-toggle="tab">安全</a></li>
+                <li <c:if test="${activeTab == '音视频'}">class="active"</c:if>><a href="#multimedia" role="tab"
+                                                                                data-toggle="tab">音视频</a></li>
+                <li <c:if test="${activeTab == '其他'}">class="active"</c:if>><a href="#other" role="tab"
+                                                                               data-toggle="tab">其他</a></li>
             </ul>
             <!-- 选项卡面板 -->
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade <c:if test="${activeTab == 'index'}">in active</c:if>" id="index">
-                    <h3 >概要</h3>
+                    <h3>概要</h3>
                     <p>
-                        截止目前6类硬件设备共257台, 其中服务器104台, 存储设备18台, 网络设备54台, 安全设备21台, 音视频设备19台, 其他设备74台。 正常运行215台。 内网设备192台, 外网设备36台。
+                        截止目前6类硬件设备共257台, 其中服务器104台, 存储设备18台, 网络设备54台, 安全设备21台, 音视频设备19台, 其他设备74台。 正常运行215台。 内网设备192台,
+                        外网设备36台。
                     </p>
                     <h3>统计</h3>
                     <!-- 统计图表 2 X 2 -->
@@ -149,29 +157,61 @@
 
     var myData1 = {
         // x轴的标示
-        labels : ["2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+        labels: ["2011", "2012", "2013", "2014", "2015", "2016"],
         // 数据，数组中的每一个object代表一条线
-        datasets : [
+        datasets: [
             {
-                label: "服务器设备",
+                label: "服务器",
                 // 填充颜色
-                fillColor : "rgba(220,220,220,0.5)",
+                fillColor: "rgba(159,200,92,0.5)",
                 // 线的颜色
-                strokeColor : "rgba(220,220,220,1)",
+                strokeColor: "rgba(159,200,92,1)",
                 // 点的填充颜色
-                pointColor : "rgba(220,220,220,1)",
+                pointColor: "rgba(159,200,92,1)",
                 // 点的边线颜色
-                pointStrokeColor : "#fff",
+                pointStrokeColor: "#fff",
                 // 与x轴标示对应的数据
-                data : [65,59,90,190,56,55,40]
+                data: [23, 25, 31, 40, 56, 55]
             },
             {
-                label: "网络设备",
-                fillColor : "rgba(151,187,205,0)",
-                strokeColor : "rgba(151,187,205,1)",
-                pointColor : "rgba(151,187,205,1)",
-                pointStrokeColor : "#fff",
-                data : [28,48,40,19,96,27,100]
+                label: "存储",
+                fillColor: "rgba(151,187,205,0)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [12, 15, 18, 21, 27, 27]
+            },
+            {
+                label: "网络",
+                fillColor: "rgba(151,187,205,0)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [4, 8, 16, 20, 22, 22]
+            },
+            {
+                label: "安全",
+                fillColor: "rgba(151,187,205,0)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [16, 16, 16, 27, 36, 40]
+            },
+            {
+                label: "音视频",
+                fillColor: "rgba(0,187,205,0)",
+                strokeColor: "rgba(0,187,205,1)",
+                pointColor: "rgba(0,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [6, 12, 18, 20, 25, 27]
+            },
+            {
+                label: "其他",
+                fillColor: "rgba(151,187,205,0)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [25, 31, 35, 36, 46, 51]
             }
         ]
 
@@ -183,11 +223,11 @@
     // chart2
     var myData2 = {
         // x轴的标示
-        labels : ["2016-01","2016-02","2016-03","2016-04","2016-05","2016-06"],
+        labels: ["服务器", "存储", "网络", "安全", "音视频", "其他"],
         // 数据，数组中的每一个object代表一条线
         datasets: [
             {
-                label: "存储设备",
+                label: "在运",
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -205,28 +245,7 @@
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1,
-                data: [65, 59, 80, 81, 56, 55]
-            },
-            {
-                label: "安全设备",
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1,
-                data: [45, 34, 23, 13, 34, 51]
+                data: [65, 53, 57, 61, 56, 55]
             }
         ]
 
@@ -237,27 +256,27 @@
 
     // chart3
     var myData3 = {
-        labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+        labels: ["服务器", "存储", "网络", "安全", "音视频", "其他"],
         datasets: [
             {
-                label: "My First dataset",
+                label: "灾备建设一期",
                 backgroundColor: "rgba(179,181,198,0.2)",
                 borderColor: "rgba(179,181,198,1)",
                 pointBackgroundColor: "rgba(179,181,198,1)",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
                 pointHoverBorderColor: "rgba(179,181,198,1)",
-                data: [65, 59, 90, 81, 56, 55, 40]
+                data: [31, 23, 16, 10, 33, 40]
             },
             {
-                label: "My Second dataset",
+                label: "灾备建设二期",
                 backgroundColor: "rgba(255,99,132,0.2)",
                 borderColor: "rgba(255,99,132,1)",
                 pointBackgroundColor: "rgba(255,99,132,1)",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
                 pointHoverBorderColor: "rgba(255,99,132,1)",
-                data: [28, 48, 40, 19, 96, 27, 100]
+                data: [56, 31, 36, 31, 42, 67]
             }
         ]
     };
@@ -282,14 +301,14 @@
                 "#E7E9ED",
                 "#36A2EB"
             ],
-            label: 'My dataset' // for legend
+            label: '灾备演练' // for legend
         }],
         labels: [
-            "Red",
-            "Green",
-            "Yellow",
-            "Grey",
-            "Blue"
+            "甘肃",
+            "青海",
+            "宁夏",
+            "新疆",
+            "西藏"
         ]
     };
     var myCanvas4 = document.getElementById("myChart4");
@@ -299,22 +318,28 @@
     // chart5
     var myData5 = {
         labels: [
-            "Red",
-            "Blue",
-            "Yellow"
+            "甘肃",
+            "青海",
+            "宁夏",
+            "新疆",
+            "西藏"
         ],
         datasets: [
             {
-                data: [300, 50, 100],
+                data: [23, 31, 16, 24, 41],
                 backgroundColor: [
                     "#FF6384",
                     "#36A2EB",
-                    "#FFCE56"
+                    "#FFCE56",
+                    "#70CC33",
+                    "#CC33CC"
                 ],
                 hoverBackgroundColor: [
                     "#FF6384",
                     "#36A2EB",
-                    "#FFCE56"
+                    "#FFCE56",
+                    "#70CC33",
+                    "#CC33CC"
                 ]
             }]
     };
@@ -326,33 +351,72 @@
     var myData6 = {
         datasets: [
             {
-                label: 'First Dataset',
+                label: '一级检修',
                 data: [
                     {
-                        x: 20,
-                        y: 30,
+                        x: 1,
+                        y: 2,
                         r: 15
                     },
                     {
-                        x: 40,
-                        y: 10,
+                        x: 3,
+                        y: 2,
                         r: 10
                     },
                     {
-                        x: 23,
-                        y: 34,
+                        x: 5,
+                        y: 3,
+                        r: 25
+                    },
+                    {
+                        x: 7,
+                        y: 6,
                         r: 31
+                    },
+                    {
+                        x: 9,
+                        y: 6,
+                        r: 13
                     }
                 ],
-                backgroundColor:"#FF6384",
+                backgroundColor: "#FF6384",
                 hoverBackgroundColor: "#FF6384"
+            },{
+                label: '二级检修',
+                data: [
+                    {
+                        x: 1,
+                        y: 4,
+                        r: 15
+                    },
+                    {
+                        x: 3,
+                        y: 7,
+                        r: 10
+                    },
+                    {
+                        x: 5,
+                        y: 9,
+                        r: 31
+                    },
+                    {
+                        x: 7,
+                        y: 6,
+                        r: 27
+                    },
+                    {
+                        x: 12,
+                        y: 11,
+                        r: 19
+                    }
+                ],
+                backgroundColor: "#33CCCC",
+                hoverBackgroundColor: "#33CCCC"
             }]
     };
     var myCanvas6 = document.getElementById("myChart6");
     var myCtx6 = myCanvas6.getContext("2d");
     new Chart(myCtx6, {type: "bubble", data: myData6});
-
-
 
 
 </script>

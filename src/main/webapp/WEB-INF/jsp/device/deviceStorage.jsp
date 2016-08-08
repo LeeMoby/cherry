@@ -1,25 +1,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid" style="margin-top: 30px">
-    <form class="form-inline">
+    <form id="dst_form_query" class="form-inline">
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="dst_name">设备名称: </label>
-                        <input type="text" class="form-control" id="dst_name" placeholder="请输入设备名称">
+                        <label for="dst_name">名称: </label>
+                        <input type="text" class="form-control" id="dst_name" name="name" value="<c:out value="${deviceStorage.name}"/>" placeholder="请输入设备名称">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dst_code">设备编号: </label>
-                    <input type="text" class="form-control" id="dst_code" placeholder="请输入设备编号">
+                    <label for="dst_code">编号: </label>
+                    <input type="text" class="form-control" id="dst_code" name="code" value="<c:out value="${deviceStorage.code}"/>" placeholder="请输入设备编号">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dst_emp">责任人: </label>
-                    <input type="text" class="form-control" id="dst_emp" placeholder="请输入责任人">
+                    <label for="dst_ipAddress"> IP: </label>
+                    <input type="text" class="form-control" id="dst_ipAddress" name="ipAddress" value="<c:out value="${deviceStorage.ipAddress}"/>" placeholder="请输入IP地址">
                 </div>
             </div>
         </div>
@@ -28,24 +28,25 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="dropdown">
-                        <label for="dst_roomid">所在机房: </label>
-                        <select id="dst_roomid" class="form-control">
-                            <c:forEach var="room" items="${roomList}">
-                                <option value="${room.id}">${room.name}</option>
-                            </c:forEach>
-                        </select>
+                        <label for="dst_brand">品牌: </label>
+                        <input type="text" class="form-control" id="dst_brand" name="brand" value="<c:out value="${deviceStorage.brand}"/>" placeholder="请输入设备品牌">
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="dst_dept">运维部门: </label>
-                    <input type="text" class="form-control" id="dst_dept" placeholder="请输入部门">
+                    <label for="dst_roomid">机房: </label>
+                    <select id="dst_roomid" name="roomId" class="form-control">
+                        <option value="">全部</option>
+                        <c:forEach var="room" items="${roomList}">
+                            <option value="${room.id}" <c:if test="${deviceStorage.roomId == room.id}">selected</c:if>>${room.name}</option>
+                        </c:forEach>
+                    </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <button type="button" class="btn btn-primary"> &nbsp;&nbsp;&nbsp;查&nbsp;&nbsp;&nbsp;询&nbsp;&nbsp;&nbsp;</button>
+                    <button type="button" class="btn btn-primary" onclick="dst_query()"> &nbsp;&nbsp;&nbsp;查&nbsp;&nbsp;&nbsp;询&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
         </div>
@@ -53,7 +54,7 @@
 </div>
 <br><br>
 <div class="text-right" style="margin-bottom: 5px">
-    <a class="btn btn-info" href="/device/add" target="_blank" role="button">新增</a>
+    <a class="btn btn-info" href="/device/storage/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dst_batchDelete()">删除</button>
     <button class="btn btn-info" type="button" onclick="dst_exportExcel()">导出</button>
@@ -106,46 +107,53 @@
 
 </div>
 <%--<nav>--%>
-    <%--<ul class="pagination">--%>
-        <%--<li class="disabled">--%>
-            <%--<a href="#" aria-label="Previous">--%>
-                <%--<span aria-hidden="true">&laquo;</span>--%>
-            <%--</a>--%>
-        <%--</li>--%>
-        <%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
-        <%--<li><a href="#">2</a></li>--%>
-        <%--<li><a href="#">3</a></li>--%>
-        <%--<li><a href="#">4</a></li>--%>
-        <%--<li><a href="#">5</a></li>--%>
-        <%--<li>--%>
-            <%--<a href="#" aria-label="Next">--%>
-                <%--<span aria-hidden="true">&raquo;</span>--%>
-            <%--</a>--%>
-        <%--</li>--%>
-    <%--</ul>--%>
+<%--<ul class="pagination">--%>
+<%--<li class="disabled">--%>
+<%--<a href="#" aria-label="Previous">--%>
+<%--<span aria-hidden="true">&laquo;</span>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--%>
+<%--<li><a href="#">2</a></li>--%>
+<%--<li><a href="#">3</a></li>--%>
+<%--<li><a href="#">4</a></li>--%>
+<%--<li><a href="#">5</a></li>--%>
+<%--<li>--%>
+<%--<a href="#" aria-label="Next">--%>
+<%--<span aria-hidden="true">&raquo;</span>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--</ul>--%>
 <%--</nav>--%>
 
 <script type="text/javascript">
     //以Excel格式,导出全部数据
     function dst_exportExcel() {
-        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+        window.location.href = "/device/storage/export";
+    }
+
+    function dst_query(){
+        var theForm = document.getElementById("dst_form_query");
+        theForm.action = "/device/storage/query";
+        theForm.method = "post";
+        theForm.submit();
     }
     // 全选复选框,控制ID复选框
-//    $(function () {
-//        $('#cbtn_all').click(function () {
-//            if (this..prop("checked") == true) {
-//                $(':checkbox[name="cbtn_id"]').prop("checked", true);
-//            } else {
-//                $(':checkbox[name="cbtn_id"]').prop("checked", false);
-//            }
-//        });
-//
-//        $(':checkbox[name="cbtn_id"]').click(function () {
-//            allchk();
-//
-//        })
-//    });
-    function dst_allchkbtn(){
+    //    $(function () {
+    //        $('#cbtn_all').click(function () {
+    //            if (this..prop("checked") == true) {
+    //                $(':checkbox[name="cbtn_id"]').prop("checked", true);
+    //            } else {
+    //                $(':checkbox[name="cbtn_id"]').prop("checked", false);
+    //            }
+    //        });
+    //
+    //        $(':checkbox[name="cbtn_id"]').click(function () {
+    //            allchk();
+    //
+    //        })
+    //    });
+    function dst_allchkbtn() {
         if ($('#cbtn_dst_all').prop("checked") == true) {
             $(':checkbox[name="cbtn_dst_id"]').prop("checked", true);
         } else {
@@ -178,10 +186,12 @@
         });
         if (IDs.length > 0) {
             var indata = {deviceIDs: IDs};
-            $.post("/device/delete", indata, function (data) {
+            $.post("/device/storage/delete", indata, function (data) {
                 var msg = "删除" + (data > 0 ? "成功" : "失败") + "。已删除" + data + "条记录。";
                 alert(msg);
+
             }, 'json');
+            window.location.reload();
         } else {
             alert("请选择要删除的记录。");
         }

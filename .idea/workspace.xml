@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3691ec79-742f-4ef9-9eff-d6f91df21681" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceNetworkController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceOtherController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceSafetyController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceServerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceStorageController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/moby/web/DeviceOtherControllerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceOtherServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceOtherServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceSafetyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceSafetyServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServerServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceMultimediaController.java" afterPath="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceMultimediaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
     </list>
     <ignored path="cherry.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,52 +60,16 @@
     <favorites_list name="cherry" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeviceMultimediaController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceMultimediaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="125" column="52" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceMultimediaServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3630#3638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deviceMultimedia.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-              <folding>
-                <marker date="1470649235000" expanded="false" signature="4904:4911" ph="«" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -102,17 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/moby/dao/AuthUserDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/AuthUserDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceMultimediaService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/moby/service/DeviceMultimediaServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/chart_test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/device.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceNetworkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/AuditDeviceService.java" />
@@ -121,14 +92,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceSafetyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceServerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/DeviceStorageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceOtherServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceSafetyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/CabinetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/service/CabinetService.java" />
@@ -143,16 +107,34 @@
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/Device.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/AuthUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/entiry/AuditDevice.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceMultmediaDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceMultimediaController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceOtherServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceSafetyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceServerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceStorageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceNetworkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceSafetyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/moby/web/DeviceOtherController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/moby/web/DeviceOtherControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp" />
       </list>
     </option>
   </component>
@@ -410,6 +392,40 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="device" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cherry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cherry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -600,6 +616,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.moby.web" />
       <recent name="com.moby.service" />
       <recent name="com.moby.dao" />
     </key>
@@ -1372,7 +1389,7 @@
       <workItem from="1470271741768" duration="11439000" />
       <workItem from="1470358946293" duration="13425000" />
       <workItem from="1470554754007" duration="10910000" />
-      <workItem from="1470617116454" duration="26761000" />
+      <workItem from="1470617116454" duration="32889000" />
     </task>
     <servers />
   </component>
@@ -1409,7 +1426,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380473000" />
+    <option name="totallyTimeSpent" value="386601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1422,7 +1439,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1276" height="777" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.493517" order="8" side_tool="false" content_ui="tabs" />
@@ -1434,7 +1451,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1871961" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33868614" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33868614" sideWeight="0.4886548" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.493517" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1445,7 +1462,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1477,150 +1494,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceSafetyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceOtherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceStorageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceServerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceMultimediaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/DeviceNetworkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/service/DeviceMultimediaServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="94" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/datepicker/css/bootstrap-datepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CabinetDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <marker date="1470624241000" expanded="true" signature="291:550" ph="SELECT c.id,... basedata_cabinet" />
-            <marker date="1470624241000" expanded="true" signature="629:861" ph="SELECT c.id,... basedata_cabinet" />
-            <marker date="1470624241000" expanded="true" signature="963:1232" ph="SELECT c.id,... basedata_cabinet" />
-            <marker date="1470624241000" expanded="true" signature="1336:1608" ph="SELECT c.id,... basedata_cabinet" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/dao/CabinetDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/CabinetServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-          <folding>
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/CabinetService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1730,7 +1603,7 @@
         <state relative-caret-position="150">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1763,49 +1636,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceMultmediaDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="100" column="54" selection-start-line="100" selection-start-column="54" selection-end-line="100" selection-end-column="54" />
-          <folding>
-            <marker date="1470644930000" expanded="true" signature="308:2026" ph="SELECT d.id,... device_multimedia" />
-            <marker date="1470644930000" expanded="true" signature="2113:3828" ph="SELECT d.id,... device_multimedia" />
-            <marker date="1470644930000" expanded="true" signature="3953:9038" ph="SELECT d.id,... device_multimedia" />
-            <marker date="1470644930000" expanded="true" signature="9100:10064" ph="INSERT INTO device_multimedia... " />
-            <marker date="1470644930000" expanded="true" signature="10120:11065" ph="UPDATE devic... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1817,92 +1652,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="135" column="57" selection-start-line="135" selection-start-column="57" selection-end-line="135" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="29">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceOtherServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="-859">
+          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3418#3426#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceSafetyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="176">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3437#3445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceNetworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="204" column="5" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3456#3464#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="176">
+          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1332">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="50" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding>
-            <marker date="1470649235000" expanded="false" signature="4904:4911" ph="«" />
+            <element signature="e#3430#3438#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceMultimediaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
+        <state relative-caret-position="32">
+          <caret line="192" column="4" selection-start-line="192" selection-start-column="4" selection-end-line="209" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3630#3638#0" expanded="true" />
@@ -1910,10 +1717,251 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceStorageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3456#3464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/service/impl/DeviceTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceMultimediaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="125" column="52" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
+        <state relative-caret-position="1455">
+          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceServerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceStorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="157" column="43" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceNetworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2130">
+          <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/service/RoomServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceSafetyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="50" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/service/DeviceTypeServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/moby/web/DeviceOtherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/moby/web/DeviceOtherControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceOtherDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="159" column="73" selection-start-line="159" selection-start-column="73" selection-end-line="159" selection-end-column="73" />
+          <folding>
+            <marker date="1470654485000" expanded="true" signature="298:2011" ph="SELECT d.id,... device_other" />
+            <marker date="1470654485000" expanded="true" signature="2093:3803" ph="SELECT d.id,... device_other" />
+            <marker date="1470654485000" expanded="true" signature="3918:8998" ph="SELECT d.id,... device_other" />
+            <marker date="1470654485000" expanded="true" signature="9060:10019" ph="INSERT INTO device_other... " />
+            <marker date="1470654485000" expanded="true" signature="10075:11015" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceNetworkDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="162" column="50" selection-start-line="162" selection-start-column="50" selection-end-line="162" selection-end-column="50" />
+          <folding>
+            <marker date="1470654485000" expanded="true" signature="302:2017" ph="SELECT d.id,... device_network" />
+            <marker date="1470654485000" expanded="true" signature="2101:3813" ph="SELECT d.id,... device_network" />
+            <marker date="1470654485000" expanded="true" signature="3932:9040" ph="SELECT d.id,... device_network" />
+            <marker date="1470654485000" expanded="true" signature="9102:10063" ph="INSERT INTO device_network... " />
+            <marker date="1470654485000" expanded="true" signature="10119:11061" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceStorageDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
+          <folding>
+            <marker date="1470654485000" expanded="true" signature="302:2017" ph="SELECT d.id,... device_storage" />
+            <marker date="1470654485000" expanded="true" signature="2101:3813" ph="SELECT d.id,... device_storage" />
+            <marker date="1470654485000" expanded="true" signature="3932:9014" ph="SELECT d.id,... device_storage" />
+            <marker date="1470654485000" expanded="true" signature="9076:10037" ph="INSERT INTO device_storage... " />
+            <marker date="1470654485000" expanded="true" signature="10093:11035" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceServerDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="49" />
+          <folding>
+            <marker date="1470654485000" expanded="true" signature="300:2014" ph="SELECT d.id,... device_server" />
+            <marker date="1470654485000" expanded="true" signature="2097:3808" ph="SELECT d.id,... device_server" />
+            <marker date="1470654485000" expanded="true" signature="3925:9006" ph="SELECT d.id,... device_server" />
+            <marker date="1470654485000" expanded="true" signature="9068:10028" ph="INSERT INTO device_server... " />
+            <marker date="1470654485000" expanded="true" signature="10084:11025" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceSafetyDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="159" column="49" selection-start-line="159" selection-start-column="49" selection-end-line="159" selection-end-column="79" />
+          <folding>
+            <marker date="1470654485000" expanded="true" signature="300:2014" ph="SELECT d.id,... device_safety" />
+            <marker date="1470654485000" expanded="true" signature="2097:3808" ph="SELECT d.id,... device_safety" />
+            <marker date="1470654485000" expanded="true" signature="3925:9010" ph="SELECT d.id,... device_safety" />
+            <marker date="1470654485000" expanded="true" signature="9072:10032" ph="INSERT INTO device_safety... " />
+            <marker date="1470654485000" expanded="true" signature="10088:11029" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceMultmediaDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+          <folding>
+            <marker date="1470644930000" expanded="true" signature="308:2026" ph="SELECT d.id,... device_multimedia" />
+            <marker date="1470644930000" expanded="true" signature="2113:3828" ph="SELECT d.id,... device_multimedia" />
+            <marker date="1470644930000" expanded="true" signature="3953:9038" ph="SELECT d.id,... device_multimedia" />
+            <marker date="1470644930000" expanded="true" signature="9100:10064" ph="INSERT INTO device_multimedia... " />
+            <marker date="1470644930000" expanded="true" signature="10120:11065" ph="UPDATE devic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/device_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="135" column="57" selection-start-line="135" selection-start-column="57" selection-end-line="135" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceNetwork.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceOther.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1250">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceSafety.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceServer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceStorage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="49" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/deviceMultimedia.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2037">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <marker date="1470649712000" expanded="false" signature="4904:4911" ph="«" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/device/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4631">
+          <caret line="368" column="29" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
           <folding />
         </state>
       </provider>
