@@ -122,7 +122,7 @@ public class DeviceMultimediaController {
         return "" + result;
     }
 
-    @RequestMapping(value = "/exportExcel4All", method = RequestMethod.GET)
+    @RequestMapping(value = "/export", method = RequestMethod.GET)
     public void expAllDevice2Excel(HttpServletRequest request,
                                    HttpServletResponse response) throws Exception {
         try {
@@ -133,7 +133,7 @@ public class DeviceMultimediaController {
                     + java.net.URLEncoder.encode("音视频设备台账.xls", "UTF-8"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 

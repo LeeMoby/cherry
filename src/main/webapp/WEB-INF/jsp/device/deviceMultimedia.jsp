@@ -129,7 +129,8 @@
 <script type="text/javascript">
     //以Excel格式,导出全部数据
     function dm_exportExcel() {
-        window.open("/device/exportExcel4All", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+//        window.open("/device/multimedia/export", "_blank", "width=300px, height=200px, menubar=no, scrollbar=no");
+        window.location.href = "/device/multimedia/export";
     }
 
     function dm_query(){

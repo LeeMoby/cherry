@@ -1,13 +1,10 @@
 package com.moby.service.impl;
 
 import com.moby.dao.AuditDeviceDAO;
-import com.moby.dao.DeviceSafetyDAO;
 import com.moby.dao.DeviceServerDAO;
 import com.moby.entiry.AuditDevice;
 import com.moby.entiry.AuthUser;
-import com.moby.entiry.DeviceSafety;
 import com.moby.entiry.DeviceServer;
-import com.moby.service.DeviceSafetyService;
 import com.moby.service.DeviceServerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
