@@ -126,11 +126,12 @@ public class DeviceNetworkController {
     public void expAllDevice2Excel(HttpServletRequest request,
                                    HttpServletResponse response) throws Exception {
         try {
+            String fileName = "网络设备台账.xls";
             byte[] bytes = deviceNetworkService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + java.net.URLEncoder.encode("网络设备台账.xls", "UTF-8"));
+                    + new String(fileName.getBytes("gbk"),"iso-8859-1"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
             ex.printStackTrace();

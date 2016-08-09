@@ -126,11 +126,12 @@ public class DeviceSafetyController {
     public void expAllDevice2Excel(HttpServletRequest request,
                                    HttpServletResponse response) throws Exception {
         try {
+            String fileName = "安全设备台账.xls";
             byte[] bytes = deviceSafetyService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + java.net.URLEncoder.encode("安全设备台账.xls", "UTF-8"));
+                    + new String(fileName.getBytes("gbk"),"iso-8859-1"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
             ex.printStackTrace();

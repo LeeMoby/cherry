@@ -126,11 +126,12 @@ public class DeviceMultimediaController {
     public void expAllDevice2Excel(HttpServletRequest request,
                                    HttpServletResponse response) throws Exception {
         try {
+            String fileName = "音视频设备台账.xls";
             byte[] bytes = deviceMultimediaService.expAllDevice2Excel();
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + java.net.URLEncoder.encode("音视频设备台账.xls", "UTF-8"));
+                    + new String(fileName.getBytes("gbk"),"iso-8859-1"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -175,4 +176,8 @@ public class DeviceMultimediaController {
         return "device/device_import";
     }
 
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public String uploadImportDevice(Model model) {
+        return "device/device_import";
+    }
 }
