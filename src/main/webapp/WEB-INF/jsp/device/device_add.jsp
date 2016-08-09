@@ -52,9 +52,9 @@
                 <div class="panel-body">
 
                     <div class="row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-4 disabled">
                             <label for="deviceTypeId">设备类型: </label>
-                            <select id="deviceTypeId" name="deviceTypeId" class="form-control">
+                            <select id="deviceTypeId" name="deviceTypeId" class="form-control" disabled>
                                 <c:forEach var="deviceType" items="${deviceTypeList}">
                                     <option value="${deviceType.id}" <c:if test="${deviceType.nameAbbr == activeTab}">selected</c:if>>${deviceType.name}</option>
                                 </c:forEach>
