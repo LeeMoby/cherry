@@ -2,7 +2,7 @@
 <!-- 引入jstl -->
 <%@include file="../common/tag.jsp" %>
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://localhost:8080/cherry/home/ -->
+<!-- saved from url=(0041) -->
 <html lang="UTF-8">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,14 +30,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/cherry/home/#">云间一石</a>
+            <a class="navbar-brand" href="#">云间一石</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://localhost:8080/cherry/home/#">导航</a></li>
-                <li><a href="http://localhost:8080/cherry/home/#">皮肤</a></li>
-                <li><a href="http://localhost:8080/cherry/home/#">用户</a></li>
-                <li><a href="http://localhost:8080/cherry/home/#">帮助</a></li>
+                <li><a href="#">导航</a></li>
+                <li><a href="#">皮肤</a></li>
+                <li><a href="#">用户</a></li>
+                <li><a href="#">帮助</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="搜索...">
@@ -50,24 +50,24 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="http://localhost:8080/cherry/home/#">首页</a>
+                <li><a href="#">首页</a>
                 </li>
-                <li><a href="http://localhost:8080/cherry/home/#">报表</a></li>
-                <li><a href="http://localhost:8080/cherry/home/#">分析</a></li>
-                <li><a href="http://localhost:8080/cherry/home/#">导出</a></li>
+                <li><a href="#">报表</a></li>
+                <li><a href="#">分析</a></li>
+                <li><a href="#">导出</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="http://localhost:8080/cherry/home/">机房巡视</a></li>
-                <li><a href="http://localhost:8080/cherry/home/">班组资料</a></li>
-                <li><a href="http://localhost:8080/cherry/home/">工作日志</a></li>
-                <li><a href="http://localhost:8080/cherry/home/">库房管理</a></li>
-                <li class="active"><a href="http://localhost:8080/device/home/">资产设备 <span
+                <li><a href="">机房巡视</a></li>
+                <li><a href="">班组资料</a></li>
+                <li><a href="">工作日志</a></li>
+                <li><a href="">库房管理</a></li>
+                <li class="active"><a href="/device/home/">资产设备 <span
                         class="sr-only">(current)</span></a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="http://localhost:8080/cherry/home/">系统配置</a></li>
-                <li><a href="http://localhost:8080/cherry/home/">偏好设置</a></li>
-                <li><a href="http://localhost:8080/cherry/home/">关于</a></li>
+                <li><a href="#">系统配置</a></li>
+                <li><a href="#">偏好设置</a></li>
+                <li><a href="#">关于</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
