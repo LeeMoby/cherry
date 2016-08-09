@@ -57,6 +57,7 @@
     <a class="btn btn-info" href="/device/storage/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dst_batchDelete()">删除</button>
+    <a class="btn btn-info" href="/device/storage/import" target="_blank" role="button">导入</a>
     <button class="btn btn-info" type="button" onclick="dst_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">
@@ -87,7 +88,7 @@
                     <td>
                         <input type="checkbox" name="cbtn_dst_id" value="${device.id}" onclick="dst_allchk()">
                     </td>
-                    <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
+                    <td><a href="/device/storage/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
                     <td>${device.cabinet.name} ${device.cabinetPosition}</td>
                     <td>${device.employee.name}</td>

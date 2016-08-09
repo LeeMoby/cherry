@@ -40,7 +40,7 @@
 
     </p>
     <div class="row">
-        <div class="col-md-12">请先下载导入模板: <a href="/WEB-INF/assets/template/设备导入模板.xls"><span
+        <div class="col-md-12">请先下载导入模板: <a href="/template/设备导入模板.xls"><span
                 class="glyphicon glyphicon-save-file" aria-hidden="true"></span>设备导入模板.xls</a></div>
     </div>
     <br>

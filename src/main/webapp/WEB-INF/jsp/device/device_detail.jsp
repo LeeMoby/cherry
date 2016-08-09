@@ -25,9 +25,9 @@
     <div class="row">
         <div class="col-md-8">
             <h2>
-                ${device.dname}
+                ${device.name}
 
-                <small>${device.deviceType.dtname}</small>
+                <small>${device.deviceType.name}</small>
             </h2>
         </div>
         <div class="col-md-3 col-md-offset-1">
@@ -48,7 +48,6 @@
         </div>
     </div>
     <br>
-    <%--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">--%>
     <div class="panel panel-primary">
         <div class="panel-heading" role="tab" id="headDetail">
             <h4 class="panel-title">
@@ -59,24 +58,79 @@
             </h4>
         </div>
         <div id="collapseDetail" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headDetail">
-            <table class="table table-bordered">
-                <tr>
-                    <td class="active"><strong>设备编号</strong></td>
-                    <td>${device.dno}</td>
-                    <td class="active"><strong>资产编号</strong></td>
-                    <td>${device.dcode}</td>
-                    <td class="active"><strong>设备名称</strong></td>
-                    <td>${device.dname}</td>
-                </tr>
-                <tr>
-                    <td class="active"><strong>设备位置</strong></td>
-                    <td>${device.cabinet.cno} ${device.dplace}</td>
-                    <td class="active"><strong>运维单位</strong></td>
-                    <td>${device.department}</td>
-                    <td class="active"><strong>责任人</strong></td>
-                    <td>${device.person}</td>
-                </tr>
-            </table>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>设备类型: </label>
+                        ${device.deviceType.name}
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>设备名称: </label>
+                        ${device.name}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>设备编号: </label>
+                        ${device.code}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>国网编号: </label>
+                        ${device.codeSgcc}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>设备用途: </label>
+                        ${device.use}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>投运日期: </label>
+                        <fmt:formatDate value="${device.useDate}" pattern="yyyy-MM-dd"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>设备状态: </label>
+                        ${device.status}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>所属网络: </label>
+                        ${device.network}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>&nbsp;&nbsp;IP&nbsp;&nbsp;地址: </label>
+                        ${device.ipAddress}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>管理部门: </label>
+                        ${device.department.name}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>责&nbsp;&nbsp;任&nbsp;&nbsp;人: </label>
+                        ${device.employee.name}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>联系电话: </label>
+                        ${device.mgtPhone}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>所在机房: </label>
+                        ${device.room.id}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>所在机柜:&nbsp;</label>
+                        ${device.cabinet.name}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>柜内位置: </label>
+                        ${device.cabinetPosition}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="panel panel-info">
@@ -89,24 +143,60 @@
             </h4>
         </div>
         <div id="collapseExt" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headExt">
-            <table class="table table-bordered">
-                <tr>
-                    <td class="active"><strong>设备型号</strong></td>
-                    <td>${device.dmodel}</td>
-                    <td class="active"><strong>所属网络</strong></td>
-                    <td>${device.nettype}</td>
-                    <td class="active"><strong>IP地址</strong></td>
-                    <td>${device.dip}</td>
-                </tr>
-                <tr>
-                    <td class="active"><strong>设备状态</strong></td>
-                    <td>${device.dstatus}</td>
-                    <td class="active"><strong>序列号</strong></td>
-                    <td>${device.serialNumber}</td>
-                    <td class="active"><strong>投运日期</strong></td>
-                    <td><fmt:formatDate value="${device.useDate}" pattern="yyyy年MM月dd日"/></td>
-                </tr>
-            </table>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label">采购方式: </label>
+                        ${device.purchaseMethod}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>制&nbsp;&nbsp;造&nbsp;&nbsp;商: </label>
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌: </label>
+                        ${device.brand}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>系&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;列: </label>
+                        ${device.series}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号: </label>
+                        ${device.model}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>序&nbsp;&nbsp;列&nbsp;&nbsp;号: </label>
+                        ${device.serialNumber}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>出厂日期: </label>
+                        <fmt:formatDate value="${device.manufactureDate}" pattern="yyyy-MM-dd"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>运维厂商: </label>
+                        ${device.maintenanceSupplier}
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>售后截止: </label>
+                        <fmt:formatDate value="${device.serviceExpiryDate}" pattern="yyyy-MM-dd"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>维保开始: </label>
+                        <fmt:formatDate value="${device.maintenanceDateStart}" pattern="yyyy-MM-dd"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>维保结束: </label>
+                        <fmt:formatDate value="${device.maintenanceDateEnd}" pattern="yyyy-MM-dd"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="panel panel-success">

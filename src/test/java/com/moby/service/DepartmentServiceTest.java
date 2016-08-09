@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -22,7 +23,7 @@ import static org.junit.Assert.*;
 public class DepartmentServiceTest {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
+    @Resource
     private DepartmentService departmentService;
 
     @Test

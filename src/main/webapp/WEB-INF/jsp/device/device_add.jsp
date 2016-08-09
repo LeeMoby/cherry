@@ -223,10 +223,7 @@
                             <input type="text" class="form-control" id="maintenanceDateEnd" name="maintenanceDateEnd"
                                    placeholder="维保结束日期">
                         </div>
-                        <div class="form-group col-md-4">
-                        </div>
                     </div>
-
                 </div>
             </div>
         </div>

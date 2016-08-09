@@ -30,62 +30,62 @@ public class AuditDeviceDAOTest {
 
     @Test
     public void getAuditDevice() throws Exception {
-        int id = 1;
-        AuditDevice auditDevice = auditDeviceDAO.getAuditDevice(id);
-        logger.info("auditDevice: " + auditDevice.toString());
+//        int id = 1;
+//        AuditDevice auditDevice = auditDeviceDAO.getAuditDevice(id);
+//        logger.info("auditDevice: " + auditDevice.toString());
     }
 
     @Test
     public void findAuditDeviceByDatetime() throws Exception {
-        Date start = sdf.parse("2015-05-08 00:00:00");
-        Date end = sdf.parse("2017-08-08 00:00:00");
-        List<AuditDevice> list = auditDeviceDAO.findAuditDeviceByDatetime(start, end);
-        for (AuditDevice auditDevice : list) {
-            logger.info("auditDevice: " + auditDevice);
-        }
+//        Date start = sdf.parse("2015-05-08 00:00:00");
+//        Date end = sdf.parse("2017-08-08 00:00:00");
+//        List<AuditDevice> list = auditDeviceDAO.findAuditDeviceByDatetime(start, end);
+//        for (AuditDevice auditDevice : list) {
+//            logger.info("auditDevice: " + auditDevice);
+//        }
     }
 
     @Test
     public void addAuditDevice() throws Exception {
-        AuditDevice newAuditDevice = new AuditDevice();
-        newAuditDevice.setType("新增");
-        newAuditDevice.setDatetime(new Date());
-        newAuditDevice.setUserId(1001);
-        newAuditDevice.setIpAddress("0.0.0.0");
-        newAuditDevice.setBrowser("safari");
-        newAuditDevice.setOs("macOS");
-        newAuditDevice.setContent("test设备名称:" + "ESXi主机1" + "、" + "ESXi主机2" + "; 设备序列号:" + "ABCDEFG" + "、" + "HIJKLMN");
-        int result = auditDeviceDAO.addAuditDevice(newAuditDevice);
-        if (result > 0) {
-            logger.info("新增" + result + "条设备变动审计记录。");
-        }
+//        AuditDevice newAuditDevice = new AuditDevice();
+//        newAuditDevice.setType("新增");
+//        newAuditDevice.setDatetime(new Date());
+//        newAuditDevice.setUserId(1001);
+//        newAuditDevice.setIpAddress("0.0.0.0");
+//        newAuditDevice.setBrowser("safari");
+//        newAuditDevice.setOs("macOS");
+//        newAuditDevice.setContent("test设备名称:" + "ESXi主机1" + "、" + "ESXi主机2" + "; 设备序列号:" + "ABCDEFG" + "、" + "HIJKLMN");
+//        int result = auditDeviceDAO.addAuditDevice(newAuditDevice);
+//        if (result > 0) {
+//            logger.info("新增" + result + "条设备变动审计记录。");
+//        }
     }
 
     @Test
     public void delAuditDevice() throws Exception {
-        List ids = new ArrayList();
-        Date start = sdf.parse("2015-05-08 00:00:00");
-        Date end = sdf.parse("2016-08-08 00:00:00");
-        List<AuditDevice> list = auditDeviceDAO.findAuditDeviceByDatetime(start, end);
-        for (AuditDevice auditDevice : list){
-            ids.add(auditDevice.getId());
-        }
-        if (ids.size() > 0){
-            int result = auditDeviceDAO.delAuditDevice(ids);
-            if (result > 0){
-                logger.info("删除" + result + "条设备变动审计记录。");
-            }
-        }
+//        List ids = new ArrayList();
+//        Date start = sdf.parse("2015-05-08 00:00:00");
+//        Date end = sdf.parse("2016-08-08 00:00:00");
+//        List<AuditDevice> list = auditDeviceDAO.findAuditDeviceByDatetime(start, end);
+//        for (AuditDevice auditDevice : list){
+//            ids.add(auditDevice.getId());
+//        }
+//        if (ids.size() > 0){
+//            int result = auditDeviceDAO.delAuditDevice(ids);
+//            if (result > 0){
+//                logger.info("删除" + result + "条设备变动审计记录。");
+//            }
+//        }
     }
 
     @Test
     public void delAuditDeviceByDatetime() throws Exception {
-        Date start = sdf.parse("2015-05-08 00:00:00");
-        Date end = sdf.parse("2016-08-08 00:00:00");
-        int result = auditDeviceDAO.delAuditDeviceByDatetime(start, end);
-        if (result > 0) {
-            logger.info("删除" + result + "条设备变动审计记录。");
-        }
+//        Date start = sdf.parse("2015-05-08 00:00:00");
+//        Date end = sdf.parse("2016-08-08 00:00:00");
+//        int result = auditDeviceDAO.delAuditDeviceByDatetime(start, end);
+//        if (result > 0) {
+//            logger.info("删除" + result + "条设备变动审计记录。");
+//        }
     }
 
 }

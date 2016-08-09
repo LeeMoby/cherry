@@ -57,6 +57,7 @@
     <a class="btn btn-info" href="/device/safety/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dsa_batchDelete()">删除</button>
+    <a class="btn btn-info" href="/device/safety/import" target="_blank" role="button">导入</a>
     <button class="btn btn-info" type="button" onclick="dsa_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">
@@ -87,7 +88,7 @@
                     <td>
                         <input type="checkbox" name="cbtn_dsa_id" value="${device.id}" onclick="dsa_allchk()">
                     </td>
-                    <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
+                    <td><a href="/device/safety/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
                     <td>${device.cabinet.name} ${device.cabinetPosition}</td>
                     <td>${device.employee.name}</td>

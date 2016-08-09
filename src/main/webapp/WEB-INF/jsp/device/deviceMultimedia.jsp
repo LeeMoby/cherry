@@ -93,7 +93,7 @@
                     <td>
                         <input type="checkbox" name="cbtn_dm_id" value="${device.id}" onclick="dm_allchk()">
                     </td>
-                    <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
+                    <td><a href="/device/multimedia/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
                     <td>${device.cabinet.name} ${device.cabinetPosition}</td>
                     <td>${device.employee.name}</td>

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -20,7 +21,7 @@ import static org.junit.Assert.*;
 @ContextConfiguration({"classpath:spring/spring-dao.xml", "classpath:spring/spring-service.xml"})
 public class CabinetServiceTest {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-    @Autowired
+    @Resource
     private CabinetService cabinetService;
 
     @Test

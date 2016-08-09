@@ -57,6 +57,7 @@
     <a class="btn btn-info" href="/device/other/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="do_batchDelete()">删除</button>
+    <a class="btn btn-info" href="/device/other/import" target="_blank" role="button">导入</a>
     <button class="btn btn-info" type="button" onclick="do_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">
@@ -87,7 +88,7 @@
                     <td>
                         <input type="checkbox" name="cbtn_do_id" value="${device.id}" onclick="do_allchk()">
                     </td>
-                    <td><a href="/device/${device.id}/detail" target="_blank">${device.code}</a></td>
+                    <td><a href="/device/other/${device.id}/detail" target="_blank">${device.code}</a></td>
                     <td>${device.name}</td>
                     <td>${device.cabinet.name} ${device.cabinetPosition}</td>
                     <td>${device.employee.name}</td>

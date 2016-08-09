@@ -170,5 +170,9 @@ public class DeviceNetworkController {
         return authUser;
     }
 
+    @RequestMapping(value = "/import", method = RequestMethod.GET)
+    public String importDevice(Model model) {
+        return "device/device_import";
+    }
 
 }
