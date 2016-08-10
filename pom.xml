@@ -22,6 +22,11 @@
         <jackson.version>2.7.5</jackson.version>
         <servlet-api.version>3.1.0</servlet-api.version>
         <spring.version>4.2.6.RELEASE</spring.version>
+        <poi.version>3.14</poi.version>
+        <fileupload.version>1.3.2</fileupload.version>
+        <jodatime.version>2.9.4</jodatime.version>
+        <jdom.version>2.0.2</jdom.version>
+        <lang3.version>3.4</lang3.version>
     </properties>
     <dependencies>
         <!--使用Junit4版本-->
@@ -164,19 +169,31 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
         </dependency>
         <!-- Apache Fileupload -->
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>1.3.2</version>
+            <version>${fileupload.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+        <!-- Date convert -->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.9.4</version>
+            <version>${jodatime.version}</version>
+        </dependency>
+        <!-- 解析xml文件,jdom -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>${jdom.version}</version>
+        </dependency>
+        <!-- 解析xml文件,lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${lang3.version}</version>
         </dependency>
 
 

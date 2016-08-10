@@ -4,7 +4,14 @@ import com.moby.dao.AuditDeviceDAO;
 import com.moby.dao.DeviceServerDAO;
 import com.moby.entiry.*;
 import com.moby.service.DeviceServerService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.jdom2.Attribute;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +19,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -67,7 +76,7 @@ public class DeviceServerServiceImpl implements DeviceServerService {
     @Transactional
     public int delDevice(List deviceIDs, AuthUser authUser) {
         StringBuffer auditContent = new StringBuffer();
-        for (int i = 0; i < deviceIDs.size(); i++){
+        for (int i = 0; i < deviceIDs.size(); i++) {
             DeviceServer device = this.getDeviceById(Integer.parseInt(deviceIDs.get(i).toString()));
             auditContent.append("设备名称:");
             auditContent.append(device.getName());
@@ -167,11 +176,12 @@ public class DeviceServerServiceImpl implements DeviceServerService {
 
     /**
      * 设备操作审计
+     *
      * @param type
      * @param authUser
      * @return
      */
-    private int saveAuditDevice(String type, String content, AuthUser authUser){
+    private int saveAuditDevice(String type, String content, AuthUser authUser) {
         AuditDevice auditDevice = new AuditDevice();
         auditDevice.setType(type);
         auditDevice.setDatetime(new Date());
@@ -183,6 +193,92 @@ public class DeviceServerServiceImpl implements DeviceServerService {
 
         return auditDeviceDAO.addAuditDevice(auditDevice);
 
+    }
+
+    public void importDevcieFromExcel() {
+        String templateFilePath = "";
+        File file = new File(templateFilePath);
+        SAXBuilder builder = new SAXBuilder();
+        try {
+            //解析xml文件
+            Document parse = builder.build(file);
+            //创建Excle文件
+            HSSFWorkbook wb = new HSSFWorkbook();
+            //创建sheet
+            HSSFSheet sheet = wb.createSheet("设备信息");
+            // 获取xml根节点
+            Element root = parse.getRootElement();
+            // 获取模板名称
+            String templateName = root.getAttribute("name").getValue();
+
+            int rownum = 0;
+            int column = 0;
+            // 设置列宽
+            Element colgroup = root.getChild("colgroup");
+            setColumnWidth(sheet, colgroup);
+            // 设置标题
+            Element title = root.getChild("title");
+            List<Element> trs = title.getChildren("tr");
+            for (int i = 0; i< trs.size(); i++){
+                Element tr = trs.get(i);
+                List<Element> tds = tr.getChildren("td");
+                HSSFRow row = sheet.createRow(rownum);
+                HSSFCellStyle cellStyle = wb.createCellStyle();
+                cellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+
+                for (column = 0; column < tds.size(); column++){
+                    Element td = tds.get(column);
+                    HSSFCell cell = row.createCell(column);
+                    Attribute rowSpan = td.getAttribute("rowspan");
+                    Attribute colSpan = td.getAttribute("colspan");
+                    Attribute value = td.getAttribute("value");
+                    if (value != null){
+                        String val = value.getValue();
+                        cell.setCellValue(val);
+                        int rspan = rowSpan.getIntValue() - 1;
+                        int cspan = colSpan.getIntValue() - 1;
+
+                        //设置字体
+                        HSSFFont font = wb.createFont();
+                        font.setFontName("仿宋_GB2312");
+                        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+                        font.setFontHeight((short)12);
+                        cellStyle.setFont(font);
+                        cell.setCellStyle(cellStyle);
+                        //合并单元格居中
+                        sheet.addMergedRegion(new CellRangeAddress(rspan, rspan, 0, cspan));
+
+                    }
+                }
+            }
+        } catch (JDOMException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 设置Excel列宽
+     *
+     * @param sheet
+     * @param colgroup
+     */
+    private void setColumnWidth(HSSFSheet sheet, Element colgroup) {
+        List<Element> cols = colgroup.getChildren();
+        for (int i = 0; i < cols.size(); i++) {
+            Element col = cols.get(i);
+            Attribute width = col.getAttribute("width");
+            String unit = width.getValue().replaceAll("[0-9,\\.]", "");
+            String value = width.getValue().replaceAll(unit, "");
+            int v = 0;
+            if (StringUtils.isBlank(unit) || "px".endsWith(unit)) {
+                v = Math.round(Float.parseFloat(value) * 37F);
+            } else if ("em".endsWith(unit)) {
+                v = Math.round(Float.parseFloat(value) * 267.5F);
+            }
+            sheet.setColumnWidth(i, v);
+        }
     }
 
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<excel id="device" code="device" name="设备信息导入">
+    <colgroup>
+        <col index="A" width="17em"></col>
+        <col index="B" width="17em"></col>
+        <col index="C" width="17em"></col>
+        <col index="D" width="17em"></col>
+        <col index="E" width="17em"></col>
+        <col index="F" width="17em"></col>
+        <col index="G" width="17em"></col>
+        <col index="H" width="17em"></col>
+        <col index="I" width="17em"></col>
+        <col index="J" width="17em"></col>
+        <col index="K" width="17em"></col>
+        <col index="L" width="17em"></col>
+        <col index="M" width="17em"></col>
+        <col index="N" width="17em"></col>
+        <col index="O" width="17em"></col>
+        <col index="P" width="17em"></col>
+        <col index="Q" width="17em"></col>
+        <col index="R" width="17em"></col>
+        <col index="S" width="17em"></col>
+        <col index="T" width="17em"></col>
+        <col index="U" width="17em"></col>
+        <col index="V" width="17em"></col>
+        <col index="W" width="17em"></col>
+        <col index="X" width="17em"></col>
+        <col index="Y" width="17em"></col>
+        <col index="Z" width="17em"></col>
+    </colgroup>
+    <title>
+        <tr height="16px">
+            <td rowspan="1" colspan="26" value="设备信息导入" />
+        </tr>
+    </title>
+    <thead>
+        <tr height="16px">
+            <th value="设备类型"/>
+            <th value="名称"/>
+            <th value="编号"/>
+            <th value="国网编号"/>
+            <th value="所在机房"/>
+            <th value="所在机柜"/>
+            <th value="柜内位置(机架号)"/>
+            <th value="制造商"/>
+            <th value="品牌"/>
+            <th value="系列"/>
+            <th value="型号"/>
+            <th value="设备状态"/>
+            <th value="用途"/>
+            <th value="投运日期"/>
+            <th value="采购方式"/>
+            <th value="序列号"/>
+            <th value="出厂日期"/>
+            <th value="售后服务到期时间"/>
+            <th value="所属网络"/>
+            <th value="IP地址"/>
+            <th value="设备管理部门"/>
+            <th value="运维责任人"/>
+            <th value="运维联系电话"/>
+            <th value="维保厂商"/>
+            <th value="维保开始日期"/>
+            <th value="维保结束日期"/>
+        </tr>
+    </thead>
+    <tbody>
+        <tr height="16px" firstrow="2" firstcol="0" repeat="5">
+            <td type="enum" format="服务器设备,存储设备,网络设备,安全设备,音视频设备,其他设备" isnullable="false" maxlength="45"/><!-- 设备类型 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 名称 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 编号 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 国网编号 -->
+            <td type="enum" format="12机房,13机房,21机房,22机房" isnullable="false" maxlength="45"/><!-- 所在机房 -->
+            <td type="enum" format="12AA,12AB,12AC,12AD,12AE,12AF,12AG,12AH,12AI,12BA,12BB,12BC,12BD,12BE,12BF,12BG,12BH,12CA,12CB,12CC,12CD,12CE,12CF,12CG,12CH,13AA,13AB,13AC,13AD,13AE,13AF,13AG,13AH,13BA,13BB,13BC,13BD,13BE,13BF,13BG,13BH,13CA,13CB,13CC,13CD,13CE,13CF,13CG,13CH,21AA,21AB,21AC,21AD,21AE,21AF,21AG,21AH,21AI,21AJ,21AK,21AL,21AM,21BA,21BB,21BC,21BD,21BE,21BF,21BG,21BH,21BI,21BJ,21BK,21BL,21BM,21BN,21BO,21BP,21CA,21CB,21CC,21CD,21CE,21CF,21CG,21CH,21CI,21CJ,21CK,21CL,21CM,21CN,21DA,21DB,21DC,21DD,21DE,21DF,21DG,21DH,21DI,21DJ,21DK,21DL,21DM,21DN,21DO,21DP,21EA,21EB,21EC,21ED,21EE,21EF,21EG,21EH,21EI,21EJ,21EK,21EL,21EM,21EN,21EO,21EP,21FG,21FH,21GF,21GG,21GH,21GI,21HF,21HG,21HH,21HI,22AA,22AB,22AC,22AD,22AE,22AF,22AG,22AH,22AI,22AJ,22AK,22AL,22BA,22BB,22BC,22BD,22BE,22BF,22BG,22BH,22BI,22BJ,22BK,22BL,22BM,22BN,22BO,22BP,22CA,22CB,22CC,22CD,22CE,22CF,22CG,22CH,22CI,22CJ,22CK,22CL,22CM,22CN,22DA,22DB,22DC,22DD,22DE,22DF,22DG,22DH,22DI,22DJ,22DK,22DL,22DM,22DN,22DO,22DP" isnullable="false" maxlength="45"/><!-- 所在机柜 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 柜内位置(机架号) -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 制造商 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 品牌 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 系列 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 型号 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 设备状态 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 用途 -->
+            <td type="date" isnullable="false" maxlength="45"/><!-- 投运日期 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 采购方式 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 序列号 -->
+            <td type="date" isnullable="false" maxlength="45"/><!-- 出厂日期 -->
+            <td type="date" isnullable="false" maxlength="45"/><!-- 售后服务到期时间 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 所属网络 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- IP地址 -->
+            <td type="enum" format="西安灾备,运检一室,运检二室" isnullable="false" maxlength="45"/><!-- 设备管理部门 -->
+            <td type="enum" format="肖莎,王磊,雷大洋,李丽莉" isnullable="false" maxlength="45"/><!-- 运维责任人 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 运维联系电话 -->
+            <td type="string" isnullable="false" maxlength="45"/><!-- 维保厂商 -->
+            <td type="date" isnullable="false" maxlength="45"/><!-- 维保开始日期 -->
+            <td type="date" isnullable="false" maxlength="45"/><!-- 维保结束日期 -->
+        </tr>
+    </tbody>
+</excel>
