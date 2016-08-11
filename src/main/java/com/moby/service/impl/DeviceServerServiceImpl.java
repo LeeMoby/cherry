@@ -4,9 +4,11 @@ import com.moby.dao.AuditDeviceDAO;
 import com.moby.dao.DeviceServerDAO;
 import com.moby.entiry.*;
 import com.moby.service.DeviceServerService;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.CellRangeAddressList;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -20,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -195,8 +198,12 @@ public class DeviceServerServiceImpl implements DeviceServerService {
 
     }
 
-    public void importDevcieFromExcel() {
-        String templateFilePath = "";
+
+    /**
+     * 解析XML导入模板,生成EXCEL文件
+     */
+    public void parseImportExcelTemplate() {
+        String templateFilePath = ""; // TODO: 16/8/11
         File file = new File(templateFilePath);
         SAXBuilder builder = new SAXBuilder();
         try {
@@ -219,20 +226,20 @@ public class DeviceServerServiceImpl implements DeviceServerService {
             // 设置标题
             Element title = root.getChild("title");
             List<Element> trs = title.getChildren("tr");
-            for (int i = 0; i< trs.size(); i++){
+            for (int i = 0; i < trs.size(); i++) {
                 Element tr = trs.get(i);
                 List<Element> tds = tr.getChildren("td");
                 HSSFRow row = sheet.createRow(rownum);
                 HSSFCellStyle cellStyle = wb.createCellStyle();
                 cellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
 
-                for (column = 0; column < tds.size(); column++){
+                for (column = 0; column < tds.size(); column++) {
                     Element td = tds.get(column);
                     HSSFCell cell = row.createCell(column);
                     Attribute rowSpan = td.getAttribute("rowspan");
                     Attribute colSpan = td.getAttribute("colspan");
                     Attribute value = td.getAttribute("value");
-                    if (value != null){
+                    if (value != null) {
                         String val = value.getValue();
                         cell.setCellValue(val);
                         int rspan = rowSpan.getIntValue() - 1;
@@ -242,7 +249,8 @@ public class DeviceServerServiceImpl implements DeviceServerService {
                         HSSFFont font = wb.createFont();
                         font.setFontName("仿宋_GB2312");
                         font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-                        font.setFontHeight((short)12);
+//                        font.setFontHeight((short) 12);
+                        font.setFontHeightInPoints((short) 12);
                         cellStyle.setFont(font);
                         cell.setCellStyle(cellStyle);
                         //合并单元格居中
@@ -250,12 +258,93 @@ public class DeviceServerServiceImpl implements DeviceServerService {
 
                     }
                 }
+                rownum++;
             }
+            // 设置表头
+            Element thead = root.getChild("thead");
+            trs = thead.getChildren("tr");
+            for (int i = 0; i < trs.size(); i++) {
+                Element tr = trs.get(i);
+                HSSFRow row = sheet.createRow(rownum);
+                List<Element> ths = tr.getChildren("td");
+                for (column = 0; column < ths.size(); column++) {
+                    Element td = ths.get(column);
+                    Attribute valueAttr = thead.getAttribute("value");
+                    HSSFCell cell = row.createCell(column);
+                    if (valueAttr != null) {
+                        String value = valueAttr.getValue();
+                        cell.setCellValue(value);
+
+                    }
+                }
+                rownum++;
+            }
+            // 设置数据区域样式
+            Element tbody = root.getChild("tbody");
+            Element tr = tbody.getChild("tr");
+            int repeat = tbody.getAttribute("repeat").getIntValue();
+            List<Element> tds = tr.getChildren("td");
+            for (int i = 0; i < repeat; i++) {
+                HSSFRow row = sheet.createRow(rownum);
+                for (column = 0; column < tds.size(); column++) {
+                    Element td = tds.get(column);
+                    HSSFCell cell = row.createCell(column);
+                    setCellType(wb, cell, td);
+                }
+                rownum++;
+            }
+
+            // 生成Excel导入模板
+            File tempFile = new File("");
+            tempFile.delete();
+            tempFile.createNewFile();
+            FileOutputStream stream = FileUtils.openOutputStream(tempFile);
+            wb.write(stream);
+            stream.close();
+
         } catch (JDOMException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 设置单元格样式
+     *
+     * @param wb
+     * @param cell
+     * @param td
+     */
+    private void setCellType(HSSFWorkbook wb, HSSFCell cell, Element td) {
+        Attribute typeAttr = td.getAttribute("type");
+        String type = typeAttr.getValue();
+        HSSFDataFormat format = wb.createDataFormat();
+        HSSFCellStyle cellStyle = wb.createCellStyle();
+        if ("NUMBERIC".equalsIgnoreCase(type)) {
+            cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);
+            Attribute formatAttr = td.getAttribute("formate");
+            String formatValue = formatAttr.getValue();
+            formatValue = StringUtils.isNotBlank(formatValue) ? formatValue : "#,#";
+            cellStyle.setDataFormat(format.getFormat(formatValue));
+        } else if ("STRING".equalsIgnoreCase(type)) {
+            cell.setCellValue("");
+            cell.setCellType(HSSFCell.CELL_TYPE_STRING);
+            cellStyle.setDataFormat(format.getFormat("@"));
+        } else if ("DATE".equalsIgnoreCase(type)) {
+            cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);
+            cellStyle.setDataFormat(format.getFormat("yyyy-mm-dd"));
+        } else if ("ENUM".equalsIgnoreCase(type)) {
+            CellRangeAddressList regions = new CellRangeAddressList(cell.getRowIndex(), cell.getRowIndex(), cell.getColumnIndex(), cell.getColumnIndex());
+            Attribute enumAttr = td.getAttribute("format");
+            String enumString = enumAttr.getValue();
+            // 加载下拉列表的值
+            DVConstraint constraint = DVConstraint.createExplicitListConstraint(enumString.split(","));
+            // 数据有效性对象
+            HSSFDataValidation dataValidation = new HSSFDataValidation(regions, constraint);
+            wb.getSheetAt(0).addValidationData(dataValidation);
+        }
+        cell.setCellStyle(cellStyle);
     }
 
     /**
