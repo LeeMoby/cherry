@@ -102,26 +102,28 @@
                     <!-- 统计图表 2 X 2 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <canvas id="myChart1" width="400" height="400"></canvas>
+                            <canvas id="myChart1" width="550px" height="550px"></canvas>
                         </div>
                         <div class="col-md-6">
-                            <canvas id="myChart2" width="400" height="400"></canvas>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <canvas id="myChart3" width="400" height="400"></canvas>
-                        </div>
-                        <div class="col-md-6">
-                            <canvas id="myChart4" width="400" height="400"></canvas>
+                            <canvas id="myChart2" width="550px" height="550px"></canvas>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-6">
-                            <canvas id="myChart5" width="400" height="400"></canvas>
+                            <canvas id="myChart3" width="550px" height="550px"></canvas>
                         </div>
                         <div class="col-md-6">
-                            <canvas id="myChart6" width="400" height="400"></canvas>
+                            <canvas id="myChart4" width="550px" height="550px"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <canvas id="myChart5" width="550px" height="550px"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="myChart6" width="550px" height="550px"></canvas>
                         </div>
                     </div>
                 </div>
