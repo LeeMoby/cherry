@@ -18,8 +18,9 @@
 <script src="/resources/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 
 <!-- fileinput -->
-<script src="/resources/bootstrap-fileinput/js/fileinput.min.js"></script>
 <script src="/resources/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js"></script>
 <script src="/resources/bootstrap-fileinput/js/plugins/purify.min.js"></script>
 <script src="/resources/bootstrap-fileinput/js/plugins/sortable.min.js"></script>
+<script src="/resources/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="/resources/bootstrap-fileinput/themes/fa/theme.js"></script>
 <script src="/resources/bootstrap-fileinput/js/locales/zh.js"></script>

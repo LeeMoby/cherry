@@ -177,6 +177,7 @@ public class DeviceMultimediaController {
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @ResponseBody
     public String uploadImportDevice(Model model) {
         return "device/device_import";
     }
