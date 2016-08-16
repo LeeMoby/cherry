@@ -31,8 +31,8 @@ CREATE TABLE `audit_device` (
   `datetime` datetime DEFAULT NULL COMMENT '生成时间',
   `user_id` int(11) unsigned DEFAULT NULL COMMENT '操作人',
   `ip_address` varchar(45) DEFAULT NULL COMMENT 'IP地址',
-  `browser` varchar(45) DEFAULT NULL COMMENT '浏览器信息',
-  `os` varchar(45) DEFAULT NULL COMMENT '操作系统信息',
+  `browser` varchar(200) DEFAULT NULL COMMENT '浏览器信息',
+  `os` varchar(200) DEFAULT NULL COMMENT '操作系统信息',
   `content` text COMMENT '审计内容',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -126,8 +126,8 @@ CREATE TABLE `auth_user` (
   `password` varchar(45) DEFAULT NULL,
   `last_login_datetime` datetime DEFAULT NULL,
   `last_ip_address` varchar(45) DEFAULT NULL,
-  `last_browser` varchar(45) DEFAULT NULL,
-  `last_os` varchar(45) DEFAULT NULL,
+  `last_browser` varchar(200) DEFAULT NULL,
+  `last_os` varchar(200) DEFAULT NULL,
   `employee_id` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';

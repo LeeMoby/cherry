@@ -5,9 +5,11 @@ import com.moby.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -84,7 +86,7 @@ public class DeviceMultimediaController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addDevice(Model model) {
+    public String addDevice(Model model, HttpServletRequest request) {
         List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
         List<Room> roomList = roomService.findAllRoom();
         List<Department> departmentList = departmentService.findAllDepartment();
@@ -98,12 +100,12 @@ public class DeviceMultimediaController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveDevice(Model model, DeviceMultimedia deviceMultimedia) {
+    public String saveDevice(Model model, DeviceMultimedia deviceMultimedia, HttpServletRequest request) {
         List<Cabinet> cabinetList = cabinetService.findCabinetByName(deviceMultimedia.getCabinet().getName());
         if (cabinetList != null && cabinetList.size() > 0) {
             deviceMultimedia.setCabinetId(cabinetList.get(0).getId());
         }
-        int result = deviceMultimediaService.addDevcie(deviceMultimedia, this.getLoginUser());
+        int result = deviceMultimediaService.addDevcie(deviceMultimedia, this.getLoginUser(request));
         if (result == 1) {
             model.addAttribute("result", "已添加1条记录!");
         }
@@ -112,12 +114,12 @@ public class DeviceMultimediaController {
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
-    public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs) {
+    public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs, HttpServletRequest request) {
         List deviceIDList = new ArrayList();
         for (Long deviceID : deviceIDs) {
             deviceIDList.add(deviceID);
         }
-        int result = deviceMultimediaService.delDevice(deviceIDList, this.getLoginUser());
+        int result = deviceMultimediaService.delDevice(deviceIDList, this.getLoginUser(request));
 
         return "" + result;
     }
@@ -131,7 +133,7 @@ public class DeviceMultimediaController {
             response.setContentType("application/x-msdownload");
             response.setContentLength(bytes.length);
             response.setHeader("Content-Disposition", "attachment;filename="
-                    + new String(fileName.getBytes("gbk"),"iso-8859-1"));
+                    + new String(fileName.getBytes("gbk"), "iso-8859-1"));
             response.getOutputStream().write(bytes);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -161,13 +163,13 @@ public class DeviceMultimediaController {
         return "device/home";
     }
 
-    private AuthUser getLoginUser() {
+    private AuthUser getLoginUser(HttpServletRequest request) {
         AuthUser authUser = new AuthUser();
         authUser.setId(1001);
         authUser.setLastLoginDatetime(new Date());
-        authUser.setLastIpAddress("10.200.230.1");
-        authUser.setLastBrowser("Chrome");
-        authUser.setLastOs("Windows 7");
+        authUser.setLastIpAddress(request.getRemoteAddr());
+        authUser.setLastBrowser(request.getHeader("User-Agent"));
+        authUser.setLastOs(request.getRemoteHost());
         return authUser;
     }
 

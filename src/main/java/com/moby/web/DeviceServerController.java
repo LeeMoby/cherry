@@ -98,12 +98,12 @@ public class DeviceServerController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveDevice(Model model, DeviceServer deviceServer) {
+    public String saveDevice(Model model, DeviceServer deviceServer, HttpServletRequest request) {
         List<Cabinet> cabinetList = cabinetService.findCabinetByName(deviceServer.getCabinet().getName());
         if (cabinetList != null && cabinetList.size() > 0) {
             deviceServer.setCabinetId(cabinetList.get(0).getId());
         }
-        int result = deviceServerService.addDevcie(deviceServer, this.getLoginUser());
+        int result = deviceServerService.addDevcie(deviceServer, this.getLoginUser(request));
         if (result == 1) {
             model.addAttribute("result", "已添加1条记录!");
         }
@@ -112,12 +112,12 @@ public class DeviceServerController {
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
-    public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs) {
+    public String deleteDevice(Model model, @RequestParam(value = "deviceIDs[]") Long[] deviceIDs, HttpServletRequest request) {
         List deviceIDList = new ArrayList();
         for (Long deviceID : deviceIDs) {
             deviceIDList.add(deviceID);
         }
-        int result = deviceServerService.delDevice(deviceIDList, this.getLoginUser());
+        int result = deviceServerService.delDevice(deviceIDList, this.getLoginUser(request));
 
         return "" + result;
     }
@@ -161,13 +161,13 @@ public class DeviceServerController {
         return "device/home";
     }
 
-    private AuthUser getLoginUser() {
+    private AuthUser getLoginUser(HttpServletRequest request) {
         AuthUser authUser = new AuthUser();
         authUser.setId(1001);
         authUser.setLastLoginDatetime(new Date());
-        authUser.setLastIpAddress("10.200.230.1");
-        authUser.setLastBrowser("Chrome");
-        authUser.setLastOs("Windows 7");
+        authUser.setLastIpAddress(request.getRemoteAddr());
+        authUser.setLastBrowser(request.getHeader("User-Agent"));
+        authUser.setLastOs(request.getRemoteHost());
         return authUser;
     }
     @RequestMapping(value = "/import", method = RequestMethod.GET)
