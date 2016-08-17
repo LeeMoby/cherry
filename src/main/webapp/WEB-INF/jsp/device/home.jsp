@@ -383,7 +383,7 @@
                 ],
                 backgroundColor: "#FF6384",
                 hoverBackgroundColor: "#FF6384"
-            },{
+            }, {
                 label: '二级检修',
                 data: [
                     {
@@ -420,6 +420,88 @@
     var myCtx6 = myCanvas6.getContext("2d");
     new Chart(myCtx6, {type: "bubble", data: myData6});
 
+
+    $('#dm_inputFile').fileinput({
+        language: 'zh',
+        uploadUrl: '/device/multimedia/upload',
+        uploadAsync: false,
+        showPreview: true,
+        showUpload: false, // hide upload button
+        showRemove: false, // hide remove button
+//        allowedPreviewTypes: ['image', 'html', 'text', 'video', 'audio', 'flash'],
+        allowedFileExtensions: ["xls", "xlsx"],
+        minFileCount: 1,
+        maxFileCount: 5
+    });
+    $('#dm_inputFile').on('fileuploaderror', function (event, data, previewId, index) {
+        var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+        console.log(data);
+        console.log('File upload error');
+    });
+    $('#dm_inputFile').on('fileerror', function (event, data) {
+        console.log(data.id);
+        console.log(data.index);
+        console.log(data.file);
+        console.log(data.reader);
+        console.log(data.files);
+    });
+    $('#dm_inputFile').on('fileuploaded', function (event, data, previewId, index) {
+        var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+        console.log('File uploaded triggered');
+    });
+
+    //    // 上传控件初始化
+    //    $("#dm_inputFile").fileinput({
+    //        showPreview: false,
+    //        allowedFileExtensions: ["xls", "xlsx"],
+    //        elErrorContainer: "#dm_inputFileError",
+    //        browseClass: "btn btn-success",
+    //        browseLabel: "查找文件",
+    //        browseIcon: "<i class='glyphicon glyphicon-search'></i>",
+    //        removeClass: "btn btn-danger",
+    //        removeLabel: "删除",
+    //        removeIcon: "<i class='glyphicon glyphicon-trash'></i>",
+    //        uploadClass: "btn btn-info",
+    //        uploadLabel: "上传",
+    //        uploadIcon: "<i class='glyphicon glyphicon-upload'></i>"
+    //    });
+
+    //    $("#dm_inputForm").submit(function (event) {
+    //        var formData = new FormData(this);
+    //        event.preventDefault();
+    //
+    //        var grid = $("[data-role='dm_inputGrid']");
+    //        $.ajax({
+    //            url: '/device/multimedia/upload',
+    //            type: 'POST',
+    //            data: formData,
+    //            contentType: false,
+    //            processData: false,
+    //            success: function (data) {
+    //                if (data.result == 'success') {
+    //                    grid.message({
+    //                        type: 'success',
+    //                        content: '上传成功'
+    //                    });
+    //                    $("#dm_inputDiv").slideToggle("slow");
+    //                    grid.grid('refresh');
+    //                } else {
+    //                    grid.message({
+    //                        type: 'error',
+    //                        content: data.result
+    //                    });
+    //                }
+    //            },
+    //            error: function () {
+    //                grid.message({
+    //                    type: 'error',
+    //                    content: '上传失败'
+    //                });
+    //            }
+    //        });
+    //    });
 
 </script>
 

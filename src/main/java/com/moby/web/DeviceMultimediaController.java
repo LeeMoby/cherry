@@ -2,6 +2,7 @@ package com.moby.web;
 
 import com.moby.entiry.*;
 import com.moby.service.*;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +10,15 @@ import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * Created by Moby on 16/6/12.
@@ -180,7 +183,42 @@ public class DeviceMultimediaController {
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
-    public String uploadImportDevice(Model model) {
-        return "device/device_import";
+    public Map<String, Object> uploadImportDevice(Model model, HttpServletRequest request, @RequestParam("inputFile") MultipartFile file) {
+        String fileSavePath = "/upload";
+        FileOutputStream out = null;
+        File newFile = null;
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        try {
+            if (!file.isEmpty()) {
+                // 获取文件字数据
+                byte[] bytes = file.getBytes();
+                // 获取文件保存目录
+                newFile = new File(request.getSession().getServletContext().getRealPath(fileSavePath));
+                // 如果目录不存在则创建
+                if (!newFile.exists()) {
+                    newFile.mkdirs();
+                }
+                out = new FileOutputStream(newFile + "/" + file.getName());
+                // 以字节流写到文件
+                out.write(bytes);
+                map.put("result", "success");
+            } else {
+                map.put("result", "failure");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        return map;
     }
 }

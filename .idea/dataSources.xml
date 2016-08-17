@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1279682571">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="MySQL - cherrydb@localhost" uuid="2ff2f5d1-952a-4741-8f21-cac61309e269">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
