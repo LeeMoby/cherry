@@ -149,7 +149,59 @@
         </div>
     </div>
 </div>
-
+<!-- Modal, 导入功能-->
+<div id="importModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">导入设备信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                <dl>
+                    <dt>
+                        导入步骤:
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>下载导入模板;</li>
+                            <li>根据模板格式,在Excel中插入/编辑需要导入的数据;</li>
+                            <li>将编辑好的文件上传到服务器,完成导入。</li>
+                        </ol>
+                    </dd>
+                </dl>
+                </p>
+                <div class="row">
+                    <div class="col-md-12">请先下载导入模板: <a href="/template/设备导入模板.xls"><span
+                            class="glyphicon glyphicon-save-file" aria-hidden="true"></span>设备导入模板.xls</a></div>
+                </div>
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form id="inputForm" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" id="dm_inputDiv">
+                                        <label for="inputFile">请上传包含数据的Excel文件:</label>
+                                        <input type="file" name="inputFile" id="inputFile" multiple class="file">
+                                        <p id="inputFileError" class="help-block">请务必保持模板的列顺序及格式一致。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">导入</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <%@include file="/WEB-INF/jsp/common/footer.jsp" %>
 <!-- chart.js -->
 <script src="/resources/chartjs/Chart.min.js"></script>
@@ -420,10 +472,16 @@
     var myCtx6 = myCanvas6.getContext("2d");
     new Chart(myCtx6, {type: "bubble", data: myData6});
 
+    var modalImportDeviceURL = "";
+    // modal
+    $('#importModal').on('shown.bs.modal', function (e) {
+        modalImportDeviceURL = e.relatedTarget.name;
+    });
 
-    $('#dm_inputFile').fileinput({
+    // file-input
+    $('#inputFile').fileinput({
         language: 'zh',
-        uploadUrl: '/device/multimedia/upload',
+        uploadUrl: '/device/' + modalImportDeviceURL + '/upload',
         uploadAsync: false,
         showPreview: true,
         showUpload: false, // hide upload button
@@ -433,20 +491,20 @@
         minFileCount: 1,
         maxFileCount: 5
     });
-    $('#dm_inputFile').on('fileuploaderror', function (event, data, previewId, index) {
+    $('#inputFile').on('fileuploaderror', function (event, data, previewId, index) {
         var form = data.form, files = data.files, extra = data.extra,
                 response = data.response, reader = data.reader;
         console.log(data);
         console.log('File upload error');
     });
-    $('#dm_inputFile').on('fileerror', function (event, data) {
+    $('#inputFile').on('fileerror', function (event, data) {
         console.log(data.id);
         console.log(data.index);
         console.log(data.file);
         console.log(data.reader);
         console.log(data.files);
     });
-    $('#dm_inputFile').on('fileuploaded', function (event, data, previewId, index) {
+    $('#inputFile').on('fileuploaded', function (event, data, previewId, index) {
         var form = data.form, files = data.files, extra = data.extra,
                 response = data.response, reader = data.reader;
         console.log('File uploaded triggered');
