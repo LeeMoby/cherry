@@ -476,6 +476,7 @@
     // modal
     $('#importModal').on('shown.bs.modal', function (e) {
         modalImportDeviceURL = e.relatedTarget.name;
+        $('#input-id').fileinput('refresh',{uploadUrl: '/device/' + modalImportDeviceURL + '/upload'});
     });
 
     // file-input
@@ -508,6 +509,11 @@
         var form = data.form, files = data.files, extra = data.extra,
                 response = data.response, reader = data.reader;
         console.log('File uploaded triggered');
+    });
+    $('#inputFile').on('filepreupload', function(event, data, previewId, index) {
+        var form = data.form, files = data.files, extra = data.extra,
+                response = data.response, reader = data.reader;
+        console.log('File pre upload triggered');
     });
 
     //    // 上传控件初始化
