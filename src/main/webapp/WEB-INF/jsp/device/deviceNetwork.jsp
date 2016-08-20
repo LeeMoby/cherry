@@ -57,7 +57,7 @@
     <a class="btn btn-info" href="/device/network/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dn_batchDelete()">删除</button>
-    <a class="btn btn-info" href="/device/network/import" target="_blank" role="button">导入</a>
+    <button class="btn btn-info" type="button" name="network" data-toggle="modal" data-target="#importModal">导入</button>
     <button class="btn btn-info" type="button" onclick="dn_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">

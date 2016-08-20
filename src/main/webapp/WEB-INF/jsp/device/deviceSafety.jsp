@@ -57,7 +57,7 @@
     <a class="btn btn-info" href="/device/safety/add" target="_blank" role="button">新增</a>
     <button class="btn btn-info" type="button">修改</button>
     <button class="btn btn-danger" type="button" onclick="dsa_batchDelete()">删除</button>
-    <a class="btn btn-info" href="/device/safety/import" target="_blank" role="button">导入</a>
+    <button class="btn btn-info" type="button" name="safety" data-toggle="modal" data-target="#importModal">导入</button>
     <button class="btn btn-info" type="button" onclick="dsa_exportExcel()">导出</button>
 </div>
 <div class="table-responsive">

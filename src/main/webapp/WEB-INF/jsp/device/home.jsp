@@ -476,7 +476,7 @@
     // modal
     $('#importModal').on('shown.bs.modal', function (e) {
         modalImportDeviceURL = e.relatedTarget.name;
-        $('#input-id').fileinput('refresh',{uploadUrl: '/device/' + modalImportDeviceURL + '/upload'});
+        $('#inputFile').fileinput('refresh',{uploadUrl: '/device/' + modalImportDeviceURL + '/upload'});
     });
 
     // file-input
