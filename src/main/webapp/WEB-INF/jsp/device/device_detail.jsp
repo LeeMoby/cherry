@@ -151,7 +151,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label>制&nbsp;&nbsp;造&nbsp;&nbsp;商: </label>
-
+                        ${device.manufacturer}
                     </div>
                     <div class="form-group col-md-4">
                         <label>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌: </label>

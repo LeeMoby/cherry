@@ -509,6 +509,7 @@
         var form = data.form, files = data.files, extra = data.extra,
                 response = data.response, reader = data.reader;
         console.log('File uploaded triggered');
+        alert(response);
     });
     $('#inputFile').on('filepreupload', function(event, data, previewId, index) {
         var form = data.form, files = data.files, extra = data.extra,

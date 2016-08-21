@@ -3,6 +3,12 @@ package com.moby.web;
 import com.moby.entiry.*;
 import com.moby.service.*;
 import org.apache.ibatis.annotations.Param;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -203,6 +209,175 @@ public class DeviceMultimediaController {
                 // 以字节流写到文件
                 out.write(bytes);
                 map.put("result", "success");
+                // 获取设备类型列表
+                List<DeviceType> deviceTypeList = deviceTypeService.findAllDeviceType();
+                Map<String, Integer> deviceTypeMap = new HashMap<String, Integer>();
+                for (DeviceType deviceType : deviceTypeList){
+                    deviceTypeMap.put(deviceType.getName(), deviceType.getId());
+                }
+                // 获取机房列表
+                List<Room> roomList = roomService.findAllRoom();
+                Map<String, Integer> roomMap = new HashMap<String, Integer>();
+                for (Room room : roomList) {
+                    roomMap.put(room.getNumber(), room.getId());
+                }
+
+                // 获取机柜列表
+                List<Cabinet> cabinetList = cabinetService.findAllCabinet();
+                Map<String, Integer> cabinetMap = new HashMap<String, Integer>();
+                for (Cabinet cabinet : cabinetList) {
+                    cabinetMap.put(cabinet.getName(), cabinet.getId());
+                }
+
+                // 获取部门列表
+                List<Department> deptList = departmentService.findAllDepartment();
+                Map<String, Integer> deptMap = new HashMap<String, Integer>();
+                for (Department dept : deptList) {
+                    deptMap.put(dept.getName(), dept.getId());
+                }
+
+                // 获取员工列表
+                List<Employee> empList = employeeService.findAllEmployee();
+                Map<String, Integer> empMap = new HashMap<String, Integer>();
+                for (Employee emp : empList){
+                    empMap.put(emp.getName(), emp.getId());
+                }
+
+                // 设置数据格式
+                DataFormatter dataFormatter = new DataFormatter(Locale.SIMPLIFIED_CHINESE);
+
+                // 新增记录数
+                int successRow = 0;
+                int failureRow = 0;
+
+                // 解析Excel文件,执行导入
+                HSSFWorkbook wb = new HSSFWorkbook(file.getInputStream());
+                Iterator<Sheet> sheetIterator = wb.sheetIterator();
+                while (sheetIterator.hasNext()) {
+                    HSSFSheet sheet = (HSSFSheet) sheetIterator.next();
+                    int lastRowNum = sheet.getLastRowNum();
+                    for (int i = 2; i <= lastRowNum; i++) {
+                        HSSFRow row = sheet.getRow(i);
+                        DeviceMultimedia device = new DeviceMultimedia();
+                        HSSFCell cell;
+                        int j = 0;
+
+                        cell = row.getCell(j);
+                        device.setDeviceTypeId(deviceTypeMap.get(dataFormatter.formatCellValue(cell)));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setName(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setCode(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setCodeSgcc(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setRoomId(roomMap.get(dataFormatter.formatCellValue(cell)));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setCabinetId(cabinetMap.get(dataFormatter.formatCellValue(cell)));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setCabinetPosition(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setManufacturer(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setBrand(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setSeries(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setModel(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setStatus(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setUse(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setUseDate(cell.getDateCellValue());
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setPurchaseMethod(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setSerialNumber(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setManufactureDate(cell.getDateCellValue());
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setServiceExpiryDate(cell.getDateCellValue());
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setNetwork(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setIpAddress(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setMgtDeptId(deptMap.get(dataFormatter.formatCellValue(cell)));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setMgtEmployeeId(empMap.get(dataFormatter.formatCellValue(cell)));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setMgtPhone(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+
+                        device.setMaintenanceSupplier(dataFormatter.formatCellValue(cell));
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setMaintenanceDateStart(cell.getDateCellValue());
+                        j++;
+
+                        cell = row.getCell(j);
+                        device.setMaintenanceDateEnd(cell.getDateCellValue());
+                        j++;
+
+                        try {
+                            successRow += deviceMultimediaService.addDevcie(device, this.getLoginUser(request));
+                        }catch (Exception ex){
+                            failureRow++;
+                        }
+
+                    }
+
+                }
+                map.put("successRow", successRow);
+                map.put("failureRow", failureRow);
             } else {
                 map.put("result", "failure");
             }
