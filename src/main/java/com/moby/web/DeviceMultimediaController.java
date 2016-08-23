@@ -182,10 +182,6 @@ public class DeviceMultimediaController {
         return authUser;
     }
 
-    @RequestMapping(value = "/import", method = RequestMethod.GET)
-    public String importDevice(Model model) {
-        return "device/device_import";
-    }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
