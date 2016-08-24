@@ -59,7 +59,7 @@
             <ul class="nav nav-sidebar">
                 <li><a href="">机房巡视</a></li>
                 <li><a href="">班组资料</a></li>
-                <li><a href="">工作日志</a></li>
+                <li><a href="/document/home/">工作日志</a></li>
                 <li><a href="">库房管理</a></li>
                 <li class="active"><a href="/device/home/">资产设备 <span
                         class="sr-only">(current)</span></a></li>
