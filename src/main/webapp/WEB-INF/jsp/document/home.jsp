@@ -78,7 +78,7 @@
                 <li <c:if test="${activeTab == 'index'}">class="active"</c:if>><a href="#index" role="tab"
                                                                                   data-toggle="tab">首页</a></li>
                 <li <c:if test="${activeTab == '日报'}">class="active"</c:if>><a href="#server" role="tab"
-                                                                                data-toggle="tab">日报</a></li>
+                                                                               data-toggle="tab">日报</a></li>
                 <li <c:if test="${activeTab == '周报'}">class="active"</c:if>><a href="#storage" role="tab"
                                                                                data-toggle="tab">周报</a></li>
                 <li <c:if test="${activeTab == '月报'}">class="active"</c:if>><a href="#network" role="tab"
@@ -111,6 +111,30 @@
 <%@include file="/WEB-INF/jsp/common/footer.jsp" %>
 <script type="text/javascript">
 
+
+    $('#table').bootstrapTable({
+        search : true,
+        showRefresh : true,
+        columns: [{
+            field: 'id',
+            title: '序号'
+        }, {
+            field: 'content',
+            title: '工作内容详述'
+        }, {
+            field: 'process',
+            title: '完成情况'
+        }],
+        data: [{
+            id: 1,
+            content: '今日重点工作',
+            process: '60%'
+        }, {
+            id: 2,
+            content: '明日工作计划',
+            process: '30%'
+        }]
+    });
 </script>
 </body>
 </html>

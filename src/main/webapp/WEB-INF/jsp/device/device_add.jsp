@@ -56,7 +56,8 @@
                             <label for="deviceTypeId">设备类型: </label>
                             <select id="deviceTypeId" name="deviceTypeId" class="form-control" disabled>
                                 <c:forEach var="deviceType" items="${deviceTypeList}">
-                                    <option value="${deviceType.id}" <c:if test="${deviceType.nameAbbr == activeTab}">selected</c:if>>${deviceType.name}</option>
+                                    <option value="${deviceType.id}"
+                                            <c:if test="${deviceType.nameAbbr == activeTab}">selected</c:if>>${deviceType.name}</option>
                                 </c:forEach>
                             </select>
 
@@ -97,7 +98,8 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="ipAddress">&nbsp;&nbsp;IP&nbsp;&nbsp;地址: </label>
-                            <input type="text" class="form-control" id="ipAddress" name="ipAddress" placeholder="请输入IP地址">
+                            <input type="text" class="form-control" id="ipAddress" name="ipAddress"
+                                   placeholder="请输入IP地址">
                         </div>
                     </div>
                     <br>
@@ -106,7 +108,8 @@
                             <label for="mgtDeptId">管理部门: </label>
                             <select id="mgtDeptId" name="mgtDeptId" class="form-control">
                                 <c:forEach var="department" items="${departmentList}">
-                                    <option value="${department.id}" <c:if test="${department.id == 1002}">selected</c:if>>${department.nameAbbr}</option>
+                                    <option value="${department.id}"
+                                            <c:if test="${department.id == 1002}">selected</c:if>>${department.nameAbbr}</option>
                                 </c:forEach>
                             </select>
                         </div>
@@ -114,7 +117,8 @@
                             <label for="mgtEmployeeId">责&nbsp;&nbsp;任&nbsp;&nbsp;人: </label>
                             <select id="mgtEmployeeId" name="mgtEmployeeId" class="form-control">
                                 <c:forEach var="employee" items="${employeeList}">
-                                    <option value="${employee.id}" <c:if test="${employee.id == 1002}">selected</c:if>>${employee.name}</option>
+                                    <option value="${employee.id}"
+                                            <c:if test="${employee.id == 1002}">selected</c:if>>${employee.name}</option>
                                 </c:forEach>
                             </select>
                         </div>
@@ -199,7 +203,8 @@
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="manufactureDate">出厂日期: </label>
-                            <input type="text" class="form-control" id="manufactureDate" name="manufactureDate" placeholder="设备出厂日期">
+                            <input type="text" class="form-control" id="manufactureDate" name="manufactureDate"
+                                   placeholder="设备出厂日期">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="maintenanceSupplier">运维厂商: </label>
@@ -208,14 +213,16 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="serviceExpiryDate">售后截止: </label>
-                            <input type="text" class="form-control" id="serviceExpiryDate" name="serviceExpiryDate" placeholder="售后服务截止日期">
+                            <input type="text" class="form-control" id="serviceExpiryDate" name="serviceExpiryDate"
+                                   placeholder="售后服务截止日期">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="maintenanceDateStart">维保开始: </label>
-                            <input type="text" class="form-control" id="maintenanceDateStart" name="maintenanceDateStart"
+                            <input type="text" class="form-control" id="maintenanceDateStart"
+                                   name="maintenanceDateStart"
                                    placeholder="维保开始日期">
                         </div>
                         <div class="form-group col-md-4">
@@ -304,12 +311,24 @@
 
         // 提交表单
         var urlType = "";
-        <c:if test="${activeTab == '服务器'}"> urlType = "server";</c:if>
-        <c:if test="${activeTab == '存储'}"> urlType = "storage";</c:if>
-        <c:if test="${activeTab == '网络'}"> urlType = "network";</c:if>
-        <c:if test="${activeTab == '安全'}"> urlType = "safety";</c:if>
-        <c:if test="${activeTab == '音视频'}"> urlType = "multimedia";</c:if>
-        <c:if test="${activeTab == '其他'}"> urlType = "other";</c:if>
+        <c:if test="${activeTab == '服务器'}">
+        urlType = "server";
+        </c:if>
+        <c:if test="${activeTab == '存储'}">
+        urlType = "storage";
+        </c:if>
+        <c:if test="${activeTab == '网络'}">
+        urlType = "network";
+        </c:if>
+        <c:if test="${activeTab == '安全'}">
+        urlType = "safety";
+        </c:if>
+        <c:if test="${activeTab == '音视频'}">
+        urlType = "multimedia";
+        </c:if>
+        <c:if test="${activeTab == '其他'}">
+        urlType = "other";
+        </c:if>
         theForm.action = "/device/" + urlType + "/save";
         theForm.method = "post";
         theForm.submit();

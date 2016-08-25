@@ -24,3 +24,7 @@
 <script src="/resources/bootstrap-fileinput/js/fileinput.min.js"></script>
 <script src="/resources/bootstrap-fileinput/themes/fa/theme.js"></script>
 <script src="/resources/bootstrap-fileinput/js/locales/zh.js"></script>
+
+<!-- bootstrap-table -->
+<script src="/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script src="/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>

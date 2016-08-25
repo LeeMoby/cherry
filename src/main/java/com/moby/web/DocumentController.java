@@ -48,6 +48,7 @@ public class DocumentController {
         String workItemDate = sdf_cn.format(new Date());
         String employeeName = "刘钊";
         String fileName = "日报-" + sdf.format(new Date()) + "-" + employeeName + ".xls";
+        String middleTitle = "无";
         ByteArrayOutputStream out = new ByteArrayOutputStream();
 
         List<Employee> teamEmpList = employeeService.findAllEmployee();
@@ -70,9 +71,9 @@ public class DocumentController {
             workItemDTO.setProgress((20 * (i + 2)) + "%");
             workItemDTO.setTeamEmployee(teamEmpList);
             workItemList.add(workItemDTO);
-
-            workItemDTO.setContent("明日第" + (i + 1) + "项工作计划情况描述");
-            workItemPlanList.add(workItemDTO);
+            WorkItemDTO workItemPlanDTO = workItemDTO;
+            workItemPlanDTO.setContent("明日第" + (i + 1) + "项工作计划情况描述");
+            workItemPlanList.add(workItemPlanDTO);
 
         }
 
@@ -89,7 +90,6 @@ public class DocumentController {
         fontTitle.setBoldweight(Font.BOLDWEIGHT_BOLD);    // 加粗
         fontTitle.setFontHeightInPoints((short) 20); // 字号
         csTitle.setFont(fontTitle);
-
 
 
         // 1.2 定义信息样式
@@ -112,15 +112,24 @@ public class DocumentController {
         HSSFCellStyle csTHead = wb.createCellStyle();
         csTHead.setVerticalAlignment(CellStyle.VERTICAL_CENTER); // 垂直居中
         csTHead.setAlignment(CellStyle.ALIGN_CENTER); // 水平居中
+        csTHead.setBorderTop(CellStyle.BORDER_THIN);    // 细边框
+        csTHead.setBorderBottom(CellStyle.BORDER_THIN);
+        csTHead.setBorderLeft(CellStyle.BORDER_THIN);
+        csTHead.setBorderRight(CellStyle.BORDER_THIN);
         Font fontTHead = wb.createFont();
-        fontTHead.setBoldweight(Font.BOLDWEIGHT_BOLD); ;    // 加粗
-        fontTHead.setFontHeightInPoints((short) 14); // 字号
+        fontTHead.setBoldweight(Font.BOLDWEIGHT_BOLD);
+        ;    // 加粗
+        fontTHead.setFontHeightInPoints((short) 12); // 字号
         csTHead.setFont(fontTHead);
 
         // 2.2.1 定义居中内容样式
         HSSFCellStyle csTBodyCenter = wb.createCellStyle();
         csTBodyCenter.setVerticalAlignment(CellStyle.VERTICAL_CENTER); // 垂直居中
         csTBodyCenter.setAlignment(CellStyle.ALIGN_CENTER); // 水平居中
+        csTBodyCenter.setBorderTop(CellStyle.BORDER_THIN);    // 细边框
+        csTBodyCenter.setBorderBottom(CellStyle.BORDER_THIN);
+        csTBodyCenter.setBorderLeft(CellStyle.BORDER_THIN);
+        csTBodyCenter.setBorderRight(CellStyle.BORDER_THIN);
         Font fontTbody = wb.createFont();
         fontTbody.setBoldweight(Font.BOLDWEIGHT_NORMAL);    // 加粗
         fontTbody.setFontHeightInPoints((short) 12); // 字号
@@ -130,6 +139,10 @@ public class DocumentController {
         HSSFCellStyle csTBodyLeft = wb.createCellStyle();
         csTBodyLeft.setVerticalAlignment(CellStyle.VERTICAL_CENTER); // 垂直居中
         csTBodyLeft.setAlignment(CellStyle.ALIGN_LEFT); // 水平居中
+        csTBodyLeft.setBorderTop(CellStyle.BORDER_THIN);    // 细边框
+        csTBodyLeft.setBorderBottom(CellStyle.BORDER_THIN);
+        csTBodyLeft.setBorderLeft(CellStyle.BORDER_THIN);
+        csTBodyLeft.setBorderRight(CellStyle.BORDER_THIN);
         Font fontTBodyLeft = wb.createFont();
         fontTBodyLeft.setBoldweight(Font.BOLDWEIGHT_NORMAL);    // 加粗
         fontTBodyLeft.setFontHeightInPoints((short) 12); // 字号
@@ -199,8 +212,18 @@ public class DocumentController {
 
             todayItemNumber++;
         }
+        // 4.3 创建中间行
+        // 4.3.1 定义合并单元格
+        CellRangeAddress cellRAMiddle = new CellRangeAddress(rowNumber, rowNumber, 0, 3);
+        sheet.addMergedRegion(cellRAMiddle);
+        // 4.3.2 创建标题行
+        HSSFRow rowMiddle = sheet.createRow(rowNumber);
+        rowNumber++;
+        HSSFCell cellMiddle = rowMiddle.createCell(0);
+        cellMiddle.setCellStyle(csTBodyLeft);
+        cellMiddle.setCellValue("需要配合或协调的工作: " + middleTitle);
 
-        // 4.3 创建表头行
+        // 4.4 创建表头行
         HSSFRow rowTomorrowTHead = sheet.createRow(rowNumber);
         rowNumber++;
         for (int i = 0; i < tomorrowTHead.length; i++) {
@@ -208,14 +231,14 @@ public class DocumentController {
             cell.setCellStyle(csTHead);
             cell.setCellValue(tomorrowTHead[i]);
         }
-        // 4.4 创建内容行
+        // 4.5 创建内容行
         int tomorrowItemNumber = 0;
         for (WorkItemDTO workItemDTO : workItemPlanList) {
             HSSFRow row = sheet.createRow(rowNumber);
             rowNumber++;
             HSSFCell cell0 = row.createCell(0);
             cell0.setCellStyle(csTBodyCenter);
-            cell0.setCellValue("" + (tomorrowItemNumber+1));
+            cell0.setCellValue("" + (tomorrowItemNumber + 1));
 
             HSSFCell cell1 = row.createCell(1);
             cell1.setCellStyle(csTBodyLeft);
@@ -236,6 +259,7 @@ public class DocumentController {
         sheet.setColumnWidth(1, 80 * 256);
         sheet.setColumnWidth(2, 20 * 256);
         sheet.setColumnWidth(3, 30 * 256);
+        sheet.setDefaultRowHeight((short) 30);
         wb.write(out);
         byte[] bytes = out.toByteArray();
         response.setContentType("application/x-msdownload");

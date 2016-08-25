@@ -18,3 +18,6 @@
 
 <!-- fileinput -->
 <link href="/resources/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
+
+<!-- bootstrap-table -->
+<link href="/resources/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet">

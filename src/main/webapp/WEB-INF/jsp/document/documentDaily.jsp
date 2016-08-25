@@ -2,11 +2,16 @@
 <div class="container-fluid" style="margin-top: 30px">
     <form id="dd_form" class="form-inline">
         <div class="page-header">
-            <h1>网络安全及支撑系统组工作日报
-                <small>${nowDate}</small>
-            </h1>
+            <h2>网络安全及支撑系统组工作日报
+                <small>${nowDate}&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-default" id="btn_exportDaily" onclick="exportDaily()">生成日报</button></small>
+            </h2>
         </div>
-        <button type="button" class="btn btn-primary" id="btn_exportDaily" onclick="exportDaily()">生成日报</button>
+
+        <div class="container-fluid">
+            <table id="table"></table>
+        </div>
+
+
     </form>
 </div>
 
@@ -19,4 +24,6 @@
         theForm.method = "post";
         theForm.submit();
     }
+
+
 </script>
