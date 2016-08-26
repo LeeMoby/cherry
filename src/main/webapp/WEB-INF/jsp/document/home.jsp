@@ -50,8 +50,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="#">首页</a>
-                </li>
+                <li><a href="#">首页</a></li>
                 <li><a href="#">报表</a></li>
                 <li><a href="#">分析</a></li>
                 <li><a href="#">导出</a></li>
@@ -113,8 +112,14 @@
 
 
     $('#table').bootstrapTable({
-        search : true,
-        showRefresh : true,
+        search: true,
+        showRefresh: true,
+        pagination : true,
+        showColumns : true,
+//        showToggle : true,  // 卡片显示控制按钮
+        showPaginationSwitch : true, // 分页显示/隐藏,按钮
+//        clickToSelect : true,
+//        maintainSelected : true,
         columns: [{
             field: 'id',
             title: '序号'
@@ -133,7 +138,7 @@
             id: 2,
             content: '明日工作计划',
             process: '30%'
-        }]
+        },]
     });
 </script>
 </body>
