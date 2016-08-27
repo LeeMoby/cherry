@@ -122,13 +122,16 @@
 //        maintainSelected : true,
         columns: [{
             field: 'id',
-            title: '序号'
+            title: '序号',
+            align: 'center'
         }, {
             field: 'content',
-            title: '工作内容详述'
+            title: '工作内容详述',
+            sortable: true
         }, {
             field: 'process',
-            title: '完成情况'
+            title: '完成情况',
+            sortable: true
         }],
         data: [{
             id: 1,
