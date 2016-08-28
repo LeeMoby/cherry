@@ -28,3 +28,4 @@
 <!-- bootstrap-table -->
 <script src="/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
 <script src="/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="/resources/bootstrap-table/js/export/bootstrap-table-export.min.js"></script>
