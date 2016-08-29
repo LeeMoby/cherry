@@ -114,10 +114,10 @@
     $('#table').bootstrapTable({
         search: true,
         showRefresh: true,
-        pagination : true,
-        showColumns : true,
+        pagination: true,
+        showColumns: true,
 //        showToggle : true,  // 卡片显示控制按钮
-        showPaginationSwitch : true, // 分页显示/隐藏,按钮
+        showPaginationSwitch: true, // 分页显示/隐藏,按钮
 //        clickToSelect : true,
 //        maintainSelected : true,
         columns: [{
@@ -141,7 +141,11 @@
             id: 2,
             content: '明日工作计划',
             process: '30%'
-        },]
+        }, {
+            id: 3,
+            content: '<input type="text">',
+            process: '<select><option>0%</option><option>20%</option><option>40%</option><option>60%</option><option>80%</option><option>100%</option></select>'
+        }]
     });
 </script>
 </body>
