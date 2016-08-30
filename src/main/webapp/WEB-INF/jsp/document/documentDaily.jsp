@@ -6,9 +6,13 @@
                 <small>${nowDate}&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-default" id="btn_exportDaily" onclick="exportDaily()">生成日报</button></small>
             </h2>
         </div>
-
-        <div class="container-fluid">
-            <table id="table"></table>
+        <h3>今日重点工作完成情况</h3>
+        <div class="row">
+            <table id="tableDaily"></table>
+        </div>
+        <h3>明日重点工作计划安排</h3>
+        <div class="row">
+            <table id="tableDailyNext"></table>
         </div>
 
 

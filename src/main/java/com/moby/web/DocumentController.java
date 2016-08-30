@@ -1,5 +1,7 @@
 package com.moby.web;
 
+import com.alibaba.druid.support.json.JSONParser;
+import com.alibaba.druid.support.json.JSONUtils;
 import com.moby.dto.WorkItemDTO;
 import com.moby.entiry.Employee;
 import com.moby.service.EmployeeService;
@@ -10,8 +12,10 @@ import org.apache.poi.ss.util.CellRangeAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayOutputStream;
@@ -38,6 +42,14 @@ public class DocumentController {
         model.addAttribute("nowDate", nowDate);
         model.addAttribute("activeTab", "index");
         return "document/home";
+    }
+
+    @RequestMapping(value = "/json", method = RequestMethod.GET)
+    @ResponseBody
+    public Model getData(Model model, @PathVariable("type") String type){
+        List<Employee> teamEmpList = employeeService.findAllEmployee();
+        model.addAttribute("teamEmpList", teamEmpList);
+        return model;
     }
 
     @RequestMapping(value = "/export", method = RequestMethod.POST)

@@ -111,15 +111,17 @@
 <script type="text/javascript">
 
 
-    $('#table').bootstrapTable({
+    $('#tableDaily').bootstrapTable({
         search: true,
         showRefresh: true,
         pagination: true,
         showColumns: true,
+        url: '/document/daily/',
 //        showToggle : true,  // 卡片显示控制按钮
-        showPaginationSwitch: true, // 分页显示/隐藏,按钮
+//        showPaginationSwitch: true, // 分页显示/隐藏,按钮
 //        clickToSelect : true,
 //        maintainSelected : true,
+//        rowStyle: tableRowStyel,
         columns: [{
             field: 'id',
             title: '序号',
@@ -136,17 +138,70 @@
         data: [{
             id: 1,
             content: '今日重点工作',
-            process: '60%'
+            process: '20%'
+        }, {
+            id: 2,
+            content: '今日重点工作',
+            process: '30%'
+        }, {
+            id: 3,
+            content: '今日重点工作',
+            process: '40%'
+        }, {
+            id: 4,
+            content: '今日重点工作',
+            process: '50%'
+        }]
+    });
+
+    $('#tableDailyNext').bootstrapTable({
+        search: true,
+        showRefresh: true,
+        pagination: true,
+        showColumns: true,
+//        showToggle : true,  // 卡片显示控制按钮
+//        showPaginationSwitch: true, // 分页显示/隐藏,按钮
+//        clickToSelect : true,
+//        maintainSelected : true,
+//        rowStyle: tableRowStyel,
+        columns: [{
+            field: 'id',
+            title: '序号',
+            align: 'center'
+        }, {
+            field: 'content',
+            title: '工作内容详述',
+            sortable: true
+        }, {
+            field: 'process',
+            title: '完成情况',
+            sortable: true
+        }],
+        data: [{
+            id: 1,
+            content: '明日工作计划',
+            process: '20%'
         }, {
             id: 2,
             content: '明日工作计划',
             process: '30%'
         }, {
             id: 3,
-            content: '<input type="text">',
-            process: '<select><option>0%</option><option>20%</option><option>40%</option><option>60%</option><option>80%</option><option>100%</option></select>'
+            content: '明日工作计划',
+            process: '40%'
+        }, {
+            id: 4,
+            content: '明日工作计划',
+            process: '50%'
         }]
     });
+
+    function tableRowStyel(row, index){
+        if(index % 2 == 0){
+            return {classes: 'active'};
+        }
+        return {};
+    }
 </script>
 </body>
 </html>
