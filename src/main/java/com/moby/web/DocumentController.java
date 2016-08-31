@@ -44,7 +44,7 @@ public class DocumentController {
         return "document/home";
     }
 
-    @RequestMapping(value = "/json", method = RequestMethod.GET)
+    @RequestMapping(value = "/data", method = RequestMethod.GET)
     @ResponseBody
     public Model getData(Model model, @PathVariable("type") String type){
         List<Employee> teamEmpList = employeeService.findAllEmployee();

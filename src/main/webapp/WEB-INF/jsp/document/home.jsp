@@ -134,6 +134,10 @@
             field: 'process',
             title: '完成情况',
             sortable: true
+        }, {
+            field: 'operate',
+            title: {class: 'glyphicon glyphicon-cog'},
+            align: 'center'
         }],
         data: [{
             id: 1,
