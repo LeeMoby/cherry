@@ -136,17 +136,19 @@
             sortable: true
         }, {
             field: 'operate',
-            title: {class: 'glyphicon glyphicon-cog'},
+            title: '<span class="glyphicon glyphicon-cog"></span>',
             align: 'center'
         }],
         data: [{
             id: 1,
             content: '今日重点工作',
-            process: '20%'
+            process: '20%',
+            operate: '<span class="glyphicon glyphicon-plus"></span>'
         }, {
             id: 2,
             content: '今日重点工作',
-            process: '30%'
+            process: '30%',
+            operate: '<span class="glyphicon glyphicon-remove"></span>'
         }, {
             id: 3,
             content: '今日重点工作',
@@ -200,8 +202,8 @@
         }]
     });
 
-    function tableRowStyel(row, index){
-        if(index % 2 == 0){
+    function tableRowStyel(row, index) {
+        if (index % 2 == 0) {
             return {classes: 'active'};
         }
         return {};
