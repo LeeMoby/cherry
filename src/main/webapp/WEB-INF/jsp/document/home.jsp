@@ -143,12 +143,12 @@
             id: 1,
             content: '今日重点工作',
             process: '20%',
-            operate: '<span class="glyphicon glyphicon-plus"></span>'
+            operate: '<span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-remove"></span>'
         }, {
             id: 2,
             content: '今日重点工作',
             process: '30%',
-            operate: '<span class="glyphicon glyphicon-remove"></span>'
+            operate: '<span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-remove"></span>'
         }, {
             id: 3,
             content: '今日重点工作',
